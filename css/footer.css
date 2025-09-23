@@ -1,0 +1,327 @@
+footer {
+  margin: 100px auto 0 auto;
+}
+footer .pc_menu {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: left;
+}
+footer .pc_menu .pc_sub1 {
+  width: 370px;
+}
+footer .pc_menu .pc_sub1 .bold {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin-top: 0;
+}
+footer .pc_menu .pc_sub1 .bold img {
+  height: 100%;
+}
+footer .pc_menu .pc_sub1 .sub_icon {
+  display: flex;
+  justify-content: space-around;
+}
+footer .pc_menu .pc_sub1 .sub_icon a svg {
+  width: 50px;
+}
+footer .pc_menu .pc_sub1 .nomal {
+  font-size: 1.5rem;
+}
+footer .pc_menu .pc_sub1 div {
+  width: 30%;
+}
+footer .pc_menu .pc_sub1 div h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+footer .pc_menu .pc_sub1 .clinic_info ul li:nth-child(1) {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+footer .pc_menu .pc_sub2 {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 20px;
+}
+footer .pc_menu .pc_sub2 li {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+footer .pc_menu .pc_sub2 ._child {
+  font-size: 1rem;
+}
+footer .pc_menu .pc_sub2 ._child a {
+  color: rgba(0, 0, 0, 0.5294117647);
+}
+footer .phone_menu,
+footer #gnavwrap {
+  display: none;
+}
+footer .phone_menu {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer .footer_last {
+  text-align: center;
+  color: white;
+  margin: 50px 0 0 0;
+  background-color: #51d0c9;
+}
+
+@media screen and (max-width: 1000px) {
+  footer .pc_menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .pc_menu .pc_sub1 .sub_icon a svg {
+    width: 35px;
+  }
+  footer .pc_menu .pc_sub2 {
+    justify-items: center;
+  }
+  footer .phone_menu {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: #51d0c9;
+    z-index: 10;
+  }
+  footer .phone_menu ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  footer .phone_menu ul li {
+    height: 100%;
+    width: 50%;
+  }
+  footer .phone_menu ul li a {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 2rem;
+  }
+  footer .phone_menu ul li a svg {
+    width: 23px;
+    height: 23px;
+  }
+  footer .phone_menu ul li a p {
+    width: 100%;
+    margin: 0;
+  }
+  footer .phone_menu ul .menu_access {
+    border-right: 1px solid white;
+  }
+  footer #gnavwrap {
+    display: block;
+    z-index: 5;
+  }
+  footer #gnavwrap .toggle {
+    z-index: 100;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  }
+  footer #gnavwrap .toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 8px auto;
+    transition-duration: 0.3s;
+  }
+  footer #gnavwrap .toggle .one {
+    margin-top: 13px;
+  }
+  footer #gnavwrap nav {
+    position: fixed;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    right: 25px;
+  }
+  footer #gnavwrap nav .reservation {
+    width: 100%;
+    margin: 50px 0 0 0;
+    text-align: center;
+  }
+  footer #gnavwrap nav .reservation-ul1 {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer #gnavwrap nav .reservation-ul1 li {
+    width: 30%;
+    height: 150px;
+  }
+  footer #gnavwrap nav .reservation-ul1 li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 145px;
+    justify-content: space-around;
+    width: 100%;
+    margin: 2.5px auto;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+  }
+  footer #gnavwrap nav .reservation-ul1 li a .link-text {
+    margin: 0;
+  }
+  footer #gnavwrap nav .reservation-ul1 .reservation-line img {
+    width: 95%;
+  }
+  footer #gnavwrap nav .reservation-ul1 .reservation-line .line-friend {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #03c755;
+    border-radius: 3px;
+    color: white;
+  }
+  footer #gnavwrap nav .reservation-ul1 .reservation-line .line-friend svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  footer #gnavwrap nav .reservation-ul1 .reservation-phone a svg,
+  footer #gnavwrap nav .reservation-ul1 .reservation-mail a svg {
+    width: 90%;
+  }
+  footer #gnavwrap nav .reservation-ul2 {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  footer #gnavwrap nav .reservation-ul2 li {
+    height: 80px;
+    border: 3px solid white;
+  }
+  footer #gnavwrap nav .reservation-ul2 li a {
+    display: block;
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.431372549);
+  }
+  footer #gnavwrap nav .reservation-ul2 li a p {
+    margin: 0;
+  }
+  footer #gnavwrap nav .reservation-ul2 li a p:nth-child(1), footer #gnavwrap nav .reservation-ul2 li a p:nth-child(3) {
+    height: 39.5px;
+    line-height: 39.5px;
+  }
+  footer #gnavwrap nav .reservation-ul2 li a .border {
+    border: 1px solid #51d0c9;
+    width: 20px;
+    margin: 0 auto;
+  }
+  footer #gnavwrap nav .reservation-ul2 li:nth-child(1), footer #gnavwrap nav .reservation-ul2 li:nth-child(3), footer #gnavwrap nav .reservation-ul2 li:nth-child(5) {
+    border-right: 1px solid rgba(128, 128, 128, 0.431372549);
+  }
+  footer #gnavwrap nav .reservation-ul2 li:last-child a {
+    border-bottom: none;
+  }
+  footer #gnavwrap nav .reservation-ul2 li:hover {
+    border: 3px solid #51d0c9;
+    transition: ease 0.3s;
+  }
+}
+#gnavwrap.off nav ul {
+  display: none;
+}
+
+#gnavwrap.on {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  width: 400px;
+  min-height: 100%;
+  z-index: 10;
+}
+#gnavwrap.on .one {
+  transform: rotate(45deg) translate(7px, 7px);
+  background-color: black;
+}
+#gnavwrap.on .two {
+  opacity: 0;
+}
+#gnavwrap.on .three {
+  transform: rotate(-45deg) translate(8px, -9px);
+  background-color: black;
+}
+#gnavwrap.on nav {
+  z-index: 10;
+}
+#gnavwrap.on #mask {
+  transition-duration: 0.5s;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.footer .last_footer {
+  display: none;
+}
+.footer .logo {
+  flex-direction: column;
+}
+.footer .logo h1 {
+  width: 100%;
+}
+.footer .logo .access {
+  width: 100%;
+  text-align: center;
+}
+.footer .footer_list {
+  width: 95%;
+}
+
+.footer_last {
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 600px) {
+  footer .pc_menu .pc_sub1 {
+    width: 90%;
+  }
+  footer .pc_menu .pc_sub2 {
+    width: 90%;
+    gap: 0;
+    grid-template-columns: repeat(1, 100%);
+  }
+  footer .pc_menu .pc_sub2 ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+  }
+  footer .pc_menu .pc_sub2 ul li:first-child {
+    grid-column: 1/-1;
+  }
+}/*# sourceMappingURL=footer.css.map */

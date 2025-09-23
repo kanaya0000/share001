@@ -1,0 +1,525 @@
+@use 'setting';
+// setting.$selectcolor: #51d0c9;
+// setting.$color: #454545;
+// setting.$width: 1200px;
+
+footer {
+    margin: 100px auto 0 auto;
+
+    .pc_menu {
+        max-width: setting.$width;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        text-align: left;
+
+        .pc_sub1 {
+            width: 370px;
+
+            .bold {
+                font-size: 2.5rem;
+                display: flex;
+                align-items: center;
+                height: 70px;
+                margin-top: 0;
+
+                img {
+                    // width: 50px;
+                    height: 100%;
+                }
+            }
+
+            .sub_icon {
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    svg {
+                        width: 50px;
+                    }
+                }
+
+            }
+
+            .nomal {
+                font-size: 1.5rem;
+            }
+
+
+
+            div {
+                width: 30%;
+            }
+
+            div {
+                h2 {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+
+            .clinic_info {
+                ul {
+                    li:nth-child(1) {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .pc_sub2 {
+            display: grid;
+            grid-template-columns: repeat(2, 250px);
+            gap: 20px;
+        }
+
+        // .pc_sub3 {
+        //     width: 150px;
+        // }
+
+        .pc_sub2 {
+            li {
+                font-size: 1.5rem;
+                margin: 15px 0;
+            }
+
+            ._child {
+                font-size: 1rem;
+
+                a {
+                    color: #00000087;
+                }
+
+
+            }
+        }
+    }
+
+    .phone_menu,
+    #gnavwrap {
+        display: none;
+    }
+
+    .phone_menu {
+        max-width: setting.$width;
+        margin: 0 auto;
+    }
+
+
+
+    // #gnavwrap {
+    //     nav {
+    //         width: 50%;
+    //         text-align: left;
+    //         font-size: 1.1rem;
+    //         display: flex;
+    //         margin-left: 30px;
+
+    //         ul {
+    //             li {
+    //                 margin: 10px 0;
+
+    //                 a {
+    //                     color: setting.$color;
+    //                 }
+    //             }
+    //         }
+
+    //         .nav_set1 {
+    //             width: 50%;
+
+    //             li:nth-child(1) {
+    //                 font-size: 1.5rem;
+    //                 color: black;
+    //             }
+
+    //         }
+
+    //         .nav_set2 {
+    //             width: 50%;
+    //             font-size: 1.5rem;
+    //             color: black;
+    //         }
+    //     }
+    // }
+
+    .footer_last {
+        text-align: center;
+        color: white;
+        margin: 50px 0 0 0;
+        background-color: setting.$selectcolor;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    footer {
+        .pc_menu {
+            flex-direction: column;
+            align-items: center;
+
+            .pc_sub1 {
+                .sub_icon {
+                    a {
+                        svg {
+                            width: 35px;
+                        }
+                    }
+                }
+            }
+
+            .pc_sub2 {
+                // grid-template-columns: repeat(2,250px);
+                justify-items: center;
+            }
+        }
+
+        .phone_menu {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            height: 70px;
+            width: 100%;
+            background-color: setting.$selectcolor;
+            z-index: 10;
+
+            ul {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+
+                li {
+                    height: 100%;
+                    width: calc(100% / 2);
+
+                    a {
+                        display: flex;
+                        height: 100%;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        justify-content: space-around;
+                        color: white;
+                        font-size: 2rem;
+
+                        svg {
+                            width: 23px;
+                            height: 23px;
+                        }
+
+                        p {
+                            width: 100%;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .menu_access {
+                    // border-left: 1px solid white;
+                    border-right: 1px solid white;
+                }
+
+            }
+        }
+
+        #gnavwrap {
+            // opacity: 0;
+            // display: none;
+            display: block;
+            z-index: 5;
+
+            .toggle {
+                z-index: 100;
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                // position: absolute;
+                // bottom: 75px;
+                top: 5px;
+                // right: 25px;
+                right: 10px;
+                // transform: translateY(50%);
+                cursor: pointer;
+                // background-color: rgba(0, 0, 0, 0.8);
+                // border-radius: 50%;
+
+                div {
+                    // ハンバーガーメニュー指定
+                    width: 30px;
+                    height: 3px;
+                    // background-color: white;
+                    background-color: black;
+                    margin: 8px auto;
+                    // backface-visibility: hidden;
+                    transition-duration: 0.3s;
+                }
+
+                .one {
+                    margin-top: 13px;
+                }
+            }
+
+            nav {
+                position: fixed;
+                width: 350px;
+                display: flex;
+                // flex-wrap: wrap;
+                flex-direction: column;
+                right: 25px;
+
+                .reservation {
+                    width: 100%;
+                    margin: 50px 0 0 0;
+                    text-align: center;
+                }
+
+                .reservation-ul1 {
+                    text-align: center;
+                    list-style: none;
+                    // margin: 50px 0 0 0;
+                    padding: 0;
+                    overflow: hidden; //はみ出分は非表示
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+
+                    li {
+                        width: 30%;
+                        height: 150px;
+
+                        // border: 1px solid black;
+                        // border-radius: 10px;
+                        // box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            height: 145px;
+                            justify-content: space-around;
+                            width: 100%;
+                            margin: 2.5px auto;
+                            // color: setting.$selectcolor;
+                            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+                            border-radius: 5px;
+
+                            .link-text {
+                                margin: 0;
+                            }
+                        }
+                    }
+
+
+
+                    .reservation-line {
+                        img {
+                            width: 95%;
+                        }
+
+                        .line-friend {
+                            width: 95%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto;
+                            background-color: #03c755;
+                            border-radius: 3px;
+                            color: white;
+
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+
+                    .reservation-phone,
+                    .reservation-mail {
+                        a {
+                            svg {
+                                width: 90%;
+                            }
+                        }
+                    }
+                }
+
+                .reservation-ul2 {
+                    display: grid;
+                    grid-template-columns: repeat(2, 45%);
+                    justify-content: center;
+                    text-align: center;
+                    margin-top: 50px;
+                    li {
+                        height: 80px;
+                        border: 3px solid white;
+                        a {
+                            display: block;
+                            width: 85%;
+                            height: 100%;
+                            margin: 0 auto;
+                            border-bottom: 1px solid #8080806e;
+                            p {
+                                margin: 0;
+                                // height: 50%;
+                            }
+                            // p:nth-child(1)::after {
+                            //     content: "";
+                            //     border-bottom: 1px solid black;
+                            //     width: 20px;
+                            //     margin: 0 auto;
+                            //     display: block;
+                            // }
+                            p:nth-child(1), p:nth-child(3) {
+                                height: 39.5px;
+                                line-height: 39.5px;
+                            }
+                            .border {
+                                border: 1px solid setting.$selectcolor;
+                                width: 20px;
+                                margin: 0 auto;
+                            }
+
+                        }
+
+                    }
+                    li:nth-child(1),li:nth-child(3),li:nth-child(5) {
+                        border-right: 1px solid #8080806e;
+                    }
+                    li:last-child {
+                        a {
+                            border-bottom: none;
+                        }
+                    }
+                    li:hover {
+                        border: 3px solid setting.$selectcolor;
+                        // background-color: setting.$selectcolor;
+                        transition: ease .3s ;
+                    }
+                }
+
+            }
+
+
+        }
+
+    }
+}
+
+
+
+#gnavwrap.off nav ul {
+    display: none;
+}
+
+// ボタンの設定
+#gnavwrap.on {
+    position: fixed;
+    right: 0;
+    top: 0;
+    // background-color: rgba(0, 0, 0, .5);
+    background-color: white;
+    width: 400px;
+    min-height: 100%;
+    // display: block;
+    z-index: 10;
+
+    // 押した時の変化
+    .one {
+        transform: rotate(45deg)translate(7px, 7px);
+        // background-color: white;
+        background-color: black;
+    }
+
+    .two {
+        opacity: 0;
+    }
+
+    .three {
+        transform: rotate(-45deg)translate(8px, -9px);
+        // background-color: white;
+        background-color: black;
+    }
+
+    nav {
+        z-index: 10;
+        // display: flex;
+    }
+
+    #mask {
+        transition-duration: .5s;
+        width: 100%;
+        height: 100%;
+        // background-color: rgba(0, 0, 0, .5);
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+    }
+}
+
+
+.footer {
+    .last_footer {
+        display: none;
+    }
+
+    .logo {
+        flex-direction: column;
+
+        h1 {
+            width: 100%;
+        }
+
+        .access {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .footer_list {
+        width: 95%;
+    }
+}
+
+.footer_last {
+    margin-bottom: 70px;
+}
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+    footer {
+        .pc_menu {
+            .pc_sub1 {
+                width: 90%;
+            }
+
+            .pc_sub2 {
+                width: 90%;
+                gap: 0;
+                grid-template-columns: repeat(1, 100%);
+
+                ul {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    margin-bottom: 30px;
+
+                    li:first-child {
+                        grid-column: 1/-1;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

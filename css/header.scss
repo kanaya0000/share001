@@ -1,0 +1,118 @@
+@use 'setting';
+// setting.$selectcolor: #51d0c9;
+// setting.$color: #454545;
+// setting.$width: 1200px;
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+    .header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            margin: 0;
+            height: 50%;
+            width: 250px;
+
+            a {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                color: setting.$color;
+                img {
+                    height: 50px;
+                    margin-right: 20px;
+                }
+            }
+
+        }
+
+        nav {
+            margin: 0 auto;
+            width: 100%;
+            height: 50%;
+            ul {
+                display: flex;
+                justify-content: space-around;
+                height: 100%;
+                li {
+                    width: 100%;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        font-size: 1rem;
+                        color: setting.$color;
+                        position: relative;
+                        overflow: hidden;
+                        .header_border {
+                            display: inline-block;
+                            position: absolute;
+                            width: 100%;
+                            height: 5px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: setting.$selectcolor;
+                            transform: translateX(-100%);
+                            transition: transform .3s;
+                        }
+                        .header_link {
+                            background-color: #51d0c97d;
+                            border: 1px solid setting.$selectcolor;
+                            border-radius: 20px;
+                            padding: 10px 25px;
+                            color: white;
+                        }
+                    }
+                    a:hover {
+                        .header_border {
+                            transform: none;
+                        }
+                        
+                    }
+                }
+                li:nth-child(6),
+                li:nth-child(7) {
+                    a:hover {
+                        span {
+                            background-color: setting.$selectcolor;
+                            color: white;
+                            border: 1px solid setting.$selectcolor;
+                            // transform: scaleX(1.2);
+                            transition: all .3s ease;
+                            letter-spacing: 3px;
+                        }
+                        
+                    }
+                    
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    header {
+        height: 50px;
+        .header {
+            h1 {
+                height: 100%;
+            }
+            nav {
+                display: none;
+            }
+        }
+    }
+}
