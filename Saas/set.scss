@@ -1,0 +1,41 @@
+$max-width: 1000px;
+// $color: rgb(31 221 147);
+$color: #0098db;
+$black: rgb(222 222 222 / 52%);
+// -1000px設定値
+$size1:2rem;
+$size2:1.5rem;
+$size3:1rem;
+// 1000-700px設定値
+$size4:1.5rem;
+$size5:1.2rem;
+$size6:1rem;
+// 700-設定値
+$size7:1.5rem;
+$size8:1.2rem;
+$size9:1rem;
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック";
+    main {
+        padding: 0 10px;        
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}

@@ -1,0 +1,138 @@
+@use 'set';
+
+
+#top_photo {
+    /*topphoto*/
+    position: relative;
+    padding-top: 0;
+
+    .photo {
+        margin: 0 auto;
+        width: 100%;
+        max-width: set.$max-width;
+        position: relative;
+
+        img {
+            width: 100%;
+            // max-width: set.$max-width;
+        }
+
+        ul {
+            // transform: translate(-50%);
+            // position: absolute;
+            // bottom: -25px;
+            // left: 50%;
+            margin: 0 auto;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            height: auto;
+            width: 95%;
+
+            li {
+                color: set.$color;
+                background-color: white;
+                // width: auto;
+                height: 100%;
+                border: 1px solid set.$color;
+                text-align: left;
+                // display: flex;
+                // justify-content: space-around;
+                // align-items: center;
+                padding: 0 10px;
+                // font-size: set.$size2;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                }
+
+                span {
+                    width: calc(100% - 30px);
+                }
+
+                .tax {
+                    font-size: .7rem;
+
+                }
+            }
+
+            li:nth-child(1) {
+                width: 500px;
+            }
+
+            li:nth-child(2) {
+                width: 650px;
+            }
+
+            li:nth-child(3) {
+                width: 800px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    main {
+        #top_photo {
+            .photo {
+                ul {
+
+                    width: 100%;
+
+                    li {
+                        font-size: 1.5rem;
+                        padding: 5px;
+                    }
+
+                    li:nth-child(1) {
+                        width: 450px;
+                    }
+
+                    li:nth-child(2) {
+                        width: 550px;
+                    }
+
+                    li:nth-child(3) {
+                        width: 630px;
+                    }
+
+                }
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    main {
+        #top_photo {
+            margin-bottom: 50px;
+
+            .photo {
+                ul {
+                    li {
+                        font-size: 1.3rem;
+                    }
+
+                    li:nth-child(1),
+                    li:nth-child(2),
+                    li:nth-child(3) {
+                        width: 95%;
+                        margin: 10px auto;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+}

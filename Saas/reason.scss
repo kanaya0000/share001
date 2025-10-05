@@ -1,0 +1,281 @@
+@use 'set';
+
+main {
+    #reason {
+        max-width: set.$max-width;
+        margin: 0 auto;
+        text-align: center;
+
+        .reason_setting {
+            p {
+                margin: 30px 0;
+                font-size: set.$size2;
+            }
+
+            .reason_detail {
+                display: grid;
+                grid-template-columns: repeat(4, 23%);
+                justify-content: space-around;
+                margin-bottom: 30px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    // aspect-ratio: 16 / 9; 
+                    // object-position: top;
+                }
+            }
+
+            .reason_text {
+                ul {
+                    li {
+                        div {
+                            position: relative;
+                            height: auto;
+                            // margin: 30px 0;
+
+                            span {
+                                position: absolute;
+                                top: -20px;
+                                left: 20px;
+                                background-color: set.$color;
+                                padding: 0 20px;
+                                color: white;
+                                height: 40px;
+                                z-index: 5;
+                                font-size: set.$size2;
+                            }
+
+                            .reason_title {
+                                font-size: set.$size2;
+                                // position: absolute;
+                                // top: 20px;
+                                // left: 0;
+                                margin: 0 auto;
+                                width: calc(100% - 34px);
+                                border: 5px solid rgb(222 222 222 / 81%);
+                                height: 60px;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                padding: 10px 12px;
+                            }
+                        }
+
+                        .reason_photo {
+                            // display: contents;
+                            // height: 200px;
+                            height: auto;
+                            .reason_photo_text {
+                                font-size: set.$size2;
+                                // margin: 10px 0;
+                            }
+                            .reason_photo_list {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+                                // height: 200px;
+                                margin-bottom: 30px;
+                                div {
+                                    width: 200px;
+                                    height: 100%;
+                                    // width: 100%;
+
+                                    img {
+                                        width: 90%;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        object-position: top;
+                                    }
+                                    .reason_name {
+                                        margin: 0;
+                                        height: 50px;
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                
+
+                            }
+                        }
+
+                        img {
+                            width: 300px;
+                            // aspect-ratio: 16 / 9; 
+                            // object-position: top;
+                        }
+
+                        .rsn_right {
+                            float: right;
+                            margin: 30px;
+                            object-fit: contain;
+                        }
+
+                        .rsn_left {
+                            float: left;
+                            margin: 30px;
+                        }
+
+                        .rsn_explanation {
+                            padding: 30px;
+                            line-height: 2rem;
+                            text-align: left;
+                            font-size: set.$size3;
+                        }
+                    }
+
+                    li:last-child {
+                        margin-bottom: 200px;
+                        img {
+                            object-fit: cover;
+                            aspect-ratio: 16 / 13; 
+                            object-position: top;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    main {
+        #reason {
+            .reason {
+                .reason_setting {
+                    p {
+                        font-size: set.$size5;
+                    }
+
+                    .reason_text {
+                        ul {
+                            li {
+                                margin-bottom: 100px;
+                                div {
+                                    margin-bottom: 10px;
+
+                                    span {
+                                        font-size: 1.2rem;
+                                        height: 35px;
+                                    }
+                                }
+
+                                img {
+                                    margin: 10px;
+                                    // width: 30%;
+                                    width: 150px;
+                                }
+
+                                .rsn_explanation {
+                                    margin: 20px 0;
+                                    padding: 0 20px;
+                                    // font-size: .9rem;
+                                    line-height: 1.8rem;
+                                }
+                                // 先生方のphoto
+                                .reason_photo {
+                                    // height: 450px;
+                                    .reason_photo_text {
+                                        font-size: set.$size5;
+                                    }
+                                    .reason_photo_list {
+                                        flex-wrap: wrap;
+                                        div {
+                                            .reason_name {
+                                                font-size: set.$size6;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    main {
+        #reason {
+            .reason {
+                .reason_setting {
+                    .reason_detail {
+                        grid-template-columns: repeat(2, 45%);
+                        gap: 10px;
+                        display: none;
+                    }
+
+                    .reason_text {
+                        ul {
+                            li {
+                                div {
+                                    span {
+                                        font-size: 1.2rem;
+                                        height: 30px;
+                                    }
+
+                                    .reason_title {
+                                        top: 15px;
+                                        // padding: 15px 0;
+                                        height: auto;
+                                        font-size: 1.2rem;
+                                    }
+                                }
+
+                                // img {
+                                //     width: 200px;
+                                // }
+                                .reason_photo {
+                                    height: auto;
+                                    .reason_photo_text {
+                                        font-size: set.$size8;
+                                    }
+                                    .reason_photo_list {
+                                        div {
+                                            width: 150px;
+                                            height: 125px;
+                                            img {
+                                                height: 100px;
+                                                margin: 0;
+                                            }
+                                            .reason_name {
+                                                height: 25px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// @media screen and (max-width:470px) {
+//     main {
+//         #reason {
+//             .reason {
+//                 .reason_setting {
+
+
+//                     .reason_text {
+//                         ul {
+//                             li {
+                                
+
+//                                 .reason_photo {
+//                                     height: 440px;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }

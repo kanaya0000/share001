@@ -1,0 +1,214 @@
+@use 'set';
+
+.page_top {
+    margin: 0;
+    width: 100%;
+    height: 5px;
+    background-color: set.$color;
+}
+
+header {
+    max-width: set.$max-width;
+    margin: 0 auto;
+    height: auto;
+
+    .top_h1 {
+        margin: 0;
+        height: 20px;
+        font-weight: normal;
+        font-size: .7rem;
+        color: gray;
+    }
+
+    .header_top {
+        height: 80px;
+        display: flex;
+        position: relative;
+
+        .logo {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            a {
+                display: inline-block;
+                width: 50%;
+                height: 100%;
+
+                h1 {
+                    height: 50px;
+                    margin: 15px 0;
+                    width: 100%;
+                    color: gray;
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .access {
+                width: 50%;
+                font-size: .8rem;
+                color: gray;
+
+                // margin-left: 10px;
+                div {
+                    width: 100%;
+                    margin: 10px 0;
+
+                    .address_1 {
+                        background-color: #80808070;
+                        padding: 3px;
+                    }
+                }
+            }
+        }
+
+        .notice {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            p {
+                margin: 0;
+                border: 1px solid set.$color;
+                text-align: center;
+                width: 100px;
+                color: set.$color;
+                font-weight: bold;
+            }
+        }
+
+        .inquiry {
+            position: absolute;
+            top: -20px;
+            right: 0;
+            width: 30%;
+            height: 100px;
+            // border: 1px solid set.$color;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: set.$color;
+            color: white;
+
+            p {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            p:nth-child(1) {
+                height: 30%;
+
+                span {
+                    background-color: white;
+                    color: black;
+                    padding: 5px;
+                    margin-left: 5px;
+                    font-size: .8rem;
+                }
+            }
+
+            p:nth-child(2) {
+                height: 20%;
+                font-size: .9rem;
+            }
+
+            p:nth-child(3) {
+                a {
+                    color: white;
+
+                    svg {
+                        height: 100%;
+                        margin: 0 5px;
+                    }
+                }
+
+                height: 50%;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .top {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    header {
+        margin: 0 30px;
+        .header_top {
+            .logo {
+                flex-direction: column;
+                width: 35%;
+                a {
+                    width: 100%;
+                    height: 50%;
+                    h1 {
+                        font-size: 1.5rem;
+                        margin: 0;
+                        height: 100%;
+                    }
+                }
+                
+
+                .access {
+                    width: auto;
+                    text-align: left;
+                    font-size: .6rem;
+                    div {
+                        margin: 5px 0;
+                    }
+                }
+            }
+            .inquiry {
+                width: 45%;
+            }
+                
+        }
+    }
+
+}
+
+@media screen and (max-width:700px) {
+header {
+    .top_h1 {
+        text-align: center;
+    }
+    margin: 0;
+    // margin-bottom: 30px;
+    width: 100%;
+    .header_top {
+        flex-wrap: wrap;
+        .logo {
+            width: 100%;
+            flex-direction: row;
+            align-items: flex-start;
+            a {
+                width: 50%;
+                height: 100%;
+            }
+            .access {
+                width: 50%;
+            }
+        }
+        .notice {
+            flex-direction: row;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: space-around;
+            background-color: set.$color;
+            p {
+                background-color: white;
+            }
+        }
+        .inquiry {
+            display: none;
+        }
+    }
+    
+}
+}

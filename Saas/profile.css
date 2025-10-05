@@ -1,0 +1,147 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック";
+}
+body main {
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+#profile .profile {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+#profile .profile .profile_setting .profile_detail {
+  width: 300px;
+  border: 1px solid rgba(128, 128, 128, 0.8588235294);
+  height: 650px;
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+#profile .profile .profile_setting .profile_detail img {
+  width: 100%;
+}
+#profile .profile .profile_setting .profile_detail .profile_text {
+  background-color: rgba(128, 128, 128, 0.8588235294);
+  color: white;
+}
+#profile .profile .profile_setting .profile_detail .profile_text p:nth-child(1) {
+  font-size: 1.3rem;
+}
+#profile .profile .profile_setting .profile_detail .profile_list {
+  background-color: rgba(128, 128, 128, 0.4784313725);
+  margin-top: 20px;
+}
+#profile .profile .profile_setting .profile_detail ul li::before {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: gray;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+#profile .profile .profile_setting .profile_detail ul li {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 10px 0 10px 10px;
+}
+#profile .profile .profile_setting .profile_detail ul li span {
+  width: 95%;
+}
+#profile .profile .profile_setting .profile1 {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: left;
+  color: #1c1c1c;
+}
+#profile .profile .profile_setting .profile1 .emphasis {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#profile .profile .profile_setting .profile1 .emphasis2 {
+  color: red;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+#profile .profile .profile2 {
+  font-weight: bold;
+  color: #0098db;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1000px) {
+  main #profile .profile .profile_setting {
+    display: block;
+    margin-bottom: 50px;
+  }
+  main #profile .profile .profile_setting .profile_detail {
+    width: 250px;
+  }
+  main #profile .profile .profile_setting .profile_detail .profile_text {
+    font-size: 1.3rem;
+  }
+  main #profile .profile .profile_setting .profile_detail ul {
+    font-size: 1.1rem;
+  }
+  main #profile .profile .profile_setting .profile1 {
+    width: 100%;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  main #profile .profile .profile_setting .profile1 .emphasis {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  main #profile .profile .profile_setting .profile1 .emphasis2 {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  main #profile .profile .profile2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #profile .profile .profile_setting .profile_detail {
+    width: 70%;
+    height: 100%;
+    max-width: 400px;
+    float: none;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+  main #profile .profile .profile_setting .profile1 {
+    width: 90%;
+    margin: 30px auto 0 auto;
+  }
+}/*# sourceMappingURL=profile.css.map */
