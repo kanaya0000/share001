@@ -26,6 +26,7 @@ main {
 
             .voice2 {
                 font-size: set.$size3;
+                margin-bottom: 20px;
             }
 
             .scroll-infinity {
@@ -45,7 +46,8 @@ main {
             .scroll-infinity__list {
                 display: flex;
                 list-style: none;
-                padding: 0
+                padding: 0;
+                margin: 0;
             }
 
             .scroll-infinity__list--left {
@@ -264,7 +266,6 @@ main {
                     .scroll-infinity__wrap {
                         .scroll-infinity__list {
                             height: 200px;
-
                             .scroll-infinity__item {
                                 width: 360px;
 

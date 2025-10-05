@@ -42,6 +42,7 @@ main #voice .voice .voice1 {
 }
 main #voice .voice .voice2 {
   font-size: 1rem;
+  margin-bottom: 20px;
 }
 main #voice .voice .scroll-infinity {
   height: 300px;
@@ -59,6 +60,7 @@ main #voice .voice .scroll-infinity__list {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 main #voice .voice .scroll-infinity__list--left {
   animation: infinity-scroll-left 30s infinite linear 0.5s both;
