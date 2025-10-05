@@ -48,6 +48,7 @@ header .header_top {
   height: 80px;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 header .header_top .logo {
   width: 50%;
@@ -137,73 +138,50 @@ header .header_top .inquiry p:nth-child(3) a svg {
   height: 100%;
   margin: 0 5px;
 }
-header .top {
-  display: none;
-}
-
-@media screen and (max-width: 1000px) {
-  header {
-    margin: 0 30px;
-  }
-  header .header_top .logo {
-    flex-direction: column;
-    width: 35%;
-  }
-  header .header_top .logo a {
-    width: 100%;
-    height: 50%;
-  }
-  header .header_top .logo a h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    height: 100%;
-  }
-  header .header_top .logo .access {
-    width: auto;
-    text-align: left;
-    font-size: 0.6rem;
-  }
-  header .header_top .logo .access div {
-    margin: 5px 0;
-  }
-  header .header_top .inquiry {
-    width: 45%;
-  }
-}
-@media screen and (max-width: 700px) {
-  header {
-    margin: 0;
-    width: 100%;
-  }
-  header .top_h1 {
-    text-align: center;
-  }
+@media screen and (max-width: 768px) {
   header .header_top {
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
   }
   header .header_top .logo {
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
   }
-  header .header_top .logo a {
-    width: 50%;
-    height: 100%;
+  header .header_top .logo a, header .header_top .logo .access {
+    width: 100%;
+    text-align: left;
+    padding: 0 10px;
   }
-  header .header_top .logo .access {
-    width: 50%;
+  header .header_top .logo a h1 {
+    font-size: 1.2rem;
+    text-align: left;
   }
   header .header_top .notice {
-    flex-direction: row;
     width: 100%;
-    margin: 0 auto;
-    justify-content: space-around;
-    background-color: #0098db;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 0;
   }
   header .header_top .notice p {
-    background-color: white;
+    margin: 0 5px;
+    font-size: 0.9rem;
   }
   header .header_top .inquiry {
-    display: none;
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding: 10px;
   }
-}/*# sourceMappingURL=header.css.map */
+  header .header_top .inquiry p:nth-child(1),
+  header .header_top .inquiry p:nth-child(2),
+  header .header_top .inquiry p:nth-child(3) {
+    height: auto;
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+  header .header_top .inquiry p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=dummy.css.map */

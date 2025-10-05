@@ -1,0 +1,119 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック";
+}
+body main {
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+main #check .check {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main #check .check .check1 {
+  font-size: 1.5rem;
+}
+main #check .check .check2 {
+  display: flex;
+  justify-content: space-around;
+}
+main #check .check .check2 ul {
+  width: 45%;
+  border: 1px solid gray;
+}
+main #check .check .check2 ul .title_set {
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 10px 0;
+  justify-content: center;
+}
+main #check .check .check2 ul .check_title1 {
+  background-color: gray;
+}
+main #check .check .check2 ul .check_title2 {
+  background-color: #0098db;
+}
+main #check .check .check2 ul li {
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: left;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+main #check .check .check2 ul li svg {
+  color: red;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+main #check .check .check3 {
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  main #check .check .check1 {
+    font-size: 1.2rem;
+  }
+  main #check .check .check2 {
+    flex-direction: column;
+  }
+  main #check .check .check2 ul {
+    width: 85%;
+    margin: 0 auto;
+  }
+  main #check .check .check2 ul .title_set {
+    font-size: 1.2rem;
+  }
+  main #check .check .check2 ul li {
+    font-size: 1rem;
+  }
+  main #check .check .check2 ul:nth-child(1) {
+    margin-bottom: 30px;
+  }
+  main #check .check .check3 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #check .check .check2 ul {
+    width: 100%;
+  }
+  main #check .check .check2 ul li {
+    padding-left: 10px;
+  }
+  main #check .check .check2 ul li svg {
+    width: 15px;
+    height: 15px;
+  }
+  main #check .check .check2 ul .title_set {
+    font-size: 1.2rem;
+  }
+  main #check .check .check3 {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=check.css.map */

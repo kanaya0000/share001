@@ -1,0 +1,83 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック";
+}
+body main {
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+main #guarantee .guarantee {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main #guarantee .guarantee .guarantee1 {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+main #guarantee .guarantee .guarantee2 {
+  display: flex;
+}
+main #guarantee .guarantee .guarantee2 img {
+  width: 30%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #guarantee .guarantee .guarantee2 p {
+  width: 70%;
+  padding: 20px;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 2rem;
+}
+main #guarantee .guarantee .guarantee2 p span {
+  background: linear-gradient(transparent 0%, yellow 0%);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  main #guarantee .guarantee .guarantee1 {
+    font-size: 1.2rem;
+  }
+  main #guarantee .guarantee .guarantee2 p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main #guarantee .guarantee .guarantee1 {
+    font-size: 1.2rem;
+  }
+  main #guarantee .guarantee .guarantee2 {
+    flex-direction: column;
+  }
+  main #guarantee .guarantee .guarantee2 img {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  main #guarantee .guarantee .guarantee2 p {
+    width: 100%;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=guarantee.css.map */
