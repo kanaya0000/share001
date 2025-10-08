@@ -1,0 +1,99 @@
+body main {
+  margin-top: 80px;
+}
+body main #top-photo {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3333333333%);
+}
+body main #top-photo .photo-list {
+  aspect-ratio: 1/1;
+}
+body main #top-photo .photo-list .photo-list-ul {
+  height: 100%;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li {
+  height: 100%;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 20px);
+  padding-left: 20px;
+  background-color: #1e7b3a;
+  color: #e8e4e3;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail {
+  margin-top: 30px;
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail p {
+  margin: 0;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail .sub-title {
+  font-size: 1.3rem;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail .title {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail .serch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail .serch li {
+  border: 1px solid #e8e4e3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .day {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  margin: 0;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .bi-box-arrow-up-right {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  color: #e8e4e3;
+}
+body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover:hover {
+  opacity: 1;
+  transition: all 0.5s;
+}
+body main #map map:hover {
+  background-color: red;
+}
+
+@media screen and (max-width: 1000px) {
+  body main #top-photo {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media screen and (max-width: 600px) {
+  body main #top-photo {
+    grid-template-columns: repeat(1, 100%);
+  }
+}/*# sourceMappingURL=style.css.map */

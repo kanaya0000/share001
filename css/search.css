@@ -1,0 +1,205 @@
+main #map {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  justify-content: space-around;
+}
+main #map .gifu-map, main #map .aichi-map {
+  display: flex;
+  justify-content: space-evenly;
+}
+main #map .gifu-map img, main #map .aichi-map img {
+  width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #map .gifu-map .gifu-list, main #map .gifu-map .aichi-list, main #map .aichi-map .gifu-list, main #map .aichi-map .aichi-list {
+  width: calc(100% - 400px);
+}
+main #map .gifu-map .gifu-list a .gifu-ul, main #map .gifu-map .aichi-list a .gifu-ul, main #map .aichi-map .gifu-list a .gifu-ul, main #map .aichi-map .aichi-list a .gifu-ul {
+  position: relative;
+  border-radius: 15px;
+  margin: 20px 0;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main #map .gifu-map .gifu-list a .gifu-ul .map-title, main #map .gifu-map .aichi-list a .gifu-ul .map-title, main #map .aichi-map .gifu-list a .gifu-ul .map-title, main #map .aichi-map .aichi-list a .gifu-ul .map-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  height: 40px;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  padding: 0 10px;
+}
+main #map .gifu-map .gifu-list a .gifu-ul .map-sub, main #map .gifu-map .aichi-list a .gifu-ul .map-sub, main #map .aichi-map .gifu-list a .gifu-ul .map-sub, main #map .aichi-map .aichi-list a .gifu-ul .map-sub {
+  list-style: disc;
+  margin-right: 30px;
+}
+main #map .gifu-map .gifu-list .tyuunou-main .gifu-ul, main #map .gifu-map .aichi-list .tyuunou-main .gifu-ul, main #map .aichi-map .gifu-list .tyuunou-main .gifu-ul, main #map .aichi-map .aichi-list .tyuunou-main .gifu-ul {
+  border: 1px solid orange;
+}
+main #map .gifu-map .gifu-list .tyuunou-main .gifu-ul .tyuunou, main #map .gifu-map .aichi-list .tyuunou-main .gifu-ul .tyuunou, main #map .aichi-map .gifu-list .tyuunou-main .gifu-ul .tyuunou, main #map .aichi-map .aichi-list .tyuunou-main .gifu-ul .tyuunou {
+  color: orange;
+}
+main #map .gifu-map .gifu-list .gifu-main .gifu-ul, main #map .gifu-map .aichi-list .gifu-main .gifu-ul, main #map .aichi-map .gifu-list .gifu-main .gifu-ul, main #map .aichi-map .aichi-list .gifu-main .gifu-ul {
+  border: 1px solid #2eff00;
+}
+main #map .gifu-map .gifu-list .gifu-main .gifu-ul .gifu, main #map .gifu-map .aichi-list .gifu-main .gifu-ul .gifu, main #map .aichi-map .gifu-list .gifu-main .gifu-ul .gifu, main #map .aichi-map .aichi-list .gifu-main .gifu-ul .gifu {
+  color: #2eff00;
+}
+main #map .gifu-map .gifu-list .seinou-main .gifu-ul, main #map .gifu-map .aichi-list .seinou-main .gifu-ul, main #map .aichi-map .gifu-list .seinou-main .gifu-ul, main #map .aichi-map .aichi-list .seinou-main .gifu-ul {
+  border: 1px solid #ffe100;
+}
+main #map .gifu-map .gifu-list .seinou-main .gifu-ul .seinou, main #map .gifu-map .aichi-list .seinou-main .gifu-ul .seinou, main #map .aichi-map .gifu-list .seinou-main .gifu-ul .seinou, main #map .aichi-map .aichi-list .seinou-main .gifu-ul .seinou {
+  color: #ffe100;
+}
+main #map .gifu-map .gifu-list .aichi-main .aichi-ul, main #map .gifu-map .aichi-list .aichi-main .aichi-ul, main #map .aichi-map .gifu-list .aichi-main .aichi-ul, main #map .aichi-map .aichi-list .aichi-main .aichi-ul {
+  border: 1px solid #ff0000;
+}
+main #map .gifu-map .gifu-list .aichi-main .aichi-ul .aichi-sub, main #map .gifu-map .aichi-list .aichi-main .aichi-ul .aichi-sub, main #map .aichi-map .gifu-list .aichi-main .aichi-ul .aichi-sub, main #map .aichi-map .aichi-list .aichi-main .aichi-ul .aichi-sub {
+  color: #ff0000;
+}
+main .gifu-shop-list,
+main .aichi-shop-list {
+  padding-top: 80px;
+}
+main .gifu-shop-list .title,
+main .aichi-shop-list .title {
+  text-align: center;
+}
+main .gifu-shop-list .region-list,
+main .aichi-shop-list .region-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+  justify-content: space-around;
+  justify-items: center;
+  gap: 20px;
+}
+main .gifu-shop-list .region-list .shop-list,
+main .aichi-shop-list .region-list .shop-list {
+  width: 95%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .gifu-shop-list .region-list .shop-list .sub-title,
+main .aichi-shop-list .region-list .shop-list .sub-title {
+  font-size: 1.5rem;
+}
+main .gifu-shop-list .region-list .shop-list h3,
+main .gifu-shop-list .region-list .shop-list p,
+main .aichi-shop-list .region-list .shop-list h3,
+main .aichi-shop-list .region-list .shop-list p {
+  margin: 0;
+}
+main .gifu-shop-list .region-list .shop-list img,
+main .aichi-shop-list .region-list .shop-list img {
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 12/7;
+}
+main .gifu-shop-list .region-list .shop-list .key-word,
+main .aichi-shop-list .region-list .shop-list .key-word {
+  display: flex;
+  gap: 10px;
+}
+main .gifu-shop-list .region-list .shop-list .key-word li,
+main .aichi-shop-list .region-list .shop-list .key-word li {
+  border-radius: 5px;
+  padding: 5px;
+}
+main .gifu-shop-list .region-list .shop-list .explanation,
+main .aichi-shop-list .region-list .shop-list .explanation {
+  color: gray;
+}
+main .gifu-shop-list .region-list .shop-list .detail-page,
+main .aichi-shop-list .region-list .shop-list .detail-page {
+  display: block;
+  height: 20px;
+  border-radius: 25px;
+  padding: 15px 85px;
+}
+main .gifu-shop-list .region-list .shop-list .detail-page:hover,
+main .aichi-shop-list .region-list .shop-list .detail-page:hover {
+  color: white;
+}
+main .gifu-shop-list .region-list .shop-list .detail-page::after,
+main .aichi-shop-list .region-list .shop-list .detail-page::after {
+  content: ">";
+  margin-left: 20px;
+}
+main #tyuunou .region-list .shop-list .key-word li {
+  color: orange;
+  border: 1px solid orange;
+}
+main #tyuunou .region-list .shop-list .detail-page {
+  border: 2px solid orange;
+  color: orange;
+}
+main #tyuunou .region-list .shop-list .detail-page:hover {
+  background-color: orange;
+  color: white;
+}
+main #gifu .region-list .shop-list .key-word li {
+  color: #2eff00;
+  border: 1px solid #2eff00;
+}
+main #gifu .region-list .shop-list .detail-page {
+  border: 2px solid #2eff00;
+  color: #2eff00;
+}
+main #gifu .region-list .shop-list .detail-page:hover {
+  background-color: #2eff00;
+  color: white;
+}
+main #seinou .region-list .shop-list .key-word li {
+  color: #ffe100;
+  border: 1px solid #ffe100;
+}
+main #seinou .region-list .shop-list .detail-page {
+  border: 2px solid #ffe100;
+  color: #ffe100;
+}
+main #seinou .region-list .shop-list .detail-page:hover {
+  background-color: #ffe100;
+  color: white;
+}
+main #aichi .region-list .shop-list .key-word li {
+  color: #3b4bff;
+  border: 1px solid #3b4bff;
+}
+main #aichi .region-list .shop-list .detail-page {
+  border: 2px solid #3b4bff;
+  color: #3b4bff;
+}
+main #aichi .region-list .shop-list .detail-page:hover {
+  background-color: #3b4bff;
+  color: white;
+}
+
+@media screen and (max-width: 650px) {
+  main #map {
+    grid-template-columns: repeat(1, 95%);
+  }
+  main #map .gifu-map, main #map .aichi-map {
+    flex-direction: column;
+    align-items: center;
+  }
+  main #map .gifu-map img, main #map .aichi-map img {
+    width: 80%;
+  }
+  main #map .gifu-map .gifu-list, main #map .gifu-map .aichi-list, main #map .aichi-map .gifu-list, main #map .aichi-map .aichi-list {
+    width: 80%;
+  }
+  main .gifu-shop-list .region-list, main .aichi-shop-list .region-list {
+    grid-template-columns: repeat(auto-fit, 95%);
+  }
+}/*# sourceMappingURL=search.css.map */

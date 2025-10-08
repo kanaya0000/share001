@@ -1,0 +1,299 @@
+$orange: orange;
+$green: #2eff00;
+$yellow: #ffe100;
+$blue: #3b4bff;
+$red:#ff0000;
+
+
+
+main {
+    #map {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px,1fr));
+        justify-content: space-around;
+
+        .gifu-map , .aichi-map {
+            display: flex;
+            justify-content: space-evenly;
+            img {
+                width: 300px;
+                object-fit: contain;
+            }
+
+            .gifu-list , .aichi-list {
+                // width: calc(90% - 400px);
+                width: calc(100% - 400px);
+                
+                a {
+                    .gifu-ul {
+                        position: relative;
+                        border-radius: 15px;
+                        margin: 20px 0;
+                        padding: 20px 30px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        .map-title {
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            position: absolute;
+                            height: 40px;
+                            top: -20px;
+                            left: 20px;
+                            background-color: white;
+                            padding: 0 10px;
+                        }
+
+                        .map-sub {
+                            list-style: disc;
+                            margin-right: 30px;
+                        }
+                    }
+                }
+
+                .tyuunou-main {
+                    .gifu-ul {
+                        border: 1px solid $orange;
+
+                        .tyuunou {
+                            color: $orange;
+                            // -webkit-text-stroke: .1px black;
+                        }
+                    }
+                }
+
+                .gifu-main {
+                    .gifu-ul {
+                        border: 1px solid $green;
+
+                        .gifu {
+                            color: $green;
+                            // -webkit-text-stroke: .1px black;
+                        }
+                    }
+                }
+
+                .seinou-main {
+                    .gifu-ul {
+                        border: 1px solid $yellow;
+
+                        .seinou {
+                            color: $yellow;
+                            // -webkit-text-stroke: .1px black;
+                        }
+                    }
+                }
+
+                .aichi-main {
+                    .aichi-ul {
+                        border: 1px solid $red;
+                        .aichi-sub {
+                            color: $red;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .gifu-shop-list,
+    .aichi-shop-list {
+        // margin-top: 80px;
+        padding-top: 80px;
+
+        .title {
+            text-align: center;
+
+        }
+
+        .region-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 400px);
+            justify-content: space-around;
+            justify-items: center;
+            gap: 20px;
+
+            .shop-list {
+                width: 95%;
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                // border: 1px solid black;
+                .sub-title {
+                    font-size: 1.5rem;
+                }
+
+                h3,
+                p {
+                    margin: 0;
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    aspect-ratio: 12/7;
+                }
+
+                .key-word {
+                    // background-color: $orange;
+                    display: flex;
+                    gap: 10px;
+
+                    li {
+                        // color: $orange;
+                        // border: 1px solid $orange;
+                        border-radius: 5px;
+                        padding: 5px;
+                    }
+                }
+
+                .explanation {
+                    color: gray;
+                }
+
+                .detail-page {
+                    display: block;
+                    height: 20px;
+                    // border: 2px solid $orange ;
+                    border-radius: 25px;
+                    padding: 15px 85px;
+                    // color: $orange;
+                }
+
+                .detail-page:hover {
+                    // background-color: $orange;
+                    color: white;
+                }
+
+                .detail-page::after {
+                    content: ">";
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    #tyuunou {
+        .region-list {
+            .shop-list {
+                .key-word {
+                    li {
+                        color: $orange;
+                        border: 1px solid $orange;
+                    }
+                }
+
+                .detail-page {
+                    border: 2px solid $orange ;
+                    color: $orange;
+                }
+
+                .detail-page:hover {
+                    background-color: $orange;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #gifu {
+        .region-list {
+            .shop-list {
+                .key-word {
+                    li {
+                        color: $green;
+                        border: 1px solid $green;
+                    }
+                }
+
+                .detail-page {
+                    border: 2px solid $green ;
+                    color: $green;
+                }
+
+                .detail-page:hover {
+                    background-color: $green;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #seinou {
+        .region-list {
+            .shop-list {
+                .key-word {
+                    li {
+                        color: $yellow;
+                        border: 1px solid $yellow;
+                    }
+                }
+
+                .detail-page {
+                    border: 2px solid $yellow;
+                    color: $yellow;
+                }
+
+                .detail-page:hover {
+                    background-color: $yellow;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #aichi {
+        .region-list {
+            .shop-list {
+                .key-word {
+                    li {
+                        color: $blue;
+                        border: 1px solid $blue;
+                    }
+                }
+
+                .detail-page {
+                    border: 2px solid $blue;
+                    color: $blue;
+                }
+
+                .detail-page:hover {
+                    background-color: $blue;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    main {
+        
+        #map {
+            grid-template-columns: repeat(1,95%);
+            .gifu-map , .aichi-map {
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: 80%;
+                }
+                .gifu-list , .aichi-list {
+                    width: 80%;
+                }
+            }
+        }
+        .gifu-shop-list , .aichi-shop-list {
+            .region-list {
+                grid-template-columns: repeat(auto-fit,95%);
+            }
+        }
+    }
+}

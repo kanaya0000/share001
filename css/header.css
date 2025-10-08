@@ -1,0 +1,170 @@
+header {
+  z-index: 100;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid gray;
+  background-color: white;
+}
+header .pc-header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+header .pc-header .pc-header-sub1 {
+  height: 100%;
+  width: 400px;
+  display: flex;
+}
+header .pc-header .pc-header-sub1 a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+header .pc-header .pc-header-sub1 a img {
+  height: 80%;
+}
+header .pc-header .pc-header-sub1 a .logo {
+  margin-right: 30px;
+  margin-left: 5px;
+}
+header .pc-header .pc-header-sub1 a .header-title {
+  font-size: 1.5rem;
+}
+header .pc-header .pc-header-sub2 {
+  width: calc(100% - 400px);
+}
+header .pc-header .pc-header-sub2 .pc-header-ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li {
+  line-height: 80px;
+  width: 80px;
+  text-align: center;
+}
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li .pc-header-a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li .pc-header-a:hover {
+  color: gray;
+}
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child {
+  margin-right: 20px;
+}
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child a svg {
+  width: 20px;
+  height: 20px;
+}
+header .phone-header {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  header .pc-header .pc-header-sub2 {
+    visibility: hidden;
+  }
+  header .phone-header {
+    visibility: visible;
+  }
+  header .phone-header #gnavwrap {
+    display: block;
+    z-index: 5;
+    transition: all 0.5s;
+    background-color: #5ecd7f;
+  }
+  header .phone-header #gnavwrap .toggle {
+    z-index: 100;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+  }
+  header .phone-header #gnavwrap .toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 8px auto;
+    transition-duration: 0.3s;
+  }
+  header .phone-header #gnavwrap .toggle .one {
+    margin-top: 13px;
+  }
+  header .phone-header #gnavwrap .phone-header-sub .phone-header-ul {
+    margin-top: 65px;
+    background-color: #00ca3c;
+  }
+  header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub1,
+  header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub2 {
+    height: 35px;
+  }
+  header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub1 .pc-header-a,
+  header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub2 .pc-header-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #e8e4e3;
+  }
+  header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub2 .pc-header-a svg {
+    height: 90%;
+  }
+  header .phone-header .off .phone-header-sub {
+    display: none;
+  }
+}
+#gnavwrap.off {
+  right: -250px;
+}
+
+#gnavwrap.on {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  width: 250px;
+  min-height: 100%;
+  z-index: 10;
+}
+#gnavwrap.on .toggle .one {
+  transform: rotate(45deg) translate(7px, 7px);
+  background-color: #e8e4e3;
+}
+#gnavwrap.on .toggle .two {
+  opacity: 0;
+}
+#gnavwrap.on .toggle .three {
+  transform: rotate(-45deg) translate(8px, -9px);
+  background-color: #e8e4e3;
+}
+
+@media screen and (max-width: 600px) {
+  header .pc-header .pc-header-sub1 {
+    width: calc(100% - 70px);
+  }
+  header .pc-header .pc-header-sub1 a .logo {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  header .pc-header .pc-header-sub1 a .header-title {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=header.css.map */

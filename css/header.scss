@@ -1,0 +1,234 @@
+@use 'set';
+
+header {
+    z-index: 100;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid gray;
+    background-color: white;
+
+    .pc-header {
+        height: 100%;
+        width: 100%;
+        // background-color: red;
+        display: flex;
+
+        .pc-header-sub1 {
+            height: 100%;
+            width: 400px;
+            display: flex;
+
+            a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 100%;
+
+                img {
+                    height: 80%;
+                }
+
+                .logo {
+                    margin-right: 30px;
+                    margin-left: 5px;
+                }
+
+                .header-title {
+                    font-size: 1.5rem;
+
+                }
+            }
+        }
+
+        .pc-header-sub2 {
+            width: calc(100% - 400px);
+
+            .pc-header-ul {
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+
+                .pc-header-li {
+                    line-height: 80px;
+                    width: 80px;
+                    text-align: center;
+
+                    .pc-header-a {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    .pc-header-a:hover {
+                        color: gray;
+                    }
+                }
+
+                .pc-header-li:last-child {
+                    margin-right: 20px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .phone-header {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    header {
+        .pc-header {
+            .pc-header-sub2 {
+                visibility: hidden;
+            }
+
+        }
+
+        .phone-header {
+            visibility: visible;
+
+            #gnavwrap {
+                display: block;
+                z-index: 5;
+                transition: all .5s;
+                background-color: #5ecd7f;
+
+                .toggle {
+                    z-index: 100;
+                    position: fixed;
+                    width: 50px;
+                    height: 50px;
+                    top: 15px;
+                    right: 10px;
+                    cursor: pointer;
+
+                    div {
+                        // ハンバーガーメニュー指定
+                        width: 30px;
+                        height: 3px;
+                        background-color: black;
+                        margin: 8px auto;
+                        transition-duration: 0.3s;
+                    }
+
+                    .one {
+                        margin-top: 13px;
+                    }
+                }
+
+                .phone-header-sub {
+                    .phone-header-ul {
+                        margin-top: 65px;
+                        background-color: #00ca3c;
+
+                        .phone-header-sub1,
+                        .phone-header-sub2 {
+                            height: 35px;
+
+                            .pc-header-a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                height: 100%;
+                                color: set.$gray;
+                            }
+                        }
+
+                        .phone-header-sub2 {
+                            .pc-header-a {
+                                svg {
+                                    height: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .off {
+                .phone-header-sub {
+                    display: none;
+                }
+
+            }
+        }
+
+    }
+}
+#gnavwrap.off {
+    right: -250px;
+}
+#gnavwrap.on {
+    position: fixed;
+    right: 0;
+    top: 0;
+    // background-color: rgba(0, 0, 0, .5);
+    background-color: white;
+    width: 250px;
+    min-height: 100%;
+    // display: block;
+    z-index: 10;
+
+    // 押した時の変化
+    .toggle {
+        .one {
+            transform: rotate(45deg)translate(7px, 7px);
+            background-color: set.$gray;
+            // background-color: black;
+        }
+
+        .two {
+            opacity: 0;
+        }
+
+        .three {
+            transform: rotate(-45deg)translate(8px, -9px);
+            background-color: set.$gray;
+            // background-color: black;
+        }
+    }
+
+
+
+}
+
+
+@media screen and (max-width:600px) {
+    header {
+        .pc-header {
+            .pc-header-sub1 {
+                width: calc(100% - 70px);
+                a {
+                    .logo {
+                        margin-right: 5px;
+                        margin-left: 5px;
+                    }
+                    .header-title {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
