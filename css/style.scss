@@ -131,6 +131,42 @@ body {
         main {
             #top-photo {
                 grid-template-columns: repeat(1,100%);
+                .photo-list {
+                    .photo-list-ul {
+                        .photo-list-li {
+                            .photo-list-li-a {
+                                .photo-list-li-a-hover {
+                                    opacity: 1;
+                                    padding: 0;
+                                    width: 100%;
+                                    background-color: transparent;
+                                    // position:relative;
+                                    .detail {
+                                        height: auto;
+                                        width: 100%;
+                                        margin: 0;
+                                        position: absolute;
+                                        bottom: 10px;
+                                        .sub-title {
+                                            background-color: #00000094;
+                                            color: white;
+                                            text-align: center;
+                                            height: 40px;
+                                            line-height: 40px;
+                                        }
+                                        .title , .serch {
+                                            display: none;
+                                        }
+                                    }
+                                    .day , svg {
+                                        display: none;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

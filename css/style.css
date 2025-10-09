@@ -96,4 +96,30 @@ body main #map map:hover {
   body main #top-photo {
     grid-template-columns: repeat(1, 100%);
   }
+  body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover {
+    opacity: 1;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+  }
+  body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail .sub-title {
+    background-color: rgba(0, 0, 0, 0.5803921569);
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+  body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail .title, body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .detail .serch {
+    display: none;
+  }
+  body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover .day, body main #top-photo .photo-list .photo-list-ul .photo-list-li .photo-list-li-a .photo-list-li-a-hover svg {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
