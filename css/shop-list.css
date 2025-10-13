@@ -1,0 +1,97 @@
+@charset "UTF-8";
+main .shop-list {
+  padding-top: 80px;
+}
+main .shop-list .sub-title {
+  color: #1e7b3a;
+  margin-left: 30px;
+}
+main .shop-list .title {
+  font-size: 3rem;
+  margin-left: 30px;
+}
+main .shop-list .shop-sub {
+  display: flex;
+}
+main .shop-list .shop-sub .photo,
+main .shop-list .shop-sub .text {
+  width: 50%;
+}
+main .shop-list .shop-sub .photo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+main .shop-list .shop-sub .photo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+}
+main .shop-list .shop-sub .text {
+  margin: 0 30px;
+}
+main .shop-list .shop-sub .text .main-text {
+  line-height: 2rem;
+}
+main .shop-list .shop-sub .text .shop-info .address::before {
+  content: "住所 : ";
+}
+main .shop-list .shop-sub .text .shop-info .regular-holiday::before {
+  content: "定休日 : ";
+}
+main .shop-list .shop-sub .text .shop-info .business-hours::before {
+  content: "営業時間 : ";
+}
+main .shop-list .shop-sub .text .shop-info .business-hours::after {
+  content: "※営業時間・営業日は状況により変更となる場合がございます。";
+  font-size: 0.7rem;
+  color: gray;
+  display: block;
+}
+main .shop-list .shop-sub .text .shop-info .parking::before {
+  content: "駐車場 : ";
+}
+main .shop-list .shop-sub .text a {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+main .shop-list .shop-sub .text a svg {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px;
+}
+main .shop-list .shop-sub .text a .insta {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  main .shop-list .shop-sub .photo {
+    grid-template-columns: 1fr;
+  }
+  main .shop-list .shop-sub .photo img {
+    aspect-ratio: 12/7;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .shop-list .title {
+    font-size: 2rem;
+  }
+  main .shop-list .shop-sub {
+    flex-direction: column;
+  }
+  main .shop-list .shop-sub .photo,
+  main .shop-list .shop-sub .text {
+    width: 100%;
+  }
+  main .shop-list .shop-sub .photo img,
+  main .shop-list .shop-sub .text img {
+    aspect-ratio: 12/7;
+  }
+  main .shop-list .shop-sub .text {
+    width: 90%;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=shop-list.css.map */
