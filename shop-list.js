@@ -95,8 +95,9 @@ div3.classList = 'photo';
 for (let k = 1; k < date[memory].detail_img + 1; k++) {
     const img = document.createElement('img');
     // img.src = img_path + '/img' + String(k).padStart(3, '0') + '.png';
-    console.log(img_path + '/img' + String(k).padStart(3, '0') + '.png')
-    img.src = img_path + '/img' + String(k).padStart(3, '0') + '.png';
+    // console.log(img_path + '/img' + String(k).padStart(3, '0') + '.png')
+    // img.src = img_path + '/img' + String(k).padStart(3, '0') + '.png';
+    img.src = img_path + '/img' + String(k).padStart(3, '0') + '.webp';
     div3.appendChild(img);
 }
 
