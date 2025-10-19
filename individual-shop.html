@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>地図から探す</title>
+    <title>岐阜-本巣市</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/footer.css">
-
+    <link rel="stylesheet" href="css/shop-list.css">
 </head>
 
 <body>
-
+    <!-- ver005 -->
     <header>
         <div class="pc-header">
             <div class="pc-header-sub1">
@@ -26,7 +25,7 @@
             <nav class="pc-header-sub2">
                 <ul class="pc-header-ul">
                     <li class="pc-header-li"><a class="pc-header-a" href="index.html">ホーム</a></li>
-                    <li class="pc-header-li"><a class="pc-header-a" href="#">探す</a></li>
+                    <li class="pc-header-li"><a class="pc-header-a" href="search.html">探す</a></li>
                     <li class="pc-header-li"><a class="pc-header-a" href="#">新着</a></li>
                     <li class="pc-header-li"><a class="pc-header-a" href="#">おすすめ</a></li>
                     <li class="pc-header-li"><a class="pc-header-a" href="#">
@@ -67,89 +66,9 @@
         </div>
     </header>
 
-    <main>
-        <section id="map">
-            <div class="gifu-map">
-                <img src="material/photo/map/original_map.png" alt="">
-                <div class="gifu-list">
-                    <a href="#tyuunou" class="tyuunou-main">
-                        <ul class="gifu-ul">
-                            <li class="map-title tyuunou">中濃エリア</li>
-                            <!-- <li class="map-sub">本巣市</li> -->
-                            <li class="map-sub">関市</li>
-                            <li class="map-sub">可児市</li>
-                            <li class="map-sub">美濃加茂市</li>
-                        </ul>
-                    </a>
-
-                    <a href="#gifu" class="gifu-main">
-                        <ul class="gifu-ul">
-                            <li class="map-title gifu">岐阜エリア</li>
-                            <li class="map-sub">安八町</li>
-                            <li class="map-sub">羽島市</li>
-                            <li class="map-sub">岐南町</li>
-                            <li class="map-sub">笠松町</li>
-                            <li class="map-sub">各務原市</li>
-                            <li class="map-sub">岐阜市</li>
-                            <li class="map-sub">本巣市</li>
-                            <li class="map-sub">瑞穂市</li>
-                        </ul>
-                    </a>
-
-                    <a href="#seinou" class="seinou-main">
-                        <ul class="gifu-ul">
-                            <li class="map-title seinou">西濃エリア</li>
-                            <li class="map-sub">大垣市</li>
-                            <li class="map-sub">養老町</li>
-                            <li class="map-sub">輪之内町</li>
-                            <li class="map-sub">池田町</li>
-                            <li class="map-sub">神戸町</li>
-                            <li class="map-sub">揖斐川町</li>
-                        </ul>
-                    </a>
-                </div>
-            </div>
-
-            <div class="aichi-map">
-                <img src="material/photo/map/aichi-map.png" alt="">
-            <div class="aichi-list">
-                <a href="#aichi" class="aichi-main">
-                    <ul class="gifu-ul aichi-ul">
-                        <li class="map-title aichi-sub">愛知北西エリア</li>
-                        <li class="map-sub">犬山市</li>
-                        <li class="map-sub">一宮市</li>
-                        <li class="map-sub">名古屋市</li>
-                    </ul>
-                </a>
-            </div>
-            </div>
-            
-        </section>
-
-        <section id="tyuunou" class="gifu-shop-list">
-            <div class="title">
-                <h2>岐阜. 中濃エリア</h2>
-            </div>
-            <div class="region-list" id="add_gifu_tyuunou"></div>
-        </section>
-        <section id="gifu" class="gifu-shop-list">
-            <div class="title">
-                <h2>岐阜. 岐阜エリア</h2>
-            </div>
-            <div class="region-list" id="add_gifu_gifu"></div>
-        </section>
-        <section id="seinou" class="gifu-shop-list">
-            <div class="title">
-                <h2>岐阜. 西濃エリア</h2>
-            </div>
-            <div class="region-list" id="add_gifu_seinou"></div>
-        </section>
-        <section id="aichi" class="aichi-shop-list">
-            <div class="title">
-                <h2>愛知エリア</h2>
-            </div>
-            <div class="region-list" id="add_aichi"></div>
-        </section>
+    <!-- ここに追記 -->
+    <main id="main">
+        
     </main>
 
     <footer>
@@ -161,8 +80,9 @@
 </body>
 
 <script src="hensuu-list.js"></script>
-<script src="serch.js"></script>
-<script src="add_file.js"></script>
 <script src="button.js"></script>
+<!-- <script src="serch.js"></script> -->
+<!-- <script src="add_file.js"></script> -->
+<script src="shop-list.js"></script>
 
 </html>
