@@ -3,6 +3,7 @@
 // console.log(localStorage.getItem('judge'));
 // console.log('id::' + sessionStorage.getItem('judge'));
 const memory = sessionStorage.getItem('judge');
+console.log('memory::' + memory);
 document.title = date[memory].place;
 
 const no = sessionStorage.getItem('file'); //stpre　ファイル名で使用

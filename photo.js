@@ -1,77 +1,17 @@
-const date = [
-    {
-        link: '#',
-        photo: 'material/photo/store/shop01.png',
-        sub_title: '本格派の一杯',
-        title: '麺処 一心',
-        serch: ['濃厚豚骨スープ', '替え玉無料サービスあり', 'サラリーマンに人気', 'カウンター席中心でお一人でも安心','夜遅くまで営業'],
-        day: '2025年9月20日'
-    },
+//変数ファイルより抜粋する変数番号
+const pickup_date = [1,3,5,7,9,11,13];
 
-    {
-        link: '#',
-        photo: 'material/photo/store/shop02.png',
-        sub_title: 'あっさり系好きにおすすめ',
-        title: 'らーめん 華',
-        serch: ['透き通った塩スープ', '女性に人気のおしゃれな内装', '小盛から大盛までサイズ選択可能', '学生割引あり','駅から徒歩5分'],
-        day: '2025年9月22日'
-    },
-        {
-        link: '#',
-        photo: 'material/photo/store/shop03.png',
-        sub_title: '昔ながらの味',
-        title: '中華そば 松風',
-        serch: ['醤油ベースのスープ', '地元の常連客が多い', 'ライスとの相性抜群', '家族連れでも入りやすい','昭和レトロな雰囲気'],
-        day: '2025年9月24日'
-    },
-        {
-        link: '#',
-        photo: 'material/photo/store/shop04.png',
-        sub_title: '辛党必見！',
-        title: '激辛ラーメン 赤炎',
-        serch: ['激辛味噌スープが名物', '辛さを5段階から選べる', '若者に人気', 'トッピングが豊富','夜中2時まで営業'],
-        day: '2025年9月26日'
-    },
-        {
-        link: '#',
-        photo: 'material/photo/store/shop05.png',
-        sub_title: '落ち着いたひととき',
-        title: 'Cafe Lumière',
-        serch: ['木目調のおしゃれな店内', '一人でも過ごしやすい', 'スペシャルティコーヒー使用', 'Wi-Fi・電源完備','モーニングセットあり'],
-        day: '2025年9月20日'
-    },
-        {
-        link: '#',
-        photo: 'material/photo/store/shop06.png',
-        sub_title: 'ランチも人気',
-        title: 'Café Verde',
-        serch: ['サンドイッチやパスタが充実', '女性に人気', '緑が多くリラックスできる空間', 'サラリーマンのランチ利用多し','デザートメニューも豊富'],
-        day: '2025年9月22日'
-    },
-        {
-        link: '#',
-        photo: 'material/photo/store/shop07.png',
-        sub_title: 'スイーツ好き必見',
-        title: 'Patisserie & Café Fleur',
-        serch: ['ケーキが絶品', 'ティータイムにおすすめ', 'おしゃれなインテリア', 'カップルや友人同士に人気','季節限定メニューあり'],
-        day: '2025年9月24日'
-    },
-        {
-        link: '#',
-        photo: 'material/photo/store/shop08.png',
-        sub_title: '隠れ家的カフェ',
-        title: 'Coffee Stand OASIS',
-        serch: ['小さなカウンター席中心', 'テイクアウト対応', 'コーヒー豆の焙煎にこだわり', '夜はバーとして営業'],
-        day: '2025年9月26日'
-    },
-];
-
+const excerpt_file=[];
+for(let i=0;i<pickup_date.length;i++) {
+    excerpt_file.push(date[pickup_date[i]]);
+}
+// console.log(excerpt_file);
 // console.log(date[1].serch[1]);
 
 const section = document.getElementById('top-photo');
 const start_text = '<ul class="photo-list-ul"><li class="photo-list-li">';
 
-for (let i = 0; i < date.length; i++) {
+for (let i = 0; i < pickup_date.length; i++) {
     const div = document.createElement('div');
     div.classList = 'photo-list';
 
@@ -83,10 +23,13 @@ for (let i = 0; i < date.length; i++) {
 
     const a = document.createElement('a');
     a.classList = 'photo-list-li-a';
-    a.href = date[i].link;
+    a.classList.add(date[i].text_count);
+    // a.href = date[i].link;
+    a.href = 'individual-shop.html';
 
     const img = document.createElement('img');
-    img.src = date[i].photo;
+    // img.src = date[i].photo;
+    img.src = excerpt_file[i].img;
 
     const div2 = document.createElement('div');
     div2.classList = 'photo-list-li-a-hover';
@@ -96,15 +39,18 @@ for (let i = 0; i < date.length; i++) {
 
     const p = document.createElement('p')
     p.classList = 'sub-title';
-    p.innerHTML = date[i].sub_title;
+    p.innerHTML = excerpt_file[i].comment;
 
     const h2 = document.createElement('h2');
     h2.classList = 'title';
-    h2.innerHTML = date[i].title;
+    h2.innerHTML = excerpt_file[i].name;
 
     let li2 = ''
-    for (let j = 0; j < date[i].serch.length; j++) {
-        li2 = li2 + '<li>' + date[i].serch[j] + '</li>'
+    // for (let j = 0; j < date[i].serch.length; j++) {
+    //     li2 = li2 + '<li>' + date[i].serch[j] + '</li>'
+    // }
+    for (let j = 0; j < excerpt_file[i].key.length; j++) {
+        li2 = li2 + '<li>' + excerpt_file[i].key[j] + '</li>'
     }
 
     const ul2 = document.createElement('ul');
@@ -113,7 +59,7 @@ for (let i = 0; i < date.length; i++) {
 
     const p2 = document.createElement('p');
     p2.classList = 'day';
-    p2.innerHTML = date[i].day;
+    p2.innerHTML = excerpt_file[i].day;
 
     // const img2=document.createElement('img');
     // img2.classList='link-photo';
@@ -129,7 +75,7 @@ for (let i = 0; i < date.length; i++) {
     svg.innerHTML = '<path fill-rule="evenodd"d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />'
         + '<path fill-rule="evenodd"d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />';
 
-console.log(svg.namespaceURI);
+// console.log(svg.namespaceURI);
     ul1.appendChild(li1);
     li1.appendChild(a);
     a.appendChild(img);
@@ -147,6 +93,39 @@ console.log(svg.namespaceURI);
 
 
     section.appendChild(div);
-    console.log(div);
+    // console.log(div);
 }
 
+//クリックした際の引き渡し
+const button=document.querySelectorAll('.photo-list-li-a');
+button.forEach((btn,index) => {
+    btn.addEventListener('click',()=> {
+        console.log(`${index}番目の要素がクリック`);
+        //クリックの要素と最初に選定したリストを照らし合わせる
+        const change=pickup_date[index];
+
+
+        // console.log(btn.classList[1] || ' ');
+        // console.log(btn.classList[1]);
+        // window.hand_over=btn.classList[1];
+        // window.hand='hello!';
+        // const hand_over=btn.classList[1];
+        // const file_no=btn.classList[2];
+
+
+        // console.log('file_no::' + file_no);
+
+        // console.log('fileno' + file_no);
+        // console.log('file' + file_no);
+        // localStorage.setItem('judge',hand_over);
+        //idの受け渡し
+        console.log(index);
+        //タイトルに使用するファイル番号
+        sessionStorage.setItem('judge',change); //sessionはブラウザを閉じると自動で消去される
+        //地区ごとのファイルNo.受け渡し
+        sessionStorage.setItem('file',date[change].text_count); //ファイル名に使用
+    });
+});
+
+
+//順番ずれてるっぽい

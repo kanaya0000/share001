@@ -1,13 +1,13 @@
 
-let tyuunou_list = [];
-let gifu_list = [];
-let seinou_list = [];
-let aichi_list = [];
-let tyuunou_count = 1;
-let gifu_count = 1;
-let seinou_count = 1;
-let aichi_count = 1;
-let all_count = 0;
+// let tyuunou_list = [];
+// let gifu_list = [];
+// let seinou_list = [];
+// let aichi_list = [];
+// let tyuunou_count = 1;
+// let gifu_count = 1;
+// let seinou_count = 1;
+// let aichi_count = 1;
+// let all_count = 0;
 
 
 
@@ -16,59 +16,59 @@ let all_count = 0;
 // let index='';
 
 
-const list_name = ['gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
-const list = [];
-for (let j = 0; j < list_name.length; j++) {
-    list.push({
-        name: list_name[j],
-        count: 0
-    })
-}
+// const list_name = ['gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
+// const list = [];
+// for (let j = 0; j < list_name.length; j++) {
+//     list.push({
+//         name: list_name[j],
+//         count: 0
+//     })
+// }
 
-console.log(list);
+// console.log(list);
 
 // 中濃、岐阜、西濃、愛知で分類分け
-for (let i = 0; i < date.length; i++) {
-    if (date[i].type == 'tyuunou') {
-        tyuunou_list.push(i);
-        // 個別ファイルと一覧のお店を判定するためにid追記
-        date[i].count = tyuunou_count;
-        tyuunou_count = tyuunou_count + 1;
-        date[i].id = all_count;
-        all_count = all_count + 1;
-    } else if (date[i].type == 'gifu') {
-        gifu_list.push(i);
-        // date[i].count=gifu_count;
-        // gifu_count=gifu_count + 1;
-        date[i].id = all_count;
-        all_count = all_count + 1;
+// for (let i = 0; i < date.length; i++) {
+//     if (date[i].type == 'tyuunou') {
+//         tyuunou_list.push(i);
+//         // 個別ファイルと一覧のお店を判定するためにid追記
+//         date[i].count = tyuunou_count;
+//         tyuunou_count = tyuunou_count + 1;
+//         date[i].id = all_count;
+//         all_count = all_count + 1;
+//     } else if (date[i].type == 'gifu') {
+//         gifu_list.push(i);
+//         // date[i].count=gifu_count;
+//         // gifu_count=gifu_count + 1;
+//         date[i].id = all_count;
+//         all_count = all_count + 1;
 
-    } else if (date[i].type == 'seinou') {
-        seinou_list.push(i);
-        date[i].count = seinou_count;
-        seinou_count = seinou_count + 1;
-        date[i].id = all_count;
-        all_count = all_count + 1;
-    } else {
-        aichi_list.push(i);
-        date[i].count = aichi_count;
-        aichi_count = aichi_count + 1;
-        date[i].id = all_count;
-        all_count = all_count + 1;
-    }
-    // date[i].file_count='';
+//     } else if (date[i].type == 'seinou') {
+//         seinou_list.push(i);
+//         date[i].count = seinou_count;
+//         seinou_count = seinou_count + 1;
+//         date[i].id = all_count;
+//         all_count = all_count + 1;
+//     } else {
+//         aichi_list.push(i);
+//         date[i].count = aichi_count;
+//         aichi_count = aichi_count + 1;
+//         date[i].id = all_count;
+//         all_count = all_count + 1;
+//     }
+    // // date[i].file_count='';
 
-    outer:
-    for (let j = 0; j < list.length; j++) {
-        for (let k = 0; k < list.length; k++) {
-            if (date[i].key_list[0] == list[k].name) {
-                list[k].count+=1;
-                date[i].text_count=list[k].count; //text_count追記
-                break outer;
-            }
-        }
-    }
-    console.log(date);
+    // outer:
+    // for (let j = 0; j < list.length; j++) {
+    //     for (let k = 0; k < list.length; k++) {
+    //         if (date[i].key_list[0] == list[k].name) {
+    //             list[k].count += 1;
+    //             date[i].text_count = list[k].count; //text_count追記
+    //             break outer;
+    //         }
+    //     }
+    // }
+    // console.log(date);
 
     // date.forEach(d => {
     //     list.forEach(l => {
@@ -81,7 +81,7 @@ for (let i = 0; i < date.length; i++) {
 
 
     // console.log(date.map(d => d.text_count));
-}
+// }
 
 console.log('count:::' + date[1]);
 
@@ -135,13 +135,14 @@ function setting(arealist, section) {
         a.classList.add('detail-page');
         a.classList.add(shopdate.id);
         a.classList.add(shopdate.text_count);
-        console.log('classname::' + a.className);
+        a.href='individual-shop.html';
+        // console.log('classname::' + a.className);
         const text = shopdate.key_list[0] + '_count';
         // console.log('text::' +text);
 
         a.classList.add(shopdate.text);
 
-        a.href = shopdate.link;
+        // a.href = shopdate.link;
         // a.target = "_blank";
         a.textContent = '記事を読む';
 
