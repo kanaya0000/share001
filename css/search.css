@@ -12,6 +12,7 @@ main #map .gifu-map img, main #map .aichi-map img {
   width: 300px;
   -o-object-fit: contain;
      object-fit: contain;
+  display: none;
 }
 main #map .gifu-map .gifu-list, main #map .gifu-map .aichi-list, main #map .aichi-map .gifu-list, main #map .aichi-map .aichi-list {
   width: calc(100% - 400px);
@@ -24,6 +25,7 @@ main #map .gifu-map .gifu-list a .gifu-ul, main #map .gifu-map .aichi-list a .gi
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: 30px;
 }
 main #map .gifu-map .gifu-list a .gifu-ul .map-title, main #map .gifu-map .aichi-list a .gifu-ul .map-title, main #map .aichi-map .gifu-list a .gifu-ul .map-title, main #map .aichi-map .aichi-list a .gifu-ul .map-title {
   font-size: 1.5rem;
@@ -38,6 +40,35 @@ main #map .gifu-map .gifu-list a .gifu-ul .map-title, main #map .gifu-map .aichi
 main #map .gifu-map .gifu-list a .gifu-ul .map-sub, main #map .gifu-map .aichi-list a .gifu-ul .map-sub, main #map .aichi-map .gifu-list a .gifu-ul .map-sub, main #map .aichi-map .aichi-list a .gifu-ul .map-sub {
   list-style: disc;
   margin-right: 30px;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li label, main #map .gifu-map .aichi-list a .gifu-ul li label, main #map .aichi-map .gifu-list a .gifu-ul li label, main #map .aichi-map .aichi-list a .gifu-ul li label {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li label input, main #map .gifu-map .aichi-list a .gifu-ul li label input, main #map .aichi-map .gifu-list a .gifu-ul li label input, main #map .aichi-map .aichi-list a .gifu-ul li label input {
+  display: none;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li label input:checked, main #map .gifu-map .aichi-list a .gifu-ul li label input:checked, main #map .aichi-map .gifu-list a .gifu-ul li label input:checked, main #map .aichi-map .aichi-list a .gifu-ul li label input:checked {
+  color: red;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li label:has(input:checked), main #map .gifu-map .aichi-list a .gifu-ul li label:has(input:checked), main #map .aichi-map .gifu-list a .gifu-ul li label:has(input:checked), main #map .aichi-map .aichi-list a .gifu-ul li label:has(input:checked) {
+  color: white;
+  background-color: black;
+  border: white;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li .tyuunou-label:has(input:checked), main #map .gifu-map .aichi-list a .gifu-ul li .tyuunou-label:has(input:checked), main #map .aichi-map .gifu-list a .gifu-ul li .tyuunou-label:has(input:checked), main #map .aichi-map .aichi-list a .gifu-ul li .tyuunou-label:has(input:checked) {
+  background-color: orange;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li .gifu-label:has(input:checked), main #map .gifu-map .aichi-list a .gifu-ul li .gifu-label:has(input:checked), main #map .aichi-map .gifu-list a .gifu-ul li .gifu-label:has(input:checked), main #map .aichi-map .aichi-list a .gifu-ul li .gifu-label:has(input:checked) {
+  background-color: #2eff00;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li .seinou-label:has(input:checked), main #map .gifu-map .aichi-list a .gifu-ul li .seinou-label:has(input:checked), main #map .aichi-map .gifu-list a .gifu-ul li .seinou-label:has(input:checked), main #map .aichi-map .aichi-list a .gifu-ul li .seinou-label:has(input:checked) {
+  background-color: #ffe100;
+}
+main #map .gifu-map .gifu-list a .gifu-ul li .aichi-label:has(input:checked), main #map .gifu-map .aichi-list a .gifu-ul li .aichi-label:has(input:checked), main #map .aichi-map .gifu-list a .gifu-ul li .aichi-label:has(input:checked), main #map .aichi-map .aichi-list a .gifu-ul li .aichi-label:has(input:checked) {
+  background-color: #ff0000;
 }
 main #map .gifu-map .gifu-list .tyuunou-main .gifu-ul, main #map .gifu-map .aichi-list .tyuunou-main .gifu-ul, main #map .aichi-map .gifu-list .tyuunou-main .gifu-ul, main #map .aichi-map .aichi-list .tyuunou-main .gifu-ul {
   border: 1px solid orange;
@@ -59,6 +90,7 @@ main #map .gifu-map .gifu-list .seinou-main .gifu-ul .seinou, main #map .gifu-ma
 }
 main #map .gifu-map .gifu-list .aichi-main .aichi-ul, main #map .gifu-map .aichi-list .aichi-main .aichi-ul, main #map .aichi-map .gifu-list .aichi-main .aichi-ul, main #map .aichi-map .aichi-list .aichi-main .aichi-ul {
   border: 1px solid #ff0000;
+  row-gap: 30px;
 }
 main #map .gifu-map .gifu-list .aichi-main .aichi-ul .aichi-sub, main #map .gifu-map .aichi-list .aichi-main .aichi-ul .aichi-sub, main #map .aichi-map .gifu-list .aichi-main .aichi-ul .aichi-sub, main #map .aichi-map .aichi-list .aichi-main .aichi-ul .aichi-sub {
   color: #ff0000;
@@ -148,15 +180,15 @@ main #tyuunou .region-list .shop-list .detail-page:hover {
   background-color: orange;
   color: white;
 }
-main #gifu .region-list .shop-list .key-word li {
+main #gifusi .region-list .shop-list .key-word li {
   color: #2eff00;
   border: 1px solid #2eff00;
 }
-main #gifu .region-list .shop-list .detail-page {
+main #gifusi .region-list .shop-list .detail-page {
   border: 2px solid #2eff00;
   color: #2eff00;
 }
-main #gifu .region-list .shop-list .detail-page:hover {
+main #gifusi .region-list .shop-list .detail-page:hover {
   background-color: #2eff00;
   color: white;
 }

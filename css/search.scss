@@ -19,6 +19,7 @@ main {
             img {
                 width: 300px;
                 object-fit: contain;
+                display: none;
             }
 
             .gifu-list , .aichi-list {
@@ -34,6 +35,7 @@ main {
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
+                        row-gap: 30px;
                         .map-title {
                             font-size: 1.5rem;
                             font-weight: bold;
@@ -48,6 +50,39 @@ main {
                         .map-sub {
                             list-style: disc;
                             margin-right: 30px;
+                        }
+                        //labelの設定
+                        li {
+                            label {
+                                padding: 10px;
+                                margin: 5px;
+                                border: 1px solid black;
+                                border-radius: 5px;
+                                input {
+                                    display: none;
+                                }
+                                input:checked  {
+                                    color: red;
+                                }
+                            }
+                            // input[type='radio']:checked + label ,
+                            label:has(input:checked) {
+                                color: white;
+                                background-color: black;
+                                border: white;
+                            }
+                            .tyuunou-label:has(input:checked) {
+                                background-color: $orange;
+                            }
+                            .gifu-label:has(input:checked) {
+                                background-color: $green;
+                            }
+                            .seinou-label:has(input:checked) {
+                                background-color: $yellow;
+                            }
+                            .aichi-label:has(input:checked) {
+                                background-color: $red;
+                            }
                         }
                     }
                 }
@@ -88,6 +123,7 @@ main {
                 .aichi-main {
                     .aichi-ul {
                         border: 1px solid $red;
+                        row-gap: 30px;
                         .aichi-sub {
                             color: $red;
                         }
@@ -203,7 +239,7 @@ main {
         }
     }
 
-    #gifu {
+    #gifusi {
         .region-list {
             .shop-list {
                 .key-word {
