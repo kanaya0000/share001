@@ -93,7 +93,156 @@ header {
     .phone-header {
         visibility: hidden;
     }
+
+    #soat-btn {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+
+        .on-img,
+        .off-img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #soat-menu {
+            div {
+                width: 95%;
+                margin: 0 auto;
+            }
+            .soat-header {
+                text-align: right;
+
+                .soat-title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+
+                .soat-header-label {
+                    padding: 10px;
+                    margin: 5px;
+                    border: 1px solid black;
+                    border-radius: 5px;
+
+                    input {
+                        display: none;
+                    }
+
+                    input:checked {
+                        color: red;
+                    }
+                }
+
+                label:has(input:checked) {
+                    color: white;
+                    background-color: black;
+                    border: white;
+                }
+            }
+            .soat-type {
+                // text-align: center;
+                font-size: 1.5rem;
+                width: auto;
+                height: 45px;
+                margin: 0 auto;
+                display: table;
+                position: relative;
+                line-height: 45px;
+            }
+            .soat-type::before {
+                content: "";
+                position: absolute;
+                height: 45px;
+                width: 5px;
+                background-color:#004aff;
+                left: -20px;
+            }
+
+            .soat-tyuunou,
+            .soat-gifu,
+            .soat-seinou,
+            .soat-aichi {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .map-title {
+                        width: 100%;
+                        font-weight: bolder;
+                        font-size: 1.3rem;
+                    }
+
+                    li {
+                        height: 45px;
+
+                        label {
+                            padding: 10px;
+                            margin: 5px;
+                            border: 1px solid black;
+                            border-radius: 5px;
+
+                            input {
+                                display: none;
+                            }
+
+                            input:checked {
+                                color: red;
+                            }
+                        }
+
+                        label:has(input:checked) {
+                            color: white;
+                            background-color: orange;
+                            border: white;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    #soat-btn.off {
+        .off-img {
+            display: none;
+        }
+
+        #soat-menu {
+            display: none;
+        }
+    }
+
+    #soat-btn.on {
+        .on-img {
+            display: none;
+        }
+
+        .off-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+        }
+
+        #soat-menu {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: white;
+        }
+    }
 }
+
+
 
 @media screen and (max-width:1000px) {
     header {
@@ -176,9 +325,11 @@ header {
 
     }
 }
+
 #gnavwrap.off {
     right: -250px;
 }
+
 #gnavwrap.on {
     position: fixed;
     right: 0;
@@ -219,11 +370,13 @@ header {
         .pc-header {
             .pc-header-sub1 {
                 width: calc(100% - 70px);
+
                 a {
                     .logo {
                         margin-right: 5px;
                         margin-left: 5px;
                     }
+
                     .header-title {
                         font-size: 1.2rem;
                     }
