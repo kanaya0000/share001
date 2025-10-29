@@ -323,6 +323,25 @@ const date = [
         detail_map: 'https://maps.app.goo.gl/7QyMewxRAkZrLmrw9',
         day:'2025/10/1',
     },
+    {
+        type: 'aichi',
+        key_list: ['itinomiya', 'breakfast', 'alcohol'],
+        name: "BEN'S MORNING CAFE",
+        img: 'material/photo/list/019_itinomiya/store002/img001.webp',
+        key: ['朝食', 'お酒'],
+        place: '一宮市',
+        comment: '10種類以上のモーニングと国産小麦のドーナツが楽しめるオシャレで人気のカフェ!',
+        detail_img: 4,
+        detail_text: 'お店の紹介文',
+        detail_address: '住所の記載',
+        detail_holiday: '定休日の記載',
+        detail_hours: '営業時間の記載',
+        detail_parking: '駐車場の有無',
+        detail_url_shop: 'https://www.instagram.com/bens_morning_cafe?igsh=MTUxcXhpbDhjdTQwdQ==',
+        detail_url_link: 'https://www.instagram.com/reel/DQP5--CE2HD/?igsh=MWYyZDEwMjN3Y3J3Zw==',
+        detail_map: 'https://maps.app.goo.gl/kncLXTNcxCAHxj3N8',
+        day:'2025/10/1',
+    },
     
 ];
 

@@ -68,18 +68,12 @@
 
 
         <div id="soat-btn" class="off">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-filter-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                <path
-                    d="M7 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5" />
-            </svg> -->
             <img class="on-img" src="material/icon/filter.svg" alt="絞り込みボタン">
             <img class="off-img" src="material/icon/close.svg" alt="閉じるボタン">
             <div id="soat-menu">
                 <div class="soat-header">
-                    <!-- <img id="soat-arrow" class="on" src="material/icon/arrow-left.svg" alt="左矢印"> -->
                     <p class="soat-title">検索条件</p>
-                    <label class="soat-header-label"><input type="radio" name="name" value="全て" id="all_check" checked>リセット</label>
+                    <label class="soat-header-label"><input class="soat-btn" type="radio" name="name" value="all_check" id="all_check" checked>リセット</label>
                 </div>
                 <p class="soat-type">
                     場所から検索
@@ -87,13 +81,13 @@
                 <div class="soat-tyuunou">
                     <ul>
                         <li class="map-title tyuunou">中濃エリア</li>
-                        <li><label class="tyuunou-label"><input type="radio" name="name" value="seki"
+                        <li><label class="tyuunou-label"><input class="soat-btn" type="radio" name="name" value="seki"
                                     id="seki">関市</label>
                         </li>
-                        <li><label class="tyuunou-label"><input type="radio" name="name" value="kani"
+                        <li><label class="tyuunou-label"><input class="soat-btn" type="radio" name="name" value="kani"
                                     id="kani">可児市</label>
                         </li>
-                        <li><label class="tyuunou-label"><input type="radio" name="name" value="minokamo"
+                        <li><label class="tyuunou-label"><input class="soat-btn" type="radio" name="name" value="minokamo"
                                     id="minokamo">美濃加茂市</label></li>
                     </ul>
 
@@ -101,24 +95,24 @@
                 <div class="soat-gifu">
                     <ul>
                         <li class="map-title gifu">岐阜エリア</li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="anpachi"
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="anpachi"
                                     id="anpachi">安八町</label></li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="hasima"
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="hasima"
                                     id="hasima">羽島市</label>
                         </li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="ginan"
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="ginan"
                                     id="ginan">岐南町</label>
                         </li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="kasamatu"
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="kasamatu"
                                     id="kasamatu">笠松町</label></li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="kagamihara"
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="kagamihara"
                                     id="kagamihara">各務原市</label></li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="gifu" id="gifu">岐阜市</label>
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="gifu" id="gifu">岐阜市</label>
                         </li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="motosu"
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="motosu"
                                     id="motosu">本巣市</label>
                         </li>
-                        <li><label class="gifu-label"><input type="radio" name="name" value="mizuho"
+                        <li><label class="gifu-label"><input class="soat-btn" type="radio" name="name" value="mizuho"
                                     id="mizuho">瑞穂市</label>
                         </li>
                     </ul>
@@ -127,19 +121,19 @@
                 <div class="soat-seinou">
                     <ul>
                         <li class="map-title seinou">西濃エリア</li>
-                        <li><label class="seinou-label"><input type="radio" name="name" value="oogaki"
+                        <li><label class="seinou-label"><input class="soat-btn" type="radio" name="name" value="oogaki"
                                     id="oogaki">大垣市</label></li>
-                        <li><label class="seinou-label"><input type="radio" name="name" value="yourou"
+                        <li><label class="seinou-label"><input class="soat-btn" type="radio" name="name" value="yourou"
                                     id="yourou">養老町</label></li>
-                        <li><label class="seinou-label"><input type="radio" name="name" value="wanouti"
+                        <li><label class="seinou-label"><input class="soat-btn" type="radio" name="name" value="wanouti"
                                     id="wanouti">輪之内町</label></li>
-                        <li><label class="seinou-label"><input type="radio" name="name" value="ikeda"
+                        <li><label class="seinou-label"><input class="soat-btn" type="radio" name="name" value="ikeda"
                                     id="ikeda">池田町</label>
                         </li>
-                        <li><label class="seinou-label"><input type="radio" name="name" value="goudo"
+                        <li><label class="seinou-label"><input class="soat-btn" type="radio" name="name" value="goudo"
                                     id="goudo">神戸町</label>
                         </li>
-                        <li><label class="seinou-label"><input type="radio" name="name" value="ibi"
+                        <li><label class="seinou-label"><input class="soat-btn" type="radio" name="name" value="ibi"
                                     id="ibi">揖斐川町</label>
                         </li>
                     </ul>
@@ -147,11 +141,11 @@
                 <div class="soat-aichi">
                     <ul>
                         <li class="map-title aichi-sub">愛知北西エリア</li>
-                            <li><label class="aichi-label"><input type="radio" name="name" value="inuyama"
+                            <li><label class="aichi-label"><input class="soat-btn" type="radio" name="name" value="inuyama"
                                         id="inuyama">犬山市</label></li>
-                            <li><label class="aichi-label"><input type="radio" name="name" value="itinomiya"
+                            <li><label class="aichi-label"><input class="soat-btn" type="radio" name="name" value="itinomiya"
                                         id="itinomiya">一宮市</label></li>
-                            <li><label class="aichi-label"><input type="radio" name="name" value="nagoya"
+                            <li><label class="aichi-label"><input class="soat-btn" type="radio" name="name" value="nagoya"
                                         id="nagoya">名古屋市</label></li>
                     </ul>
                 </div>
@@ -196,10 +190,13 @@
 
 </body>
 
+
 <script src="hensuu-list.js"></script>
 <script src="serch.js"></script>
 <script src="add_file.js"></script>
 <script src="button.js"></script>
+
 <script src="soat.js"></script>
+<script src="link-back.js"></script>
 
 </html>

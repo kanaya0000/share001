@@ -7,7 +7,7 @@ console.log('memory::' + memory);
 document.title = date[memory].place;
 
 const no = sessionStorage.getItem('file'); //stpre　ファイル名で使用
-
+// console.log(date[memory]);
 // console.log(no);
 // console.log('No::' + date[no]);
 
@@ -113,7 +113,9 @@ const div5 = document.createElement('div');
 div5.classList = 'shop-info';
 
 const p3 = document.createElement('p');
-p3.classList = date[memory].detail_address;
+// p3.classList = date[memory].detail_address;
+p3.classList = 'address';
+p3.textContent=date[memory].detail_address;
 
 const p4 = document.createElement('p');
 p4.classList = 'regular-holiday';
