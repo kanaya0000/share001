@@ -84,11 +84,13 @@ main {
                     margin-bottom: 20px;
                     width: 200px;
 
-                    .insta , .google-map {
+                    .insta,
+                    .google-map {
                         height: 20px;
                         width: 20px;
                         margin: 0 10px;
                     }
+
                     // svg {
                     //     height: 20px;
                     //     width: 20px;
@@ -97,6 +99,30 @@ main {
                 }
             }
         }
+    }
+}
+
+//戻るボタンの設定
+.back {
+    margin-left: 5%;
+    #link-back {
+        background-color: #4d9bc2;
+        border: none;
+        border-radius: 3px;
+        a {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            svg {
+                height: 20px;
+                color: white;
+                margin-right: 10px;
+            }
+            span {
+                color: white;
+            }
+        }
+
     }
 }
 
@@ -122,6 +148,7 @@ main {
             .title {
                 font-size: 2rem;
             }
+
             .shop-sub {
                 flex-direction: column;
 

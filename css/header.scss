@@ -111,10 +111,21 @@ header {
         }
 
         #soat-menu {
+            max-width: 500px;
+            right: 0;
+            position: fixed;
+            top: 80px;
+            // left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: white;
+            overflow-y: auto; //縦方向スクロール
+            border: 1px solid black;
             div {
                 width: 95%;
                 margin: 0 auto;
             }
+
             .soat-header {
                 text-align: right;
 
@@ -144,6 +155,7 @@ header {
                     border: white;
                 }
             }
+
             .soat-type {
                 // text-align: center;
                 font-size: 1.5rem;
@@ -154,12 +166,13 @@ header {
                 position: relative;
                 line-height: 45px;
             }
+
             .soat-type::before {
                 content: "";
                 position: absolute;
                 height: 45px;
                 width: 5px;
-                background-color:#004aff;
+                background-color: #004aff;
                 left: -20px;
             }
 
@@ -231,14 +244,6 @@ header {
             z-index: 20;
         }
 
-        #soat-menu {
-            position: fixed;
-            top: 80px;
-            left: 0;
-            width: 100%;
-            height: calc(100% - 80px);
-            background-color: white;
-        }
     }
 }
 

@@ -89,6 +89,17 @@ header #soat-btn .off-img {
   top: 0;
   right: 0;
 }
+header #soat-btn #soat-menu {
+  max-width: 500px;
+  right: 0;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  height: calc(100% - 80px);
+  background-color: white;
+  overflow-y: auto;
+  border: 1px solid black;
+}
 header #soat-btn #soat-menu div {
   width: 95%;
   margin: 0 auto;
@@ -198,14 +209,6 @@ header #soat-btn.on .off-img {
   width: 100%;
   height: 100%;
   z-index: 20;
-}
-header #soat-btn.on #soat-menu {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 80px);
-  background-color: white;
 }
 
 @media screen and (max-width: 1000px) {

@@ -60,10 +60,33 @@ main .shop-list .shop-sub .text a {
   margin-bottom: 20px;
   width: 200px;
 }
-main .shop-list .shop-sub .text a .insta, main .shop-list .shop-sub .text a .google-map {
+main .shop-list .shop-sub .text a .insta,
+main .shop-list .shop-sub .text a .google-map {
   height: 20px;
   width: 20px;
   margin: 0 10px;
+}
+
+.back {
+  margin-left: 5%;
+}
+.back #link-back {
+  background-color: #4d9bc2;
+  border: none;
+  border-radius: 3px;
+}
+.back #link-back a {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+.back #link-back a svg {
+  height: 20px;
+  color: white;
+  margin-right: 10px;
+}
+.back #link-back a span {
+  color: white;
 }
 
 @media screen and (max-width: 1000px) {
