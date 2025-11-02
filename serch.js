@@ -113,6 +113,15 @@ function setting(arealist, section) {
         const img = document.createElement('img');
         img.src = shopdate.img;
         img.alt = shopdate.name;
+        let img_path2='';
+    for(let aa=0;aa<place_list.length;aa++) {
+        if(shopdate.place == place_list[aa]) {
+            img_path2=file_list[aa];
+            break;
+        }
+    } 
+    // img.src='material/photo/list/' + img_path2 + '/' + excerpt_file[i].img + '/img001.webp' ;
+    img.src='material/photo/list/' + img_path2 + '/' + shopdate.img + '/img001.webp' ;
 
         const ul = document.createElement('ul');
         ul.classList.add('key-word');

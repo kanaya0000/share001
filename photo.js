@@ -1,5 +1,33 @@
 //変数ファイルより抜粋する変数番号
-const pickup_date = [1,3,5,7,9,11,13];
+// const pickup_date = [0,1,2,3,4,5,6];
+
+//ランダムでリストへ格納
+const input_count=10; //リスト内の数
+// const maxvalue=15; //ファイルの上限
+const maxvalue=date.length;
+
+
+
+const randomarray=[];
+// for(let i=0;i<input_count;i++) {
+//     const randomvalue=Math.floor(Math.random()*(maxvalue+1));
+//     //重複していた場合やり直す
+//     randomarray.push(randomvalue);
+// }
+
+while(randomarray.length < input_count) {
+    // const randomvalue=Math.floor(Math.random() * (maxvalue + 1));
+    const randomvalue=Math.floor(Math.random() * maxvalue);
+    if(!randomarray.includes(randomvalue)) { //配列に含まれているか判定
+        randomarray.push(randomvalue);
+    }
+}
+
+console.log(randomarray);
+
+const pickup_date =randomarray; //トップページの組み合わせ用リスト
+
+
 
 const excerpt_file=[];
 for(let i=0;i<pickup_date.length;i++) {
@@ -29,7 +57,24 @@ for (let i = 0; i < pickup_date.length; i++) {
 
     const img = document.createElement('img');
     // img.src = date[i].photo;
-    img.src = excerpt_file[i].img;
+    // img.src = excerpt_file[i].img;
+    // img.src='material/photo/list/' + region + '/store' + String(no.padStart(3, '0'));
+    let img_path2='';
+    for(let j=0;j<place_list.length;j++) {
+        if(excerpt_file[i].place == place_list[j]) {
+            img_path2=file_list[j];
+            break;
+        }
+    } 
+    img.src='material/photo/list/' + img_path2 + '/' + excerpt_file[i].img + '/img001.webp' ;
+console.log(img);
+
+
+//file_listに数値を入力、変数のimgにはstoreナンバーと画像ファイル名のみ指定する
+
+
+
+
 
     const div2 = document.createElement('div');
     div2.classList = 'photo-list-li-a-hover';

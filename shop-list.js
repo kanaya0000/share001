@@ -182,6 +182,3 @@ div1.append(p1, h2, div2);
 console.log(div1);
 main.appendChild(div1);
 
-
-
-
