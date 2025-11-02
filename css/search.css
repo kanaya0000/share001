@@ -45,11 +45,13 @@ main .gifu-shop-list .region-list .shop-list .key-word,
 main .aichi-shop-list .region-list .shop-list .key-word {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 main .gifu-shop-list .region-list .shop-list .key-word li,
 main .aichi-shop-list .region-list .shop-list .key-word li {
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
 }
 main .gifu-shop-list .region-list .shop-list .explanation,
 main .aichi-shop-list .region-list .shop-list .explanation {

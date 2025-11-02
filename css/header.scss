@@ -161,7 +161,7 @@ header {
                 font-size: 1.5rem;
                 width: auto;
                 height: 45px;
-                margin: 0 auto;
+                margin: 50px auto 0 auto;
                 display: table;
                 position: relative;
                 line-height: 45px;
@@ -218,13 +218,36 @@ header {
                     }
                 }
             }
+            .soat-key {
+                margin-bottom: 50px;
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    // gap: 5px;
+                    li {
+                        display: inline-block;
+                        height: 2rem;
+                        line-height: 2rem;
+                        label {
+                            display: block;
+                        }
+                    }
+                }
+            }
         }
 
     }
 
     #soat-btn.off {
+        .on-img {
+            background-color: white;
+            border-radius: 50%;
+        }
+
         .off-img {
             display: none;
+            //     background-color: white;
+            //     border-radius: 50%;
         }
 
         #soat-menu {

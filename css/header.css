@@ -132,7 +132,7 @@ header #soat-btn #soat-menu .soat-type {
   font-size: 1.5rem;
   width: auto;
   height: 45px;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   display: table;
   position: relative;
   line-height: 45px;
@@ -194,6 +194,25 @@ header #soat-btn #soat-menu .soat-aichi ul li label:has(input:checked) {
   color: white;
   background-color: orange;
   border: white;
+}
+header #soat-btn #soat-menu .soat-key {
+  margin-bottom: 50px;
+}
+header #soat-btn #soat-menu .soat-key ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+header #soat-btn #soat-menu .soat-key ul li {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+}
+header #soat-btn #soat-menu .soat-key ul li label {
+  display: block;
+}
+header #soat-btn.off .on-img {
+  background-color: white;
+  border-radius: 50%;
 }
 header #soat-btn.off .off-img {
   display: none;
