@@ -60,17 +60,17 @@ function fill_on() {
 }
 
 //絞り込み
-const soat_btn = document.getElementById('soat-btn');
+// const soat_btn = document.getElementById('soat-btn');
 
-soat_btn.addEventListener('click', () => {
-    if (soat_btn.className == 'off') {
-        //onにしてメニュー表示
-        soat_btn.className = 'on';
-    } else {
-        //offにしてメニュー閉じる
-        soat_btn.className = 'off';
-    }
-})
+// soat_btn.addEventListener('click', () => {
+//     if (soat_btn.className == 'off') {
+//         //onにしてメニュー表示
+//         soat_btn.className = 'on';
+//     } else {
+//         //offにしてメニュー閉じる
+//         soat_btn.className = 'off';
+//     }
+// })
 
 
 
