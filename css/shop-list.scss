@@ -22,17 +22,18 @@ main {
             .photo,
             .text {
                 width: 50%;
+                min-width: 0;
             }
 
             .photo {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-
+                gap: 5px;
                 img {
                     width: 100%;
                     object-fit: cover;
                     // aspect-ratio: 12/7;
-                    aspect-ratio: 1/1;
+                    // aspect-ratio: 1/1;
                 }
             }
 
@@ -47,6 +48,10 @@ main {
                 // }
                 .main-text {
                     line-height: 2rem;
+                    //空白の場所で改行する
+                    white-space: normal;
+                    overflow-wrap: break-word;
+                    word-break: keep-all;
                 }
 
                 .shop-info {
@@ -134,7 +139,7 @@ main {
                     grid-template-columns: 1fr;
 
                     img {
-                        aspect-ratio: 12/7;
+                        // aspect-ratio: 12/7;
                     }
                 }
             }
@@ -158,7 +163,7 @@ main {
                     // grid-template-columns: 1fr;
 
                     img {
-                        aspect-ratio: 12/7;
+                        // aspect-ratio: 12/7;
                     }
                 }
 

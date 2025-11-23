@@ -44,7 +44,7 @@ header {
 
         .pc-header-sub2 {
             width: calc(100% - 400px);
-
+            
             .pc-header-ul {
                 display: flex;
                 justify-content: flex-end;
@@ -74,12 +74,12 @@ header {
                 .pc-header-li:last-child {
                     margin-right: 20px;
 
-                    a {
+                    .pc-header-a {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-
-                        svg {
+                        
+                        .bi-instagram {
                             width: 20px;
                             height: 20px;
                         }
@@ -92,182 +92,184 @@ header {
 
     .phone-header {
         visibility: hidden;
+        
     }
 
-    #soat-btn {
-        width: 50px;
-        height: 50px;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
+    // #soat-btn {
+    //     display: none;
+    //     width: 50px;
+    //     height: 50px;
+    //     position: fixed;
+    //     bottom: 20px;
+    //     right: 20px;
 
-        .on-img,
-        .off-img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
+    //     .on-img,
+    //     .off-img {
+    //         width: 100%;
+    //         height: 100%;
+    //         position: absolute;
+    //         top: 0;
+    //         right: 0;
+    //     }
 
-        #soat-menu {
-            max-width: 500px;
-            right: 0;
-            position: fixed;
-            top: 80px;
-            // left: 0;
-            width: 100%;
-            height: calc(100% - 80px);
-            background-color: white;
-            overflow-y: auto; //縦方向スクロール
-            border: 1px solid black;
-            div {
-                width: 95%;
-                margin: 0 auto;
-            }
+    //     #soat-menu {
+    //         max-width: 500px;
+    //         right: 0;
+    //         position: fixed;
+    //         top: 80px;
+    //         // left: 0;
+    //         width: 100%;
+    //         height: calc(100% - 80px);
+    //         background-color: white;
+    //         overflow-y: auto; //縦方向スクロール
+    //         border: 1px solid black;
+    //         div {
+    //             width: 95%;
+    //             margin: 0 auto;
+    //         }
 
-            .soat-header {
-                text-align: right;
+    //         .soat-header {
+    //             text-align: right;
 
-                .soat-title {
-                    font-size: 1.5rem;
-                    text-align: center;
-                }
+    //             .soat-title {
+    //                 font-size: 1.5rem;
+    //                 text-align: center;
+    //             }
 
-                .soat-header-label {
-                    padding: 10px;
-                    margin: 5px;
-                    border: 1px solid black;
-                    border-radius: 5px;
+    //             .soat-header-label {
+    //                 padding: 10px;
+    //                 margin: 5px;
+    //                 border: 1px solid black;
+    //                 border-radius: 5px;
 
-                    input {
-                        display: none;
-                    }
+    //                 input {
+    //                     display: none;
+    //                 }
 
-                    input:checked {
-                        color: red;
-                    }
-                }
+    //                 input:checked {
+    //                     color: red;
+    //                 }
+    //             }
 
-                label:has(input:checked) {
-                    color: white;
-                    background-color: black;
-                    border: white;
-                }
-            }
+    //             label:has(input:checked) {
+    //                 color: white;
+    //                 background-color: black;
+    //                 border: white;
+    //             }
+    //         }
 
-            .soat-type {
-                // text-align: center;
-                font-size: 1.5rem;
-                width: auto;
-                height: 45px;
-                margin: 50px auto 0 auto;
-                display: table;
-                position: relative;
-                line-height: 45px;
-            }
+    //         .soat-type {
+    //             // text-align: center;
+    //             font-size: 1.5rem;
+    //             width: auto;
+    //             height: 45px;
+    //             margin: 50px auto 0 auto;
+    //             display: table;
+    //             position: relative;
+    //             line-height: 45px;
+    //         }
 
-            .soat-type::before {
-                content: "";
-                position: absolute;
-                height: 45px;
-                width: 5px;
-                background-color: #004aff;
-                left: -20px;
-            }
+    //         .soat-type::before {
+    //             content: "";
+    //             position: absolute;
+    //             height: 45px;
+    //             width: 5px;
+    //             background-color: #004aff;
+    //             left: -20px;
+    //         }
 
-            .soat-tyuunou,
-            .soat-gifu,
-            .soat-seinou,
-            .soat-aichi {
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
+    //         .soat-tyuunou,
+    //         .soat-gifu,
+    //         .soat-seinou,
+    //         .soat-aichi {
+    //             ul {
+    //                 display: flex;
+    //                 flex-wrap: wrap;
 
-                    .map-title {
-                        width: 100%;
-                        font-weight: bolder;
-                        font-size: 1.3rem;
-                    }
+    //                 .map-title {
+    //                     width: 100%;
+    //                     font-weight: bolder;
+    //                     font-size: 1.3rem;
+    //                 }
 
-                    li {
-                        height: 45px;
+    //                 li {
+    //                     height: 45px;
 
-                        label {
-                            padding: 10px;
-                            margin: 5px;
-                            border: 1px solid black;
-                            border-radius: 5px;
+    //                     label {
+    //                         padding: 10px;
+    //                         margin: 5px;
+    //                         border: 1px solid black;
+    //                         border-radius: 5px;
 
-                            input {
-                                display: none;
-                            }
+    //                         input {
+    //                             display: none;
+    //                         }
 
-                            input:checked {
-                                color: red;
-                            }
-                        }
+    //                         input:checked {
+    //                             color: red;
+    //                         }
+    //                     }
 
-                        label:has(input:checked) {
-                            color: white;
-                            background-color: orange;
-                            border: white;
-                        }
+    //                     label:has(input:checked) {
+    //                         color: white;
+    //                         background-color: orange;
+    //                         border: white;
+    //                     }
 
 
-                    }
-                }
-            }
-            .soat-key {
-                margin-bottom: 50px;
-                ul {
-                    display: grid;
-                    grid-template-columns: repeat(3,1fr);
-                    // gap: 5px;
-                    li {
-                        display: inline-block;
-                        height: 2rem;
-                        line-height: 2rem;
-                        label {
-                            display: block;
-                        }
-                    }
-                }
-            }
-        }
+    //                 }
+    //             }
+    //         }
+    //         .soat-key {
+    //             margin-bottom: 50px;
+    //             ul {
+    //                 display: grid;
+    //                 grid-template-columns: repeat(3,1fr);
+    //                 // gap: 5px;
+    //                 li {
+    //                     display: inline-block;
+    //                     height: 2rem;
+    //                     line-height: 2rem;
+    //                     label {
+    //                         display: block;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
 
-    }
+    // }
 
-    #soat-btn.off {
-        .on-img {
-            background-color: white;
-            border-radius: 50%;
-        }
+    // #soat-btn.off {
+    //     .on-img {
+    //         background-color: white;
+    //         border-radius: 50%;
+    //     }
 
-        .off-img {
-            display: none;
-            //     background-color: white;
-            //     border-radius: 50%;
-        }
+    //     .off-img {
+    //         display: none;
+    //         //     background-color: white;
+    //         //     border-radius: 50%;
+    //     }
 
-        #soat-menu {
-            display: none;
-        }
-    }
+    //     #soat-menu {
+    //         display: none;
+    //     }
+    // }
 
-    #soat-btn.on {
-        .on-img {
-            display: none;
-        }
+    // #soat-btn.on {
+    //     .on-img {
+    //         display: none;
+    //     }
 
-        .off-img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            z-index: 20;
-        }
+    //     .off-img {
+    //         display: block;
+    //         width: 100%;
+    //         height: 100%;
+    //         z-index: 20;
+    //     }
 
-    }
+    // }
 }
 
 
@@ -289,7 +291,7 @@ header {
                 z-index: 5;
                 transition: all .5s;
                 background-color: #5ecd7f;
-
+                
                 .toggle {
                     z-index: 100;
                     position: fixed;
@@ -317,7 +319,6 @@ header {
                     .phone-header-ul {
                         margin-top: 65px;
                         background-color: #00ca3c;
-
                         .phone-header-sub1,
                         .phone-header-sub2 {
                             height: 45px;
@@ -336,6 +337,8 @@ header {
                             .pc-header-a {
                                 svg {
                                     height: 90%;
+                                    // height: 20px;
+                                    
                                 }
                             }
                         }

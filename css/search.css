@@ -1,3 +1,129 @@
+@charset "UTF-8";
+main #top_photo {
+  position: relative;
+  width: 100%;
+  margin: 80px auto 0 auto;
+  height: 400px;
+  aspect-ratio: 16/9;
+}
+main #top_photo .top_photo {
+  width: 100%;
+  height: 100%;
+}
+main #top_photo .top_photo .photo1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main #top_photo .top_photo .photo1 .bgimg {
+  width: 100%;
+  height: 400px;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../material/photo/top-photo/img002.webp");
+  background-position: center center;
+}
+main #top_photo .top_photo .photo1 .bgimg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 黒の半透明で影を表現 */
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  /* クリックを通す */
+}
+main #top_photo .top_photo .photo1 .bg {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+main #top_photo .top-text {
+  width: 100%;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+main #top_photo .top-text .text-title {
+  font-size: 3rem;
+  color: white;
+}
+main #top_photo .top-text .text-sub {
+  font-size: 1.5rem;
+  color: white;
+}
+main .serch {
+  width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+main .serch .serch-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .serch .serch-header svg {
+  width: 20px;
+  height: 20px;
+}
+main .serch .serch-header .serch-title {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+main .serch .serch-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+main .serch .serch-list .set0 {
+  width: 300px;
+}
+main .serch .serch-list .set0 .select-set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+main .serch .serch-list .set0 .select-set img {
+  margin: 10px;
+  height: 25px;
+}
+main .serch .serch-list .set0 .select-set span {
+  color: gray;
+}
+main .serch .serch-list .set0 .select-set select {
+  margin: 10px;
+  border: none;
+  font-size: 1.3rem;
+  height: 30px;
+}
+main .serch .serch-list .button .btn-set {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin: 10px;
+  font-size: 1.3rem;
+}
+main .serch .serch-list .button .btn-set img {
+  margin-right: 10px;
+}
 main .gifu-shop-list,
 main .aichi-shop-list {
   padding-top: 80px;
@@ -35,11 +161,10 @@ main .aichi-shop-list .region-list .shop-list p {
 }
 main .gifu-shop-list .region-list .shop-list img,
 main .aichi-shop-list .region-list .shop-list img {
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 12/7;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .gifu-shop-list .region-list .shop-list .key-word,
 main .aichi-shop-list .region-list .shop-list .key-word {
@@ -122,7 +247,24 @@ main #aichi .region-list .shop-list .detail-page:hover {
   color: white;
 }
 
+@media screen and (max-width: 1000px) {
+  main #top_photo {
+    height: 200px;
+  }
+  main #top_photo .top_photo .photo1 .bgimg {
+    height: 200px;
+  }
+  main .serch {
+    width: 300px;
+  }
+}
 @media screen and (max-width: 650px) {
+  main #top_photo .top-text .text-title {
+    font-size: 2.5rem;
+  }
+  main #top_photo .top-text .text-sub {
+    font-size: 1.1rem;
+  }
   main #map {
     grid-template-columns: repeat(1, 95%);
   }
@@ -144,5 +286,9 @@ main #aichi .region-list .shop-list .detail-page:hover {
   main .gifu-shop-list .region-list,
   main .aichi-shop-list .region-list {
     grid-template-columns: repeat(auto-fit, 95%);
+  }
+  main .serch .serch-list {
+    align-items: center;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=search.css.map */

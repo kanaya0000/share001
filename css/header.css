@@ -62,172 +62,17 @@ header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li .pc-header-a:hover
 header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child {
   margin-right: 20px;
 }
-header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child a {
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child .pc-header-a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child a svg {
+header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li:last-child .pc-header-a .bi-instagram {
   width: 20px;
   height: 20px;
 }
 header .phone-header {
   visibility: hidden;
-}
-header #soat-btn {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-header #soat-btn .on-img,
-header #soat-btn .off-img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-header #soat-btn #soat-menu {
-  max-width: 500px;
-  right: 0;
-  position: fixed;
-  top: 80px;
-  width: 100%;
-  height: calc(100% - 80px);
-  background-color: white;
-  overflow-y: auto;
-  border: 1px solid black;
-}
-header #soat-btn #soat-menu div {
-  width: 95%;
-  margin: 0 auto;
-}
-header #soat-btn #soat-menu .soat-header {
-  text-align: right;
-}
-header #soat-btn #soat-menu .soat-header .soat-title {
-  font-size: 1.5rem;
-  text-align: center;
-}
-header #soat-btn #soat-menu .soat-header .soat-header-label {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-header #soat-btn #soat-menu .soat-header .soat-header-label input {
-  display: none;
-}
-header #soat-btn #soat-menu .soat-header .soat-header-label input:checked {
-  color: red;
-}
-header #soat-btn #soat-menu .soat-header label:has(input:checked) {
-  color: white;
-  background-color: black;
-  border: white;
-}
-header #soat-btn #soat-menu .soat-type {
-  font-size: 1.5rem;
-  width: auto;
-  height: 45px;
-  margin: 50px auto 0 auto;
-  display: table;
-  position: relative;
-  line-height: 45px;
-}
-header #soat-btn #soat-menu .soat-type::before {
-  content: "";
-  position: absolute;
-  height: 45px;
-  width: 5px;
-  background-color: #004aff;
-  left: -20px;
-}
-header #soat-btn #soat-menu .soat-tyuunou ul,
-header #soat-btn #soat-menu .soat-gifu ul,
-header #soat-btn #soat-menu .soat-seinou ul,
-header #soat-btn #soat-menu .soat-aichi ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-header #soat-btn #soat-menu .soat-tyuunou ul .map-title,
-header #soat-btn #soat-menu .soat-gifu ul .map-title,
-header #soat-btn #soat-menu .soat-seinou ul .map-title,
-header #soat-btn #soat-menu .soat-aichi ul .map-title {
-  width: 100%;
-  font-weight: bolder;
-  font-size: 1.3rem;
-}
-header #soat-btn #soat-menu .soat-tyuunou ul li,
-header #soat-btn #soat-menu .soat-gifu ul li,
-header #soat-btn #soat-menu .soat-seinou ul li,
-header #soat-btn #soat-menu .soat-aichi ul li {
-  height: 45px;
-}
-header #soat-btn #soat-menu .soat-tyuunou ul li label,
-header #soat-btn #soat-menu .soat-gifu ul li label,
-header #soat-btn #soat-menu .soat-seinou ul li label,
-header #soat-btn #soat-menu .soat-aichi ul li label {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-header #soat-btn #soat-menu .soat-tyuunou ul li label input,
-header #soat-btn #soat-menu .soat-gifu ul li label input,
-header #soat-btn #soat-menu .soat-seinou ul li label input,
-header #soat-btn #soat-menu .soat-aichi ul li label input {
-  display: none;
-}
-header #soat-btn #soat-menu .soat-tyuunou ul li label input:checked,
-header #soat-btn #soat-menu .soat-gifu ul li label input:checked,
-header #soat-btn #soat-menu .soat-seinou ul li label input:checked,
-header #soat-btn #soat-menu .soat-aichi ul li label input:checked {
-  color: red;
-}
-header #soat-btn #soat-menu .soat-tyuunou ul li label:has(input:checked),
-header #soat-btn #soat-menu .soat-gifu ul li label:has(input:checked),
-header #soat-btn #soat-menu .soat-seinou ul li label:has(input:checked),
-header #soat-btn #soat-menu .soat-aichi ul li label:has(input:checked) {
-  color: white;
-  background-color: orange;
-  border: white;
-}
-header #soat-btn #soat-menu .soat-key {
-  margin-bottom: 50px;
-}
-header #soat-btn #soat-menu .soat-key ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-header #soat-btn #soat-menu .soat-key ul li {
-  display: inline-block;
-  height: 2rem;
-  line-height: 2rem;
-}
-header #soat-btn #soat-menu .soat-key ul li label {
-  display: block;
-}
-header #soat-btn.off .on-img {
-  background-color: white;
-  border-radius: 50%;
-}
-header #soat-btn.off .off-img {
-  display: none;
-}
-header #soat-btn.off #soat-menu {
-  display: none;
-}
-header #soat-btn.on .on-img {
-  display: none;
-}
-header #soat-btn.on .off-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
 }
 
 @media screen and (max-width: 1000px) {
