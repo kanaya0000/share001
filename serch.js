@@ -1,87 +1,21 @@
+//プルダウンメニュー
+//エリアの選択欄
+const eria_serch = document.getElementById('select0');
+for (let i = 0; i < place_list.length; i++) {
+    const option1 = document.createElement('option');
+    option1.value = place_list[i];
+    option1.textContent = place_list[i];
+    eria_serch.append(option1);
+}
 
-// let tyuunou_list = [];
-// let gifu_list = [];
-// let seinou_list = [];
-// let aichi_list = [];
-// let tyuunou_count = 1;
-// let gifu_count = 1;
-// let seinou_count = 1;
-// let aichi_count = 1;
-// let all_count = 0;
+const genre_serch = document.getElementById('select1')
+for (let i = 0; i < classification.length; i++) {
+    const option1 = document.createElement('option');
+    option1.value = classification[i].jp;
+    option1.textContent = classification[i].jp;
+    genre_serch.append(option1);
+}
 
-
-
-// console.log(gifu_list);
-// let count_map = {};
-// let index='';
-
-
-// const list_name = ['gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
-// const list = [];
-// for (let j = 0; j < list_name.length; j++) {
-//     list.push({
-//         name: list_name[j],
-//         count: 0
-//     })
-// }
-
-// console.log(list);
-
-// 中濃、岐阜、西濃、愛知で分類分け
-// for (let i = 0; i < date.length; i++) {
-//     if (date[i].type == 'tyuunou') {
-//         tyuunou_list.push(i);
-//         // 個別ファイルと一覧のお店を判定するためにid追記
-//         date[i].count = tyuunou_count;
-//         tyuunou_count = tyuunou_count + 1;
-//         date[i].id = all_count;
-//         all_count = all_count + 1;
-//     } else if (date[i].type == 'gifu') {
-//         gifu_list.push(i);
-//         // date[i].count=gifu_count;
-//         // gifu_count=gifu_count + 1;
-//         date[i].id = all_count;
-//         all_count = all_count + 1;
-
-//     } else if (date[i].type == 'seinou') {
-//         seinou_list.push(i);
-//         date[i].count = seinou_count;
-//         seinou_count = seinou_count + 1;
-//         date[i].id = all_count;
-//         all_count = all_count + 1;
-//     } else {
-//         aichi_list.push(i);
-//         date[i].count = aichi_count;
-//         aichi_count = aichi_count + 1;
-//         date[i].id = all_count;
-//         all_count = all_count + 1;
-//     }
-    // // date[i].file_count='';
-
-    // outer:
-    // for (let j = 0; j < list.length; j++) {
-    //     for (let k = 0; k < list.length; k++) {
-    //         if (date[i].key_list[0] == list[k].name) {
-    //             list[k].count += 1;
-    //             date[i].text_count = list[k].count; //text_count追記
-    //             break outer;
-    //         }
-    //     }
-    // }
-    // console.log(date);
-
-    // date.forEach(d => {
-    //     list.forEach(l => {
-    //         if(d.key_list[0].includes(l)) {
-    //             d.text_count +=1;
-
-    //         }
-    //     })
-    // })
-
-
-    // console.log(date.map(d => d.text_count));
-// }
 
 console.log('count:::' + date[1]);
 
@@ -113,15 +47,18 @@ function setting(arealist, section) {
         const img = document.createElement('img');
         img.src = shopdate.img;
         img.alt = shopdate.name;
-        let img_path2='';
-    for(let aa=0;aa<place_list.length;aa++) {
-        if(shopdate.place == place_list[aa]) {
-            img_path2=file_list[aa];
-            break;
+        let img_path2 = '';
+        for (let aa = 0; aa < place_list.length; aa++) {
+            if (shopdate.place == place_list[aa]) {
+                img_path2 = file_list[aa];
+                break;
+            }
         }
-    } 
-    // img.src='material/photo/list/' + img_path2 + '/' + excerpt_file[i].img + '/img001.webp' ;
-    img.src='material/photo/list/' + img_path2 + '/' + shopdate.img + '/img001.webp' ;
+        // img.src='material/photo/list/' + img_path2 + '/' + excerpt_file[i].img + '/img001.webp' ;
+        // img.src = 'material/photo/list/' + img_path2 + '/' + shopdate.img + '/img001.webp';
+        // img.src = 'material/photo/list/' + img_path2 + '/store' + shopdate.store_no + '/img001.webp';
+        img.src = 'material/photo/list/' + img_path2 + '/store' + String(shopdate.store_no).padStart(3, '0') + '/img001.webp';
+console.log('aaaa-----' + shopdate.store_no);
 
         const ul = document.createElement('ul');
         ul.classList.add('key-word');
@@ -142,14 +79,20 @@ function setting(arealist, section) {
         const a = document.createElement('a');
         // a.classList.add('detail-page'+ ' count' + all_count);
         a.classList.add('detail-page');
-        a.classList.add(shopdate.id);
-        a.classList.add(shopdate.text_count);
-        a.href='individual-shop.html';
+        a.classList.add(shopdate.id); //エリア4箇所
+        // a.classList.add(shopdate.text_count); //エリア詳細
+        a.classList.add(shopdate.store_no);
+
+        //同じクラス名を同時に指定できない
+
+        // console.log(j + '::::' + shopdate.store_no )
+        // a.classList.add(shopdate.store_no); //エリア詳細
+        a.href = 'individual-shop.html';
         // console.log('classname::' + a.className);
-        const text = shopdate.key_list[0] + '_count';
+        // const text = shopdate.key_list[0] + '_count';
         // console.log('text::' +text);
 
-        a.classList.add(shopdate.text);
+        // a.classList.add(shopdate.text);
 
         // a.href = shopdate.link;
         // a.target = "_blank";
@@ -167,21 +110,7 @@ setting(gifu_list, section2);
 setting(seinou_list, section3);
 setting(aichi_list, section4);
 
-//グローバル変数
-// window.hand_over='';
 
-// shop-listのクラスからクリックした要素を判定
-//クリックした要素のカウントを判定して連想配列の情報を渡す
-// const button=document.querySelectorAll('.detail-page');
-// button.forEach((btn,index) => {
-//     btn.addEventListener('click',()=> {
-//         console.log(`${index}番目の要素がクリック`);
-//         // console.log(btn.classList[1] || ' ');
-//         // console.log(btn.classList[1]);
-//         // window.hand_over=btn.classList[1];
-//         window.hand='hello!';
-//     });
-// });
 
 
 

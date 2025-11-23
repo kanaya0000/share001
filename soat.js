@@ -1,8 +1,14 @@
+
+
+
+
+
+
 //絞り込み機能
 //inputのid指定
 const check_list = ['all_check', 'gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
 //'.' + check_list[○];
-const id_list = ['tyuunou', 'gifusi', 'seinou', 'aichi'];
+// const id_list = ['tyuunou', 'gifusi', 'seinou', 'aichi'];
 //絞り込みの記憶 1=中濃、2＝岐阜、3＝西濃、4＝愛知
 let judge_count = 0;
 
@@ -10,6 +16,46 @@ let judge_count = 0;
 for (let i = 0; i < check_list.length; i++) {
     setting(i);
 }
+
+
+
+const soat_key = document.getElementById('soat-key');
+
+const ul = document.createElement('ul');
+
+
+for (let i = 0; i < classification.length; i++) {
+    const li = document.createElement('li');
+    li.classList=classification[i].key;
+    // li.textContent=classification[i].jp;
+    const label=document.createElement('label');
+    // label.textContent=classification[i].jp;
+
+    const input=document.createElement('input');
+    input.classList='soat-btn2';
+    input.id=classification[i].key;
+    // input.type='radio';
+    input.type='checkbox';
+    input.name='name2';
+    input.value=classification[i].key;
+    input.id=classification[i].key;
+    // input.textContent=classification[i].jp;
+    label.append(input);
+
+    // label.textContent=classification[i].jp;
+    label.append(classification[i].jp);
+
+    li.append(label);
+    ul.append(li);
+    // ul.append(li,label);
+}
+soat_key.append(ul);
+
+//-----絞り込み追加終了
+
+
+
+
 
 
 function setting(i) {
@@ -20,13 +66,13 @@ function setting(i) {
         if (i == 0) {
             // console.log('「全て」をクリック');
             //全てを選択
-            for (let j = 1; j < check_list.length; j++) {
-                // let on = document.querySelectorAll(check_list[j])
-                const on = document.querySelectorAll('.shop-list')
-                on.forEach(el => {
-                    el.style.display = 'flex';
-                });
-            }
+            // for (let j = 1; j < check_list.length; j++) {
+            //     // let on = document.querySelectorAll(check_list[j])
+            //     const on = document.querySelectorAll('.shop-list')
+            //     on.forEach(el => {
+            //         el.style.display = 'flex';
+            //     });
+            // }
             //タイトルの表示
             for (let j = 0; j < id_list.length; j++) {
                 const id_on = document.getElementById(id_list[j]);
@@ -80,60 +126,13 @@ function setting(i) {
         }
         console.log('judge' + judge_count);
         const judge_eria = sessionStorage.setItem('judge_eria', judge_count);
+
+        //judge_countから地区の絞り込み＋以降の単語の絞り込みで表示
+        //チェックの有無を確認
+        const click_check=document.querySelectorAll('input[name="name2"]:checked');
+        console.log('チェックを確認' + click_check);
     })
 }
 
 
 
-//---これ以降単語の絞り込み機能
-const classification = [ //表示するワード
-    { jp: "ランチ", key: "lunch" },
-    { jp: "ディナー", key: "dinner" },
-    { jp: "モーニング", key: "morning" },
-    { jp: "和食", key: "washoku" },
-    { jp: "洋食", key: "youshoku" },
-    { jp: "中華", key: "chinese" },
-    { jp: "イタリアン", key: "italian" },
-    { jp: "フレンチ", key: "french" },
-    { jp: "カフェ", key: "cafe" },
-    { jp: "焼肉", key: "yakiniku" },
-    { jp: "ラーメン", key: "ramen" },
-    { jp: "ファミリー", key: "family" },
-    { jp: "デート", key: "date" },
-    { jp: "一人でもOK", key: "solo" },
-    { jp: "女子会", key: "girls" },
-    { jp: "飲み会", key: "party" },
-    { jp: "コスパ重視", key: "cost" },
-    { jp: "高級", key: "luxury" },
-];
-
-const soat_key = document.getElementById('soat-key');
-
-const ul = document.createElement('ul');
-
-
-for (let i = 0; i < classification.length; i++) {
-    const li = document.createElement('li');
-    li.classList=classification[i].key;
-    // li.textContent=classification[i].jp;
-    const label=document.createElement('label');
-    // label.textContent=classification[i].jp;
-
-    const input=document.createElement('input');
-    input.classList='soat-btn2';
-    // input.type='radio';
-    input.type='checkbox';
-    input.name='name';
-    input.value=classification[i].key;
-    input.id=classification[i].key;
-    // input.textContent=classification[i].jp;
-    label.append(input);
-
-    // label.textContent=classification[i].jp;
-    label.append(classification[i].jp);
-
-    li.append(label);
-    ul.append(li);
-    // ul.append(li,label);
-}
-soat_key.append(ul);

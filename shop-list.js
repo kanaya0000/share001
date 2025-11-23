@@ -8,7 +8,9 @@ document.title = date[memory].place;
 
 const no = sessionStorage.getItem('file'); //stpre　ファイル名で使用
 // console.log(date[memory]);
-// console.log(no);
+console.log('no::' + no);
+const check=sessionStorage.getItem('check');
+console.log('check::' + check);
 // console.log('No::' + date[no]);
 
 // console.log(gifu_list);
@@ -89,7 +91,14 @@ console.log('region::' + region);
 
 console.log('no:::' + no);
 
-const img_path = 'material/photo/list/' + region + '/store' + String(no.padStart(3, '0'));
+// if(no < 10) {
+//     const img_path = 'material/photo/list/' + region + '/store' + String(no.padStart(3, '0'));
+// } else if (no < 100) {
+//     const img_path = 'material/photo/list/' + region + '/store' + String(no.padStart(2, '0'));
+// }
+
+const img_path = 'material/photo/list/' + region + '/store' + no;
+
 // console.log('path::' + img_path );
 const div3 = document.createElement('div');
 div3.classList = 'photo';

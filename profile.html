@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,15 +8,14 @@
     <!-- ファビコン設定 -->
     <link rel="icon" href="material/icon/icon.jpeg">
 
-
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
-    <!-- ver22 -->
+
     <header>
         <div class="pc-header">
             <div class="pc-header-sub1">
@@ -29,7 +28,7 @@
                 <ul class="pc-header-ul">
                     <li class="pc-header-li"><a class="pc-header-a" href="search.html">Home</a></li>
                     <li class="pc-header-li"><a class="pc-header-a" href="#">Picks</a></li>
-                    <li class="pc-header-li"><a class="pc-header-a" href="profile.html">Profile</a></li>
+                    <li class="pc-header-li"><a class="pc-header-a" href="#">Profile</a></li>
                     <li class="pc-header-li"><a class="pc-header-a"
                             href="https://www.instagram.com/toms.gourmet?igsh=YnRxdHIyemxjMW8z" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram"
@@ -65,9 +64,6 @@
                 <div id="mask"></div>
             </div>
         </div>
-
-
-
     </header>
 
     <main>
@@ -80,96 +76,91 @@
                 </div>
             </div>
             <div class="top-text">
-                <p class="text-title">TOM'S グルメ</p>
-                <p class="text-sub">岐阜を中心に美味しいお店を紹介しています</p>
-
+                <p class="text-title">Profile</p>
             </div>
         </div>
 
-
-
-
-        <section class="serch">
-            <!-- <div class="serch-header">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-                <span class="serch-title">条件を設定してお店を探す</span>
-            </div> -->
-            <div class="serch-list">
-                <div class="set0">
-                    <!-- <label for="label1">エリアの選択</label><br> -->
-                    <div class="select-set">
-                        <img src="material/icon/map.svg" alt="">
-                        <span>エリアの選択</span>
-                        <select name="name1" size="1" id="select0" class="select0">
-                            <option value="全て">全て</option>
-                        </select>
-                    </div>
+        <section id="set1">
+            <h2>投稿者</h2>
+            <div class="set">
+                <img src="material/photo/top-photo/img003.webp" alt="">
+                <div class="profile_text">
+                    <ul>
+                        <li class="a">Name</li>
+                        <li class="b">Tomoya</li>
+                        <li class="a">Age</li>
+                        <li class="b">○○</li>
+                        <li class="a">From</li>
+                        <li class="b">Gifu</li>
+                        <li class="a">Hobbies</li>
+                        <li class="b">○○○○○</li>
+                        <li class="a">Contact</li>
+                        <li class="insta"><a href="https://www.instagram.com/toms.gourmet?igsh=YnRxdHIyemxjMW8z" target="_blank"><img class="icon" src="material/icon/insta.svg"
+                                    alt="">インスタアカウントへ</a></li>
+                    </ul>
                 </div>
-                <div class="set0">
-                    <!-- <label for="label1">ジャンルの選択</label><br> -->
-                    <div class="select-set">
-                        <img src="material/icon/house.svg" alt="">
-                        <span>ジャンルの選択</span>
-                        <select name="name1" size="1" id="select1" class="select0">
-                            <option value="全て">全て</option>
-                        </select>
-                    </div>
+            </div>
+            <p class="message-title">Message</p>
+            <p class="message-sub">地元・岐阜には、まだ広く知られていないけれど
+                本当に魅力あふれる飲食店がたくさんあります。
+                そんなお店をもっと多くの人に知ってもらいたい、
+                そして訪れた人が「また来たい」と思えるきっかけを作りたい——
+                そんな想いから、このサイトを立ち上げました。<br><br>
+
+                大切にしているのは、実際に足を運び、
+                そのお店で過ごした時間や雰囲気、料理の美味しさを
+                できるだけそのままの形でお伝えすること。
+                華やかさだけでなく、店主のこだわりや温かさ、
+                そこにしかないストーリーも一緒に届けたいと思っています。<br><br>
+
+                ここで紹介しているお店が、
+                あなたの日常に少しの楽しみやワクワクをもたらし、
+                「知らなかった岐阜の魅力」に気付くきっかけになれば嬉しいです。
+                このサイトで出会ったお店が、
+                あなたの新しいお気に入りとなりますように——。</p>
+        </section>
+
+        <section id="set2">
+            <h2>サイト管理者</h2>
+            <div class="set">
+                <img src="material/icon/people-2.webp" alt="">
+                <div class="profile_text">
+                    <ul>
+                        <li class="a">Name</li>
+                        <li class="b">Kodera</li>
+                        <li class="a">Age</li>
+                        <li class="b">27</li>
+                        <li class="a">From</li>
+                        <li class="b">Gifu</li>
+                        <li class="a">Hobbies</li>
+                        <li class="b">カメラ、テニス、キャンプ</li>
+                    </ul>
                 </div>
-                <button class="button" id="serch-btn">
-                    <div class="btn-set">
-                        <img src="material/icon/search.svg" alt="">
-                        検索
-                    </div>
-                </button>
             </div>
-
+            <p class="message-title">Message</p>
+            <p class="message-sub">Webサイトの制作と運営に強い関心を持ち、
+                これから本格的にWebサイトづくりの道を進んでいきたいと考えています。
+                TOM'Sグルメ様のサイトを立ち上げ、学びながら成長していく過程を大切にしつつ、
+                同じようにWebサイトが必要な方々のお手伝いもできればと思っています。<br><br>
+                「自分で作りたいけれど、どうしていいかわからない」
+                「お店やサービスをもっと多くの人に知ってほしい」
+                そんな想いを持つ方々に寄り添い、
+                丁寧で分かりやすく、長く使っていただけるサイトづくりを目指しています。<br><br>
+                まだ学びの途中ではありますが、
+                だからこそ柔軟な視点で、ひとつひとつのサイトに真摯に向き合っていきます。
+                Webを通じて、誰かの未来や想いを支えられる存在になれたら嬉しいです。</p>
         </section>
 
-        <section id="tyuunou" class="gifu-shop-list">
-            <div class="title">
-                <h2>岐阜. 中濃エリア</h2>
-            </div>
-            <div class="region-list" id="add_gifu_tyuunou"></div>
-        </section>
-        <section id="gifusi" class="gifu-shop-list">
-            <div class="title">
-                <h2>岐阜. 岐阜エリア</h2>
-            </div>
-            <div class="region-list" id="add_gifu_gifu"></div>
-        </section>
-        <section id="seinou" class="gifu-shop-list">
-            <div class="title">
-                <h2>岐阜. 西濃エリア</h2>
-            </div>
-            <div class="region-list" id="add_gifu_seinou"></div>
-        </section>
-        <section id="aichi" class="aichi-shop-list">
-            <div class="title">
-                <h2>愛知エリア</h2>
-            </div>
-            <div class="region-list" id="add_aichi"></div>
-        </section>
     </main>
+
+
 
     <footer>
         <p>
             <small>&copy;TOM'Sグルメ</small>
         </p>
     </footer>
-
 </body>
 
-
-<script src="hensuu-list.js"></script>
-<script src="hensuu-list2.js"></script>
-<script src="serch.js"></script>
-<script src="add_file.js"></script>
 <script src="button.js"></script>
-
-<script src="soat.js"></script>
-<!-- <script src="link-back.js"></script> -->
-
 </html>

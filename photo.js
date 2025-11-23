@@ -169,6 +169,7 @@ button.forEach((btn,index) => {
         sessionStorage.setItem('judge',change); //sessionはブラウザを閉じると自動で消去される
         //地区ごとのファイルNo.受け渡し
         sessionStorage.setItem('file',date[change].text_count); //ファイル名に使用
+        // console.log('change:::' + date[change]);
     });
 });
 
