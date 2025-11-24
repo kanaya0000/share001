@@ -86,7 +86,7 @@ header .phone-header {
     display: block;
     z-index: 5;
     transition: all 0.5s;
-    background-color: #5ecd7f;
+    background-color: #fafafa;
   }
   header .phone-header #gnavwrap .toggle {
     z-index: 100;
@@ -109,7 +109,7 @@ header .phone-header {
   }
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul {
     margin-top: 65px;
-    background-color: #00ca3c;
+    background-color: #afafaf;
   }
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub1,
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub2 {

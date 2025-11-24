@@ -64,8 +64,7 @@ main #top_photo .top-text .text-sub {
   color: white;
 }
 main .serch {
-  width: 800px;
-  margin: 0 auto;
+  margin: 50px auto;
   background-color: white;
   border-radius: 5px;
   padding: 5px;
@@ -96,10 +95,10 @@ main .serch .serch-list .set0 {
 }
 main .serch .serch-list .set0 .select-set {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 main .serch .serch-list .set0 .select-set img {
   margin: 10px;
@@ -113,12 +112,18 @@ main .serch .serch-list .set0 .select-set select {
   border: none;
   font-size: 1.3rem;
   height: 30px;
+  width: 100px;
+}
+main .serch .serch-list .button {
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
 }
 main .serch .serch-list .button .btn-set {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 30px;
-  margin: 10px;
   font-size: 1.3rem;
 }
 main .serch .serch-list .button .btn-set img {
@@ -255,7 +260,7 @@ main #aichi .region-list .shop-list .detail-page:hover {
     height: 200px;
   }
   main .serch {
-    width: 300px;
+    width: 350px;
   }
 }
 @media screen and (max-width: 650px) {

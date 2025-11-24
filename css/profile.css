@@ -109,6 +109,7 @@ main section .set .profile_text ul .a::after {
 }
 main section .message-title {
   text-align: center;
+  margin-top: 100px;
 }
 main #set2 .set .profile_text ul li {
   height: 50px;
