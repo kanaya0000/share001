@@ -1,0 +1,90 @@
+main #top_photo .top_photo .photo1 .bgimg {
+  background-image: url("../material/photo/top-photo/img001.webp");
+}
+main #title {
+  max-width: 1000px;
+  margin: 100px auto;
+  text-align: center;
+}
+main #title h2 {
+  font-size: 2rem;
+}
+main #title .h2-phone {
+  display: none;
+}
+main #title p {
+  font-size: 1rem;
+  line-height: 3rem;
+}
+main .section {
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+}
+main .section .title {
+  text-align: center;
+  margin: 50px 0;
+}
+main .section .title h2 {
+  font-size: 3rem;
+  margin: 10px 30px;
+}
+main .section .title h3 {
+  font-size: 2rem;
+  margin: 10px 15px;
+}
+main .section .title .title-text {
+  line-height: 2rem;
+}
+main .section .title .insta, main .section .title .map {
+  margin: 0;
+  text-align: right;
+}
+main .section .title .insta a, main .section .title .map a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+main .section .title .insta a img, main .section .title .map a img {
+  margin-left: 10px;
+}
+main .section .eat {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  justify-content: space-between;
+}
+main .section .eat .eat-list img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+}
+main .section .eat .eat-list .eat-title {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  main #title .h2-pc {
+    display: none;
+  }
+  main #title .h2-phone {
+    display: block;
+  }
+  main #title p {
+    line-height: 2rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  main .section .title .title-text {
+    text-align: left;
+  }
+  main .section .eat {
+    grid-template-columns: repeat(1, 90%);
+    justify-content: center;
+    gap: 50px;
+  }
+  main .section .eat .eat-list p {
+    text-align: center;
+  }
+}/*# sourceMappingURL=picks.css.map */

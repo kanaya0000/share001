@@ -1,0 +1,115 @@
+main {
+    #top_photo {
+        .top_photo {
+            .photo1 {
+                .bgimg {
+                    background-image: url("../material/photo/top-photo/img001.webp");
+                }
+            }
+        }
+    }
+
+    #title {
+        max-width: 1000px;
+        margin: 100px auto;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+        }
+        .h2-phone {
+            display: none;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 3rem;
+        }
+    }
+
+    .section {
+        max-width: 1000px;
+        width: 95%;
+        // max-width: 1200px;
+        margin: 0 auto;
+
+        .title {
+            text-align: center;
+            margin: 50px 0;
+            h2 {
+                font-size: 3rem;
+                margin: 10px 30px;
+            }
+            h3 {
+                font-size: 2rem;
+                margin:10px 15px;
+            }
+            .title-text {
+                line-height: 2rem;
+            }
+            .insta , .map {
+                margin: 0;
+                text-align: right;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    height: 100%;
+                    img {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .eat {
+            display: grid;
+            grid-template-columns: repeat(2,45%);
+            justify-content: space-between;
+            .eat-list {
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 1/1;
+                }
+                .eat-title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    main {
+        #title {
+            .h2-pc {
+                display: none;
+            }
+            .h2-phone {
+                display: block;
+            }
+            p {
+                line-height: 2rem;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        .section {
+            .title {
+                .title-text {
+                    text-align: left;
+                }
+            }
+            .eat {
+                grid-template-columns: repeat(1,90%);
+                justify-content: center;
+                gap: 50px;
+                .eat-list {
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

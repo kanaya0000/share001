@@ -1,0 +1,160 @@
+main {
+    #top_photo {
+        position: relative;
+        // margin-top: 80px;
+        width: 100%;
+        margin: 80px auto 0 auto;
+        // height: calc(100vh - 100px);
+        // height: 300px;
+        // height: calc(100vh - 300px);
+        height: 400px;
+        aspect-ratio: 16/9;
+
+        .top_photo {
+            width: 100%;
+            height: 100%;
+
+            .photo1 {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                .bgimg {
+                    width: 100%;
+                    // width: 300px;
+                    // height: calc(100vh - 100px);
+                    // height: 300px;
+                    // height: calc(100vh - 300px);
+                    height: 400px;
+                    // opacity: 0;
+                    aspect-ratio: 16/9;
+                    // background-size: contain;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    // animation: bganime 15s infinite;
+                    // background-image: url("../material/photo/top-photo/img002.webp");
+                    background-position: center center;
+                    // position: absolute; //abs出ないと2つ目以降の画像表示されない
+
+                }
+
+                .bgimg::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    /* 黒の半透明で影を表現 */
+                    // background: rgba(0, 0, 0, 0.5);
+                    background: rgba(0, 0, 0, 0.2);
+                    pointer-events: none;
+                    /* クリックを通す */
+                }
+
+
+
+                // .bgimg:nth-child(2) {
+                //     background-image: url("../material/photo/top-photo/img002.webp");
+                //     animation-delay: 5s;
+
+                // }
+
+
+
+                // .bgimg:nth-child(3) {
+                //     background-image: url("../material/photo/top-photo/img003.webp");
+                //     animation-delay: 10s;
+                // }
+
+                // .bg {
+                //     animation: bganime-bg 15s infinite;
+                //     // animation-delay: 5s;
+                // }
+
+                // .bgimg_text2 {
+                //     animation-delay: 5s;
+                // }
+
+                // .bgimg_text3 {
+                //     animation-delay: 10s;
+                // }
+
+                // .bgimg_text {
+                .bg {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 90%;
+                    color: white;
+                    font-size: 3.5rem;
+                    text-align: center;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+
+
+
+            }
+
+        }
+
+        .top-text {
+            width: 100%;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translate(50%, -50%);
+            text-align: center;
+
+            .text-title {
+                font-size: 3rem;
+                color: white;
+            }
+
+            .text-sub {
+                font-size: 1.5rem;
+                color: white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    main {
+        #top_photo {
+            height: 200px;
+
+            .top_photo {
+                .photo1 {
+                    .bgimg {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+
+        .serch {
+            width: 350px;
+        }
+    }
+}
+
+
+@media screen and (max-width:650px) {
+main {
+        #top_photo {
+            .top-text {
+                .text-title {
+                    font-size: 2.5rem;
+                }
+
+                .text-sub {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+}
+}
+    
