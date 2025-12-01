@@ -77,28 +77,17 @@ console.log('aaaa-----' + shopdate.store_no);
         p2.textContent = shopdate.comment;
 
         const a = document.createElement('a');
-        // a.classList.add('detail-page'+ ' count' + all_count);
         a.classList.add('detail-page');
         a.classList.add(shopdate.id); //エリア4箇所
-        // a.classList.add(shopdate.text_count); //エリア詳細
         a.classList.add(shopdate.store_no);
-
         //同じクラス名を同時に指定できない
-
-        // console.log(j + '::::' + shopdate.store_no )
-        // a.classList.add(shopdate.store_no); //エリア詳細
         a.href = 'individual-shop.html';
-        // console.log('classname::' + a.className);
-        // const text = shopdate.key_list[0] + '_count';
-        // console.log('text::' +text);
+        // a.textContent = '記事を読む';
 
-        // a.classList.add(shopdate.text);
+        // div1.append(h3, img, ul, p1, p2, a);
+        a.append(img,ul,h3,p1);
+        div1.append(a);
 
-        // a.href = shopdate.link;
-        // a.target = "_blank";
-        a.textContent = '記事を読む';
-
-        div1.append(h3, img, ul, p1, p2, a);
         section.appendChild(div1);
 
 
