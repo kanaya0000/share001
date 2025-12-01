@@ -1,8 +1,12 @@
-$orange: orange;
-$green: #2eff00;
-$yellow: #ffe100;
-$blue: #3b4bff;
-$red: #ff0000;
+// $orange: orange;
+// $green: #2eff00;
+// $yellow: #ffe100;
+// $blue: #3b4bff;
+// $red: #ff0000;
+$color:#b9b9b98c; //囲い色
+$text:#545454; //文字色
+
+
 
 
 
@@ -16,19 +20,23 @@ main {
             }
         }
     }
+
     .serch {
         margin: 50px auto;
         background-color: white;
         border-radius: 5px;
         padding: 5px;
+
         .serch-header {
             display: flex;
             justify-content: center;
             align-items: center;
+
             svg {
                 width: 20px;
                 height: 20px;
             }
+
             .serch-title {
                 font-size: 1.5rem;
                 margin-left: 10px;
@@ -79,6 +87,7 @@ main {
                 height: 50px;
                 width: 150px;
                 border-radius: 25px;
+
                 .btn-set {
                     display: flex;
                     align-items: center;
@@ -96,181 +105,280 @@ main {
         }
     }
 
+    // #tyuunou,
+    // #seinou {
+        // background-color: #f9f7d4;
+    // }
+
+
     .gifu-shop-list,
     .aichi-shop-list {
+        // background-color: #f9f7d478;
+        background-color: white;
         // margin-top: 80px;
-        padding-top: 80px;
-
+        padding: 50px 0;
         .title {
             text-align: center;
 
+            h2 {
+                font-size: 2.5rem;
+            }
         }
 
         .region-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, 400px);
+            // grid-template-columns: repeat(auto-fit, 400px);
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
             justify-content: space-around;
             justify-items: center;
-            gap: 20px;
-
+            gap: 40px;
+            width: 90%;
+            margin: 0 auto;
             .shop-list {
-                width: 95%;
+                width: 100%;
                 display: flex;
                 gap: 10px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-
                 // border: 1px solid black;
-                .sub-title {
-                    font-size: 1.5rem;
-                }
-
-                h3,
-                p {
-                    margin: 0;
-                }
-
-                img {
-                    // width: 100%;
-                    width: 80%;
-                    border-radius: 10px;
-                    object-fit: contain;
-                    // aspect-ratio: 12/7;
-                }
-
-                .key-word {
-                    // background-color: $orange;
-                    display: flex;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                    justify-content: center;
-
-                    li {
-                        // color: $orange;
-                        // border: 1px solid $orange;
-                        border-radius: 5px;
-                        padding: 5px 10px;
-                    }
-                }
-
-                .explanation {
-                    color: gray;
-                }
-
+                // padding: 20px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+                background-color: #ffd69f14;
+                border-radius: 10px;
                 .detail-page {
-                    display: block;
-                    height: 20px;
-                    // border: 2px solid $orange ;
-                    border-radius: 25px;
-                    padding: 15px 85px;
-                    // color: $orange;
+                    // border: 1px solid black;
+                    // padding: 10px;
+                    position: relative;
+                    // padding: 15px;
+                    //囲いデザイン
+                    // border-top: 2px solid $color;
+                    // border-bottom: 2px solid $color;
+                    // padding: 10px 20px;
+                    
+                    .sub-title {
+                        font-size: 1.5rem;
+                    }
+
+                    h3,
+                    p,
+                    ul {
+                        color: $text;
+                        margin: 5px 0 5px 15px;
+                        width: calc(100% - 15px);
+                        text-align: left;
+                    }
+
+                    h3 {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        height: 4rem;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    img {
+                        // width: 100%;
+                        width: 100%;
+                        // border-radius: 10px;
+                        object-fit: cover;
+                        aspect-ratio: 3/2;
+                        //ホバー時の設定
+                        transition: .3s ease;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+
+                    .key-word {
+                        // background-color: $orange;
+                        display: flex;
+                        gap: 10px;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+
+                        li {
+                            // color: $orange;
+                            // border: 1px solid $orange;
+                            border-radius: 5px;
+                            // padding: 5px 10px;
+                            font-size: .9rem;
+                        }
+
+                        li::before {
+                            content: "#";
+                        }
+                    }
+                    .place {
+                        font-size: .9rem;
+                    }
+
                 }
 
-                .detail-page:hover {
-                    // background-color: $orange;
-                    color: white;
-                }
+                // 囲い線デザイン
+                // .detail-page::before ,
+                // .detail-page::after{
+                //     content: "";
+                //     position: absolute;
+                //     width: 30px;
+                //     height: 30px;
+                //     display: inline-block;
+                    
+                // }
+                // .detail-page::before {
+                //     top: 0;
+                //     left: 0;
+                //     border-top:1px solid black;
+                //     border-left: 1px solid black;
+                // }
+                // .detail-page::after {
+                //     bottom: 0;
+                //     right: 0;
+                //     border-right: 1px solid black;
+                //     border-bottom: 1px solid black;
+                // }
 
-                .detail-page::after {
-                    content: ">";
-                    margin-left: 20px;
-                }
+
+                // .detail-page:before,
+                // .detail-page::after {
+                //     content: "";
+                //     position: absolute;
+                //     top: -10px;
+                //     width: 2px;
+                //     height: -webkit-calc(100% + 20px);
+                //     height: calc(100% + 20px);
+                //     background-color: $color;
+                // }
+                // .detail-page::before {
+                //     left: 10px;
+                // }
+
+                // .detail-page::after {
+                //     right: 10px;
+                // }
+                // .detail-page:hover {
+                //     img , ul , h3 , p {
+                //         opacity: .8;
+                //         // transform: scale(1.5);
+                //     }
+                    
+                    
+                // }
+
+
+
+                // .detail-page {
+                //     display: block;
+                //     height: 20px;
+                //     // border: 2px solid $orange ;
+                //     border-radius: 25px;
+                //     padding: 15px 85px;
+                //     // color: $orange;
+                // }
+
+                // .detail-page:hover {
+                //     // background-color: $orange;
+                //     color: white;
+                // }
+
+                // .detail-page::after {
+                //     content: ">";
+                //     margin-left: 20px;
+                // }
             }
         }
     }
 
-    #tyuunou {
-        .region-list {
-            .shop-list {
-                .key-word {
-                    li {
-                        color: $orange;
-                        border: 1px solid $orange;
-                    }
-                }
+    // #tyuunou {
+    //     .region-list {
+    //         .shop-list {
+    //             .key-word {
+    //                 li {
+    //                     color: $orange;
+    //                     border: 1px solid $orange;
+    //                 }
+    //             }
 
-                .detail-page {
-                    border: 2px solid $orange ;
-                    color: $orange;
-                }
+    //             .detail-page {
+    //                 border: 2px solid $orange ;
+    //                 color: $orange;
+    //             }
 
-                .detail-page:hover {
-                    background-color: $orange;
-                    color: white;
-                }
-            }
-        }
-    }
+    //             .detail-page:hover {
+    //                 background-color: $orange;
+    //                 color: white;
+    //             }
+    //         }
+    //     }
+    // }
 
-    #gifusi {
-        .region-list {
-            .shop-list {
-                .key-word {
-                    li {
-                        color: $green;
-                        border: 1px solid $green;
-                    }
-                }
+    // #gifusi {
+    //     .region-list {
+    //         .shop-list {
+    //             .key-word {
+    //                 li {
+    //                     color: $green;
+    //                     border: 1px solid $green;
+    //                 }
+    //             }
 
-                .detail-page {
-                    border: 2px solid $green ;
-                    color: $green;
-                }
+    //             .detail-page {
+    //                 border: 2px solid $green ;
+    //                 color: $green;
+    //             }
 
-                .detail-page:hover {
-                    background-color: $green;
-                    color: white;
-                }
-            }
-        }
-    }
+    //             .detail-page:hover {
+    //                 background-color: $green;
+    //                 color: white;
+    //             }
+    //         }
+    //     }
+    // }
 
-    #seinou {
-        .region-list {
-            .shop-list {
-                .key-word {
-                    li {
-                        color: $yellow;
-                        border: 1px solid $yellow;
-                    }
-                }
+    // #seinou {
+    //     .region-list {
+    //         .shop-list {
+    //             .key-word {
+    //                 li {
+    //                     color: $yellow;
+    //                     border: 1px solid $yellow;
+    //                 }
+    //             }
 
-                .detail-page {
-                    border: 2px solid $yellow;
-                    color: $yellow;
-                }
+    //             .detail-page {
+    //                 border: 2px solid $yellow;
+    //                 color: $yellow;
+    //             }
 
-                .detail-page:hover {
-                    background-color: $yellow;
-                    color: white;
-                }
-            }
-        }
-    }
+    //             .detail-page:hover {
+    //                 background-color: $yellow;
+    //                 color: white;
+    //             }
+    //         }
+    //     }
+    // }
 
-    #aichi {
-        .region-list {
-            .shop-list {
-                .key-word {
-                    li {
-                        color: $blue;
-                        border: 1px solid $blue;
-                    }
-                }
+    // #aichi {
+    //     .region-list {
+    //         .shop-list {
+    //             .key-word {
+    //                 li {
+    //                     color: $blue;
+    //                     border: 1px solid $blue;
+    //                 }
+    //             }
 
-                .detail-page {
-                    border: 2px solid $blue;
-                    color: $blue;
-                }
+    //             .detail-page {
+    //                 border: 2px solid $blue;
+    //                 color: $blue;
+    //             }
 
-                .detail-page:hover {
-                    background-color: $blue;
-                    color: white;
-                }
-            }
-        }
-    }
+    //             .detail-page:hover {
+    //                 background-color: $blue;
+    //                 color: white;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 
@@ -300,7 +408,27 @@ main {
         .gifu-shop-list,
         .aichi-shop-list {
             .region-list {
-                grid-template-columns: repeat(auto-fit, 95%);
+                grid-template-columns: repeat(2, 45%);
+                .shop-list {
+                    .detail-page {
+                        .key-word , h3 , .place {
+                            margin-left:5px ;
+                            width: calc(100% - 5px);
+                        } 
+                        .key-word {
+                            li {
+                                font-size: .8rem;
+                            }
+                        }
+                        .place {
+                            font-size: .8rem;
+                        }
+                        .sub-title {
+                            font-size: 1.2rem;
+                            // background-color: red;
+                        }
+                    }
+                }
             }
         }
 

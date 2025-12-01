@@ -6,7 +6,7 @@ main #top_photo .top_photo .photo1 .bgimg {
   background-image: url("../material/photo/top-photo/img003.webp");
 }
 main section {
-  width: 80%;
+  max-width: 1000px;
   margin: 50px auto 100px auto;
 }
 main section h2 {
@@ -64,6 +64,9 @@ main #set2 .set .profile_text ul li {
 @media screen and (max-width: 1000px) {
   main {
     font-size: 1rem;
+  }
+  main section {
+    width: 90%;
   }
   main section .set {
     flex-direction: column;

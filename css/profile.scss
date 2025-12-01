@@ -11,7 +11,8 @@ main {
         }
     }
     section {
-        width: 80%;
+        max-width: 1000px;
+        // width: 80%;
         margin: 50px auto 100px auto;
         h2 {
             font-size: 2rem;
@@ -92,6 +93,7 @@ main {
 main {
     font-size: 1rem;
     section {
+        width: 90%;
         .set {
             flex-direction: column;
             align-items: center;

@@ -5,7 +5,7 @@ header {
   position: fixed;
   top: 0;
   border-bottom: 1px solid gray;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 header .pc-header {
   height: 100%;
