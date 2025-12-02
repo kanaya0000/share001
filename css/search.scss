@@ -21,6 +21,24 @@ main {
         }
     }
 
+        #title {
+        max-width: 1000px;
+        margin: 100px auto;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+        }
+        .h2-phone {
+            display: none;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 3rem;
+        }
+    }
+
     .serch {
         margin: 50px auto;
         background-color: white;
@@ -155,17 +173,23 @@ main {
                     // border-top: 2px solid $color;
                     // border-bottom: 2px solid $color;
                     // padding: 10px 20px;
-                    
+                    overflow: hidden;
                     .sub-title {
                         font-size: 1.5rem;
+                    }
+                    .sub-text {
+                        font-size: .9rem;
+                        height: 2.5rem;
+                        display: flex;
+                        align-items: center;
                     }
 
                     h3,
                     p,
                     ul {
                         color: $text;
-                        margin: 5px 0 5px 15px;
-                        width: calc(100% - 15px);
+                        margin: 5px 5px 5px 15px;
+                        width: calc(100% - 20px);
                         text-align: left;
                     }
 
@@ -195,7 +219,15 @@ main {
                         gap: 10px;
                         flex-wrap: wrap;
                         justify-content: flex-start;
-
+                        // position: absolute;
+                        // top: 5px;
+                        // left: 5px;
+                        // background-color:#00000091 ;
+                        // color: white;
+                        // border: 1px solid white;
+                        // width: auto;
+                        // margin: 0;
+                        // padding: 5px;
                         li {
                             // color: $orange;
                             // border: 1px solid $orange;
@@ -214,6 +246,12 @@ main {
 
                 }
 
+                .detail-page:hover {
+                    img {
+                        // opacity: .8;
+                        transform: scale(1.05);
+                    }
+                }
                 // 囲い線デザイン
                 // .detail-page::before ,
                 // .detail-page::after{

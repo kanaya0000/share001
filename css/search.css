@@ -1,6 +1,21 @@
 main #top_photo .top_photo .photo1 .bgimg {
   background-image: url("../material/photo/top-photo/img002.webp");
 }
+main #title {
+  max-width: 1000px;
+  margin: 100px auto;
+  text-align: center;
+}
+main #title h2 {
+  font-size: 2rem;
+}
+main #title .h2-phone {
+  display: none;
+}
+main #title p {
+  font-size: 1rem;
+  line-height: 3rem;
+}
 main .serch {
   margin: 50px auto;
   background-color: white;
@@ -105,10 +120,18 @@ main .aichi-shop-list .region-list .shop-list {
 main .gifu-shop-list .region-list .shop-list .detail-page,
 main .aichi-shop-list .region-list .shop-list .detail-page {
   position: relative;
+  overflow: hidden;
 }
 main .gifu-shop-list .region-list .shop-list .detail-page .sub-title,
 main .aichi-shop-list .region-list .shop-list .detail-page .sub-title {
   font-size: 1.5rem;
+}
+main .gifu-shop-list .region-list .shop-list .detail-page .sub-text,
+main .aichi-shop-list .region-list .shop-list .detail-page .sub-text {
+  font-size: 0.9rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
 }
 main .gifu-shop-list .region-list .shop-list .detail-page h3,
 main .gifu-shop-list .region-list .shop-list .detail-page p,
@@ -117,8 +140,8 @@ main .aichi-shop-list .region-list .shop-list .detail-page h3,
 main .aichi-shop-list .region-list .shop-list .detail-page p,
 main .aichi-shop-list .region-list .shop-list .detail-page ul {
   color: #545454;
-  margin: 5px 0 5px 15px;
-  width: calc(100% - 15px);
+  margin: 5px 5px 5px 15px;
+  width: calc(100% - 20px);
   text-align: left;
 }
 main .gifu-shop-list .region-list .shop-list .detail-page h3,
@@ -158,6 +181,10 @@ main .aichi-shop-list .region-list .shop-list .detail-page .key-word li::before 
 main .gifu-shop-list .region-list .shop-list .detail-page .place,
 main .aichi-shop-list .region-list .shop-list .detail-page .place {
   font-size: 0.9rem;
+}
+main .gifu-shop-list .region-list .shop-list .detail-page:hover img,
+main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 650px) {
