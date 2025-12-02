@@ -42,7 +42,8 @@ function setting(arealist, section) {
 
         const h3 = document.createElement('h3');
         h3.classList.add('sub-title');
-        h3.textContent = shopdate.name;
+        // h3.textContent = shopdate.name;
+        h3.textContent = shopdate.place + ' | ' + shopdate.name;
 
         const img = document.createElement('img');
         img.src = shopdate.img;
@@ -68,13 +69,17 @@ console.log('aaaa-----' + shopdate.store_no);
             ul.appendChild(li);
         }
 
-        const p1 = document.createElement('p');
-        p1.classList.add('place');
-        p1.textContent = shopdate.place;
+        // const p1 = document.createElement('p');
+        // p1.classList.add('place');
+        // p1.textContent = shopdate.place;
 
         const p2 = document.createElement('p');
-        p2.classList.add('explanation');
-        p2.textContent = shopdate.comment;
+        // p2.classList.add('explanation');
+        p2.textContent = shopdate.commnet;
+        // console.log('----------------' + shopdate.commnet);
+
+        p2.classList.add('sub-text');
+        
 
         const a = document.createElement('a');
         a.classList.add('detail-page');
@@ -85,7 +90,7 @@ console.log('aaaa-----' + shopdate.store_no);
         // a.textContent = '記事を読む';
 
         // div1.append(h3, img, ul, p1, p2, a);
-        a.append(img,ul,h3,p1);
+        a.append(img,ul,h3,p2);
         div1.append(a);
 
         section.appendChild(div1);
