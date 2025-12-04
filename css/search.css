@@ -1,5 +1,12 @@
 main #top_photo .top_photo .photo1 .bgimg {
-  background-image: url("../material/photo/top-photo/img002.webp");
+  height: 100%;
+  width: 100%;
+  background-image: url("../material/photo/top-photo/img001.webp");
+  background-position: center center;
+}
+main #top_photo .top-text .phone-text-title,
+main #top_photo .top-text .phone-text-sub {
+  display: none;
 }
 main #title {
   max-width: 1000px;
@@ -188,6 +195,54 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
 }
 
 @media screen and (max-width: 650px) {
+  main #top_photo {
+    height: calc(100vh - 80px);
+  }
+  main #top_photo .top_photo .photo1 .bgimg {
+    opacity: 0;
+    animation: bganime 15s infinite;
+    position: absolute;
+  }
+  main #top_photo .top_photo .photo1 .bgimg:nth-child(2) {
+    background-image: url("../material/photo/top-photo/img002.webp");
+    animation-delay: 5s;
+  }
+  main #top_photo .top_photo .photo1 .bgimg:nth-child(3) {
+    background-image: url("../material/photo/top-photo/img003.webp");
+    animation-delay: 10s;
+  }
+  main #top_photo .top_photo .photo1 .bgimg::after {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  main #top_photo .top-text .pc-text-title {
+    display: none;
+  }
+  main #top_photo .top-text .phone-text-title,
+  main #top_photo .top-text .phone-text-sub {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    display: block;
+    color: white;
+  }
+  main #top_photo .top-text .phone-text-title {
+    font-size: 3rem;
+  }
+  main #top_photo .top-text .phone-text-sub {
+    font-size: 1.5rem;
+  }
+  main #title .h2-pc {
+    display: none;
+  }
+  main #title .h2-phone {
+    display: block;
+  }
+  main #title p {
+    line-height: 2rem;
+    width: 90%;
+    margin: 0 auto;
+  }
   main #map {
     grid-template-columns: repeat(1, 95%);
   }
@@ -208,9 +263,12 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   }
   main .gifu-shop-list .region-list,
   main .aichi-shop-list .region-list {
-    grid-template-columns: repeat(2, 45%);
+    grid-template-columns: repeat(2, 48%);
+    gap: 20px;
   }
-  main .gifu-shop-list .region-list .shop-list .detail-page .key-word, main .gifu-shop-list .region-list .shop-list .detail-page h3, main .gifu-shop-list .region-list .shop-list .detail-page .place,
+  main .gifu-shop-list .region-list .shop-list .detail-page .key-word,
+  main .gifu-shop-list .region-list .shop-list .detail-page h3,
+  main .gifu-shop-list .region-list .shop-list .detail-page .place,
   main .aichi-shop-list .region-list .shop-list .detail-page .key-word,
   main .aichi-shop-list .region-list .shop-list .detail-page h3,
   main .aichi-shop-list .region-list .shop-list .detail-page .place {
@@ -228,6 +286,12 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   main .gifu-shop-list .region-list .shop-list .detail-page .sub-title,
   main .aichi-shop-list .region-list .shop-list .detail-page .sub-title {
     font-size: 1.2rem;
+    font-size: 1rem;
+    height: auto;
+  }
+  main .gifu-shop-list .region-list .shop-list .detail-page .sub-text,
+  main .aichi-shop-list .region-list .shop-list .detail-page .sub-text {
+    height: auto;
   }
   main .serch .serch-list {
     align-items: center;

@@ -3,8 +3,8 @@
 // $yellow: #ffe100;
 // $blue: #3b4bff;
 // $red: #ff0000;
-$color:#b9b9b98c; //囲い色
-$text:#545454; //文字色
+$color: #b9b9b98c; //囲い色
+$text: #545454; //文字色
 
 
 
@@ -12,16 +12,69 @@ $text:#545454; //文字色
 
 main {
     #top_photo {
+        // height: calc(100vh - 80px);
+
         .top_photo {
+
             .photo1 {
                 .bgimg {
-                    background-image: url("../material/photo/top-photo/img002.webp");
+                    height: 100%;
+                    width: 100%;
+                    // opacity: 0;
+                    background-image: url("../material/photo/top-photo/img001.webp");
+                    // animation: bganime 15s infinite;
+                    // background-image: url("../material/photo/top-photo/img002.webp");
+                    background-position: center center;
+                    // position: absolute; //abs出ないと2つ目以降の画像表示されない
                 }
+
+                // .bgimg:nth-child(2) {
+                //     background-image: url("../material/photo/top-photo/img002.webp");
+                //     animation-delay: 5s;
+
+                // }
+
+
+
+                // .bgimg:nth-child(3) {
+                //     background-image: url("../material/photo/top-photo/img003.webp");
+                //     animation-delay: 10s;
+                // }
+
+                // .bgimg::after {
+                //     background: rgba(0, 0, 0, 0.4);
+                // }
+
+
             }
+        }
+
+        .top-text {
+
+            .phone-text-title,
+            .phone-text-sub {
+                display: none;
+            }
+
+            //     .text-title {
+            //         font-family: "Dancing Script", cursive;
+            //         font-optical-sizing: auto;
+            //         font-weight: weight;
+            //         font-style: normal;
+            //         font-size: 3rem;
+            //     }
+
+            //     .text-sub {
+            //         font-family: "Dancing Script", cursive;
+            //         font-optical-sizing: auto;
+            //         font-weight: weight;
+            //         font-style: normal;
+            //         font-size: 1.5rem;
+            //     }
         }
     }
 
-        #title {
+    #title {
         max-width: 1000px;
         margin: 100px auto;
         text-align: center;
@@ -29,6 +82,7 @@ main {
         h2 {
             font-size: 2rem;
         }
+
         .h2-phone {
             display: none;
         }
@@ -125,7 +179,7 @@ main {
 
     // #tyuunou,
     // #seinou {
-        // background-color: #f9f7d4;
+    // background-color: #f9f7d4;
     // }
 
 
@@ -135,6 +189,7 @@ main {
         background-color: white;
         // margin-top: 80px;
         padding: 50px 0;
+
         .title {
             text-align: center;
 
@@ -146,12 +201,13 @@ main {
         .region-list {
             display: grid;
             // grid-template-columns: repeat(auto-fit, 400px);
-            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             justify-content: space-around;
             justify-items: center;
             gap: 40px;
             width: 90%;
             margin: 0 auto;
+
             .shop-list {
                 width: 100%;
                 display: flex;
@@ -164,6 +220,7 @@ main {
                 box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
                 background-color: #ffd69f14;
                 border-radius: 10px;
+
                 .detail-page {
                     // border: 1px solid black;
                     // padding: 10px;
@@ -174,9 +231,11 @@ main {
                     // border-bottom: 2px solid $color;
                     // padding: 10px 20px;
                     overflow: hidden;
+
                     .sub-title {
                         font-size: 1.5rem;
                     }
+
                     .sub-text {
                         font-size: .9rem;
                         height: 2.5rem;
@@ -219,20 +278,9 @@ main {
                         gap: 10px;
                         flex-wrap: wrap;
                         justify-content: flex-start;
-                        // position: absolute;
-                        // top: 5px;
-                        // left: 5px;
-                        // background-color:#00000091 ;
-                        // color: white;
-                        // border: 1px solid white;
-                        // width: auto;
-                        // margin: 0;
-                        // padding: 5px;
+
                         li {
-                            // color: $orange;
-                            // border: 1px solid $orange;
                             border-radius: 5px;
-                            // padding: 5px 10px;
                             font-size: .9rem;
                         }
 
@@ -240,6 +288,7 @@ main {
                             content: "#";
                         }
                     }
+
                     .place {
                         font-size: .9rem;
                     }
@@ -252,171 +301,10 @@ main {
                         transform: scale(1.05);
                     }
                 }
-                // 囲い線デザイン
-                // .detail-page::before ,
-                // .detail-page::after{
-                //     content: "";
-                //     position: absolute;
-                //     width: 30px;
-                //     height: 30px;
-                //     display: inline-block;
-                    
-                // }
-                // .detail-page::before {
-                //     top: 0;
-                //     left: 0;
-                //     border-top:1px solid black;
-                //     border-left: 1px solid black;
-                // }
-                // .detail-page::after {
-                //     bottom: 0;
-                //     right: 0;
-                //     border-right: 1px solid black;
-                //     border-bottom: 1px solid black;
-                // }
 
-
-                // .detail-page:before,
-                // .detail-page::after {
-                //     content: "";
-                //     position: absolute;
-                //     top: -10px;
-                //     width: 2px;
-                //     height: -webkit-calc(100% + 20px);
-                //     height: calc(100% + 20px);
-                //     background-color: $color;
-                // }
-                // .detail-page::before {
-                //     left: 10px;
-                // }
-
-                // .detail-page::after {
-                //     right: 10px;
-                // }
-                // .detail-page:hover {
-                //     img , ul , h3 , p {
-                //         opacity: .8;
-                //         // transform: scale(1.5);
-                //     }
-                    
-                    
-                // }
-
-
-
-                // .detail-page {
-                //     display: block;
-                //     height: 20px;
-                //     // border: 2px solid $orange ;
-                //     border-radius: 25px;
-                //     padding: 15px 85px;
-                //     // color: $orange;
-                // }
-
-                // .detail-page:hover {
-                //     // background-color: $orange;
-                //     color: white;
-                // }
-
-                // .detail-page::after {
-                //     content: ">";
-                //     margin-left: 20px;
-                // }
             }
         }
     }
-
-    // #tyuunou {
-    //     .region-list {
-    //         .shop-list {
-    //             .key-word {
-    //                 li {
-    //                     color: $orange;
-    //                     border: 1px solid $orange;
-    //                 }
-    //             }
-
-    //             .detail-page {
-    //                 border: 2px solid $orange ;
-    //                 color: $orange;
-    //             }
-
-    //             .detail-page:hover {
-    //                 background-color: $orange;
-    //                 color: white;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // #gifusi {
-    //     .region-list {
-    //         .shop-list {
-    //             .key-word {
-    //                 li {
-    //                     color: $green;
-    //                     border: 1px solid $green;
-    //                 }
-    //             }
-
-    //             .detail-page {
-    //                 border: 2px solid $green ;
-    //                 color: $green;
-    //             }
-
-    //             .detail-page:hover {
-    //                 background-color: $green;
-    //                 color: white;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // #seinou {
-    //     .region-list {
-    //         .shop-list {
-    //             .key-word {
-    //                 li {
-    //                     color: $yellow;
-    //                     border: 1px solid $yellow;
-    //                 }
-    //             }
-
-    //             .detail-page {
-    //                 border: 2px solid $yellow;
-    //                 color: $yellow;
-    //             }
-
-    //             .detail-page:hover {
-    //                 background-color: $yellow;
-    //                 color: white;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // #aichi {
-    //     .region-list {
-    //         .shop-list {
-    //             .key-word {
-    //                 li {
-    //                     color: $blue;
-    //                     border: 1px solid $blue;
-    //                 }
-    //             }
-
-    //             .detail-page {
-    //                 border: 2px solid $blue;
-    //                 color: $blue;
-    //             }
-
-    //             .detail-page:hover {
-    //                 background-color: $blue;
-    //                 color: white;
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 
@@ -424,6 +312,77 @@ main {
 
 @media screen and (max-width:650px) {
     main {
+        #top_photo {
+            height: calc(100vh - 80px);
+
+            .top_photo {
+                .photo1 {
+                    .bgimg {
+                        opacity: 0;
+                        animation: bganime 15s infinite;
+                        position: absolute; //abs出ないと2つ目以降の画像表示されない
+                    }
+
+                    .bgimg:nth-child(2) {
+                        background-image: url("../material/photo/top-photo/img002.webp");
+                        animation-delay: 5s;
+
+                    }
+
+
+
+                    .bgimg:nth-child(3) {
+                        background-image: url("../material/photo/top-photo/img003.webp");
+                        animation-delay: 10s;
+                    }
+
+                    .bgimg::after {
+                        background: rgba(0, 0, 0, 0.4);
+                    }
+                }
+
+            }
+
+            .top-text {
+                .pc-text-title {
+                    display: none;
+                }
+
+                .phone-text-title,
+                .phone-text-sub {
+                    font-family: "Dancing Script", cursive;
+                    font-optical-sizing: auto;
+                    font-weight: weight;
+                    font-style: normal;
+                    display: block;
+                    color: white;
+                }
+                .phone-text-title {
+                    font-size: 3rem;
+                }
+                .phone-text-sub {
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+
+        #title {
+            .h2-pc {
+                display: none;
+            }
+
+            .h2-phone {
+                display: block;
+            }
+
+            p {
+                line-height: 2rem;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+
         #map {
             grid-template-columns: repeat(1, 95%);
 
@@ -446,24 +405,38 @@ main {
         .gifu-shop-list,
         .aichi-shop-list {
             .region-list {
-                grid-template-columns: repeat(2, 45%);
+                grid-template-columns: repeat(2, 48%);
+                gap: 20px;
+
                 .shop-list {
                     .detail-page {
-                        .key-word , h3 , .place {
-                            margin-left:5px ;
+
+                        .key-word,
+                        h3,
+                        .place {
+                            margin-left: 5px;
                             width: calc(100% - 5px);
-                        } 
+                        }
+
                         .key-word {
                             li {
                                 font-size: .8rem;
                             }
                         }
+
                         .place {
                             font-size: .8rem;
                         }
+
                         .sub-title {
                             font-size: 1.2rem;
+                            font-size: 1rem;
                             // background-color: red;
+                            height: auto;
+                        }
+
+                        .sub-text {
+                            height: auto;
                         }
                     }
                 }

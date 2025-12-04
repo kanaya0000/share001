@@ -19,4 +19,15 @@ ul {
 }
 ul li {
   list-style: none;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translate(0, -30%);
+  transition: 2s;
+}
+
+.fadein.on {
+  transform: translate(0, 0);
+  opacity: 1;
 }/*# sourceMappingURL=common.css.map */
