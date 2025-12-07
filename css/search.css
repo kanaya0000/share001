@@ -140,6 +140,10 @@ main .aichi-shop-list .region-list .shop-list .detail-page .sub-text {
   display: flex;
   align-items: center;
 }
+main .gifu-shop-list .region-list .shop-list .detail-page .place,
+main .aichi-shop-list .region-list .shop-list .detail-page .place {
+  display: none;
+}
 main .gifu-shop-list .region-list .shop-list .detail-page h3,
 main .gifu-shop-list .region-list .shop-list .detail-page p,
 main .gifu-shop-list .region-list .shop-list .detail-page ul,
