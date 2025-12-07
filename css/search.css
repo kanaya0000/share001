@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 main #top_photo .top_photo .photo1 .bgimg {
   height: 100%;
   width: 100%;
@@ -220,10 +219,6 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   }
   main #top_photo .top-text .phone-text-title,
   main #top_photo .top-text .phone-text-sub {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
     display: block;
     color: white;
   }
@@ -232,6 +227,7 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   }
   main #top_photo .top-text .phone-text-sub {
     font-size: 1.5rem;
+    line-height: 3rem;
   }
   main #title .h2-pc {
     display: none;
@@ -243,6 +239,7 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
     line-height: 2rem;
     width: 90%;
     margin: 0 auto;
+    text-align: left;
   }
   main #map {
     grid-template-columns: repeat(1, 95%);

@@ -8,7 +8,7 @@ $text: #545454; //文字色
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 
 
@@ -352,10 +352,10 @@ main {
 
                 .phone-text-title,
                 .phone-text-sub {
-                    font-family: "Dancing Script", cursive;
-                    font-optical-sizing: auto;
-                    font-weight: weight;
-                    font-style: normal;
+                    // font-family: "Dancing Script", cursive;
+                    // font-optical-sizing: auto;
+                    // font-weight: weight;
+                    // font-style: normal;
                     display: block;
                     color: white;
                 }
@@ -364,6 +364,7 @@ main {
                 }
                 .phone-text-sub {
                     font-size: 1.5rem;
+                    line-height: 3rem;
                 }
             }
 
@@ -382,6 +383,7 @@ main {
                 line-height: 2rem;
                 width: 90%;
                 margin: 0 auto;
+                text-align: left;
             }
         }
 

@@ -1,4 +1,3 @@
-@use 'set';
 
 
 main {
@@ -138,9 +137,7 @@ main {
                 .photo {
                     grid-template-columns: 1fr;
 
-                    img {
-                        // aspect-ratio: 12/7;
-                    }
+
                 }
             }
         }
@@ -162,9 +159,7 @@ main {
                     width: 100%;
                     // grid-template-columns: 1fr;
 
-                    img {
-                        // aspect-ratio: 12/7;
-                    }
+
                 }
 
                 .text {
