@@ -17,7 +17,7 @@ for (let i = 0; i < classification.length; i++) {
 }
 
 
-console.log('count:::' + date[1]);
+// console.log('count:::' + date[1]);
 
 // console.log('count' + date[1].count);
 
@@ -59,7 +59,7 @@ function setting(arealist, section) {
         // img.src = 'material/photo/list/' + img_path2 + '/' + shopdate.img + '/img001.webp';
         // img.src = 'material/photo/list/' + img_path2 + '/store' + shopdate.store_no + '/img001.webp';
         img.src = 'material/photo/list/' + img_path2 + '/store' + String(shopdate.store_no).padStart(3, '0') + '/img001.webp';
-console.log('aaaa-----' + shopdate.store_no);
+// console.log('aaaa-----' + shopdate.store_no);
 
         const ul = document.createElement('ul');
         ul.classList.add('key-word');
@@ -69,9 +69,9 @@ console.log('aaaa-----' + shopdate.store_no);
             ul.appendChild(li);
         }
 
-        // const p1 = document.createElement('p');
-        // p1.classList.add('place');
-        // p1.textContent = shopdate.place;
+        const p1 = document.createElement('p');
+        p1.classList.add('place');
+        p1.textContent = shopdate.place;
 
         const p2 = document.createElement('p');
         // p2.classList.add('explanation');
@@ -90,7 +90,7 @@ console.log('aaaa-----' + shopdate.store_no);
         // a.textContent = '記事を読む';
 
         // div1.append(h3, img, ul, p1, p2, a);
-        a.append(img,ul,h3,p2);
+        a.append(img,ul,h3,p2,p1);
         div1.append(a);
 
         section.appendChild(div1);

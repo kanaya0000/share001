@@ -84,7 +84,7 @@ keep_btn.addEventListener('click', () => {
     const value2 = document.getElementById('select1');
     eria_keep = value1.value;
     genre_keep = value2.value;
-    console.log(eria_keep);
+    // console.log(eria_keep);
     // console.log('エリアの選択::' + eria_keep);
     // console.log('ジャンルの選択::' + genre_keep);
 
@@ -118,8 +118,8 @@ keep_btn.addEventListener('click', () => {
                 }
             }
         }
-        console.log('検索結果リスト：' + display_list);
-        console.log('検索キーワード：' + genre_keep);
+        // console.log('検索結果リスト：' + display_list);
+        // console.log('検索キーワード：' + genre_keep);
 
         //リストを元に表示させる要素を選択 1=変数の1データ目
         for (let i = 0; i < display_list.length; i++) {
@@ -128,28 +128,28 @@ keep_btn.addEventListener('click', () => {
             class_list[display_list[i]].style.display = 'flex';
 
             //タイトルの判定
-            console.log('------' + class_list[i].classList[1]);
+            // console.log('------' + class_list[i].classList[1]);
             //all_listのnameプロパティだけのリスト作成
             const namelist = all_list.map(item => item.name);
-            console.log(namelist);
-            console.log(date + 'データ');
+            // console.log(namelist);
+            // console.log(date + 'データ');
             for (let j = 0; j < namelist.length; j++) {
                 if (namelist.slice(0, 8).includes(class_list[display_list[i]].classList[1])) {
                     //岐阜エリア
-                    console.log(i + 'は岐阜エリア');
+                    // console.log(i + 'は岐阜エリア');
                     //タイトルの際表示
                     const title_up = document.getElementById(id_list[1]);
                     title_up.style.display = 'block';
                 } else if (namelist.slice(8, 11).includes(class_list[display_list[i]].classList[1])) {
-                    console.log(i + 'は中濃エリア');
+                    // console.log(i + 'は中濃エリア');
                     const title_up = document.getElementById(id_list[0]);
                     title_up.style.display = 'block';
                 } else if (namelist.slice(11, 17).includes(class_list[display_list[i]].classList[1])) {
-                    console.log(i + 'は西濃エリア');
+                    // console.log(i + 'は西濃エリア');
                     const title_up = document.getElementById(id_list[2]);
                     title_up.style.display = 'block';
                 } else {
-                    console.log(i + 'は愛知エリア');
+                    // console.log(i + 'は愛知エリア');
                     const title_up = document.getElementById(id_list[3]);
                     title_up.style.display = 'block';
                 }
@@ -159,9 +159,9 @@ keep_btn.addEventListener('click', () => {
 
     } else if (eria_keep != '全て' && genre_keep == '全て') {
         console.log('エリアのみ選択');
-        console.log(eria_keep);
+        // console.log(eria_keep);
         const class_list = riset(); //一旦リセット
-console.log(date[1] + 'データ');
+// console.log(date[1] + 'データ');
         let display_list = []; //絞り込みのキーワードに引っかかったリスト
         for (let j = 0; j < class_list.length; j++) {
             const child = class_list[j].querySelectorAll('.place')
@@ -174,7 +174,7 @@ console.log(date[1] + 'データ');
                 }
             }
         }
-        console.log('エリアのみ:::' + display_list);
+        // console.log('エリアのみ:::' + display_list);
 
         //リストを元に表示させる要素を選択 1=変数の1データ目
         for (let i = 0; i < display_list.length; i++) {
@@ -190,20 +190,20 @@ console.log(date[1] + 'データ');
             for (let j = 0; j < namelist.length; j++) {
                 if (namelist.slice(0, 8).includes(class_list[display_list[i]].classList[1])) {
                     //岐阜エリア
-                    console.log(i + 'は岐阜エリア');
+                    // console.log(i + 'は岐阜エリア');
                     //タイトルの際表示
                     const title_up = document.getElementById(id_list[1]);
                     title_up.style.display = 'block';
                 } else if (namelist.slice(8, 11).includes(class_list[display_list[i]].classList[1])) {
-                    console.log(i + 'は中濃エリア');
+                    // console.log(i + 'は中濃エリア');
                     const title_up = document.getElementById(id_list[0]);
                     title_up.style.display = 'block';
                 } else if (namelist.slice(11, 17).includes(class_list[display_list[i]].classList[1])) {
-                    console.log(i + 'は西濃エリア');
+                    // console.log(i + 'は西濃エリア');
                     const title_up = document.getElementById(id_list[2]);
                     title_up.style.display = 'block';
                 } else {
-                    console.log(i + 'は愛知エリア');
+                    // console.log(i + 'は愛知エリア');
                     const title_up = document.getElementById(id_list[3]);
                     title_up.style.display = 'block';
                 }
@@ -214,8 +214,8 @@ console.log(date[1] + 'データ');
 
 
     } else {
-        console.log('どちらも選択');
-        console.log(eria_keep + ':::' + genre_keep);
+        // console.log('どちらも選択');
+        // console.log(eria_keep + ':::' + genre_keep);
         const class_list = riset(); //一旦リセット
 
         let display_list = []; //絞り込みのキーワードに引っかかったリスト
@@ -233,7 +233,7 @@ console.log(date[1] + 'データ');
                 }
             }
         }
-        console.log(display_list + '両方にヒット');
+        // console.log(display_list + '両方にヒット');
        
 
         for (let i = 0; i < display_list.length; i++) {
