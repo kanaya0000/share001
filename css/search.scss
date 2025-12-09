@@ -184,7 +184,48 @@ main {
     // background-color: #f9f7d4;
     // }
 
-
+    // #tyuunou {
+    //     .title {
+    //         h2 {
+    //             color: #deccb7;
+    //         }
+    //         h2::after {
+    //             background-color: #deccb7;
+    //         }
+    //     }
+    // }
+    // #gifusi {
+    //     .title {
+    //         h2 {
+    //             color: #4d3e36;
+    //         }
+    //         h2::after {
+    //             background-color: #4d3e36;
+    //         }
+    //     }
+    // }
+    
+    // #seinou {
+    //     .title {
+    //         h2 {
+    //             color: #7b8d8a;
+    //         }
+    //         h2::after {
+    //             background-color: #7b8d8a;
+    //         }
+    //     }
+    // }
+    
+    // #aichi {
+    //     .title {
+    //         h2 {
+    //             color: #657355;
+    //         }
+    //         h2::after {
+    //             background-color: #657355;
+    //         }
+    //     }
+    // }
     .gifu-shop-list,
     .aichi-shop-list {
         // background-color: #f9f7d478;
@@ -194,9 +235,30 @@ main {
 
         .title {
             text-align: center;
-
             h2 {
-                font-size: 2.5rem;
+                position: relative;
+                display: inline-block;
+                // font-size: 2.5rem;
+                .eria {
+                    font-size: 3rem;
+                    color: #deccb7;
+                }
+                .ken {
+                    font-size: 1.5rem;
+                    // color: rgb(90 255 212);
+                    color: #deccb7;
+                }
+            }
+            h2::after {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                right: 0;
+                width: calc(100% + 50px);
+                height: 5px;
+                // background-color: rgb(90 255 212);
+                background-color: #deccb7;
+                transform: translate(25px);
             }
         }
 
@@ -384,9 +446,11 @@ main {
 
             p {
                 line-height: 2rem;
-                width: 90%;
+                // width: 90%;
+                max-width: 350px;
                 margin: 0 auto;
                 text-align: left;
+                text-wrap: wrap;
             }
         }
 
@@ -454,6 +518,50 @@ main {
             .serch-list {
                 align-items: center;
                 flex-direction: column;
+            }
+        }
+    }
+    .gifu-shop-list , .aichi-shop-list  {
+        .title {
+            h2 {
+                position: relative;
+                width: auto;
+                display: inline-block;
+                position: relative;
+                .eria {
+                    display: block;
+                    margin-left: 20px;
+                }
+                .ken {
+                    // position: absolute;
+                    // top: 50%;
+                    // right: 50%;
+                    // transform: translate(50%,-50%) scale(2);
+                    // text-align: left;
+                    font-size: 2rem;
+                    // transform: scale(1.5);
+                    // color: rgb(90 255 212);
+                    color: #deccb7;
+                    // transform-origin: left;
+                    // display: inline-block;
+                    display: block;
+                }
+            }
+            h2:before {
+                margin-right: 20px;
+                content: "";
+                position: absolute;
+                top: 0;
+                left:0;
+                width: 5px;
+                height: 100%;
+                display: inline-block;
+                // background-color: rgba(97, 255, 214, 0.34);
+                // background-color: rgb(90 255 212);
+                background-color: #deccb7;
+            }
+            h2::after {
+                display: none;
             }
         }
     }

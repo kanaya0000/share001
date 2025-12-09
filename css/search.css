@@ -100,7 +100,29 @@ main .aichi-shop-list .title {
 }
 main .gifu-shop-list .title h2,
 main .aichi-shop-list .title h2 {
-  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+main .gifu-shop-list .title h2 .eria,
+main .aichi-shop-list .title h2 .eria {
+  font-size: 3rem;
+  color: #deccb7;
+}
+main .gifu-shop-list .title h2 .ken,
+main .aichi-shop-list .title h2 .ken {
+  font-size: 1.5rem;
+  color: #deccb7;
+}
+main .gifu-shop-list .title h2::after,
+main .aichi-shop-list .title h2::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: calc(100% + 50px);
+  height: 5px;
+  background-color: #deccb7;
+  transform: translate(25px);
 }
 main .gifu-shop-list .region-list,
 main .aichi-shop-list .region-list {
@@ -241,9 +263,10 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   }
   main #title p {
     line-height: 2rem;
-    width: 90%;
+    max-width: 350px;
     margin: 0 auto;
     text-align: left;
+    text-wrap: wrap;
   }
   main #map {
     grid-template-columns: repeat(1, 95%);
@@ -298,5 +321,34 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   main .serch .serch-list {
     align-items: center;
     flex-direction: column;
+  }
+  .gifu-shop-list .title h2, .aichi-shop-list .title h2 {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    position: relative;
+  }
+  .gifu-shop-list .title h2 .eria, .aichi-shop-list .title h2 .eria {
+    display: block;
+    margin-left: 20px;
+  }
+  .gifu-shop-list .title h2 .ken, .aichi-shop-list .title h2 .ken {
+    font-size: 2rem;
+    color: #deccb7;
+    display: block;
+  }
+  .gifu-shop-list .title h2:before, .aichi-shop-list .title h2:before {
+    margin-right: 20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    display: inline-block;
+    background-color: #deccb7;
+  }
+  .gifu-shop-list .title h2::after, .aichi-shop-list .title h2::after {
+    display: none;
   }
 }/*# sourceMappingURL=search.css.map */

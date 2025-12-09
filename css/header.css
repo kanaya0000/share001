@@ -54,7 +54,7 @@ header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li .pc-header-a {
   height: 100%;
   width: 100%;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li .pc-header-a:hover {
   color: gray;
@@ -109,11 +109,11 @@ header .phone-header {
   }
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul {
     margin-top: 65px;
-    background-color: #afafaf;
+    background-color: #deccb7;
   }
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub1,
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub2 {
-    height: 45px;
+    height: 80px;
   }
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub1 .pc-header-a,
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub2 .pc-header-a {
@@ -122,7 +122,8 @@ header .phone-header {
     align-items: center;
     width: 100%;
     height: 100%;
-    color: #e8e4e3;
+    color: white;
+    font-size: 2rem;
   }
   header .phone-header #gnavwrap .phone-header-sub .phone-header-ul .phone-header-sub2 .pc-header-a svg {
     height: 90%;
@@ -146,14 +147,14 @@ header .phone-header {
 }
 #gnavwrap.on .toggle .one {
   transform: rotate(45deg) translate(7px, 7px);
-  background-color: #e8e4e3;
+  background-color: black;
 }
 #gnavwrap.on .toggle .two {
   opacity: 0;
 }
 #gnavwrap.on .toggle .three {
   transform: rotate(-45deg) translate(8px, -9px);
-  background-color: #e8e4e3;
+  background-color: black;
 }
 
 @media screen and (max-width: 600px) {

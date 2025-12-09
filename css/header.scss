@@ -1,4 +1,3 @@
-@use 'set';
 
 header {
     z-index: 100;
@@ -64,7 +63,8 @@ header {
                         height: 100%;
                         width: 100%;
                         text-decoration: none;
-                        color: black;
+                        // color: black;
+                        color: white;
                     }
 
                     .pc-header-a:hover {
@@ -118,6 +118,7 @@ header {
                 z-index: 5;
                 transition: all .5s;
                 background-color: #fafafa;
+                // background-color: #deccb7;
                 
                 .toggle {
                     z-index: 100;
@@ -145,10 +146,12 @@ header {
                 .phone-header-sub {
                     .phone-header-ul {
                         margin-top: 65px;
-                        background-color: #afafaf;
+                        // background-color: #afafaf;
+                        background-color:#deccb7;
                         .phone-header-sub1,
                         .phone-header-sub2 {
-                            height: 45px;
+                            // height: 45px;
+                            height: 80px;
 
                             .pc-header-a {
                                 display: flex;
@@ -156,7 +159,9 @@ header {
                                 align-items: center;
                                 width: 100%;
                                 height: 100%;
-                                color: set.$gray;
+                                // color:gray;
+                                color:white;
+                                font-size: 2rem;
                             }
                         }
 
@@ -203,8 +208,8 @@ header {
     .toggle {
         .one {
             transform: rotate(45deg)translate(7px, 7px);
-            background-color: set.$gray;
-            // background-color: black;
+            // background-color: set.$gray;
+            background-color: black;
         }
 
         .two {
@@ -213,8 +218,8 @@ header {
 
         .three {
             transform: rotate(-45deg)translate(8px, -9px);
-            background-color: set.$gray;
-            // background-color: black;
+            // background-color: set.$gray;
+            background-color: black;
         }
     }
 
