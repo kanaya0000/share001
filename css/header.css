@@ -54,7 +54,7 @@ header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li .pc-header-a {
   height: 100%;
   width: 100%;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 header .pc-header .pc-header-sub2 .pc-header-ul .pc-header-li .pc-header-a:hover {
   color: gray;

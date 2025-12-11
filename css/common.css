@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: ms ｐ明朝, ms pmincho, ヒラギノ明朝 pro w3, hiragino mincho pro, serif;

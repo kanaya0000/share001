@@ -2,29 +2,67 @@ footer {
   font-size: 1rem;
   text-align: center;
 }
+footer .top {
+  position: fixed;
+  bottom: 5px;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  margin-right: 16px;
+}
+footer .top .arrow {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 1px gray;
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(100px);
+}
+footer .top .arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-left: solid 1px gray;
+  border-bottom: solid 1px gray;
+  transform: rotate(135deg);
+  transform-origin: 7px 5px;
+}
+footer .top .slide.on {
+  opacity: 1;
+  transform: translateX(0);
+}
 footer .link-btn {
   position: fixed;
   right: 0;
-  bottom: 0;
+  bottom: 50px;
   padding: 0;
   margin: 1rem;
   list-style: none;
+  opacity: 0;
+  transform: translateX(100px);
 }
 footer .link-btn li {
-  opacity: 0;
   transition: all 0.5s;
   width: 70px;
 }
 footer .link-btn li a {
   color: white;
 }
+footer .link-btn .set-off {
+  transform: translateX(200px);
+}
+footer .link-btn .set-on {
+  transform: translateX(0);
+}
 footer .link-btn li:hover a {
   background-color: #c89961;
 }
 footer .link-btn li.plus,
-footer .link-btn ul:hover li {
-  opacity: 1;
-}
 footer .link-btn li:nth-child(1) {
   transition-delay: 200ms;
 }
@@ -106,9 +144,24 @@ footer .link-btn .plus span::before {
   left: 15px;
 }
 footer .link-btn .plus span::after {
-  top: 15px;
-  left: 6px;
+  top: 24px;
+  left: 15px;
+  transform-origin: 10px 1px;
   transform: rotate(90deg);
+}
+footer .link-btn .plus.fil-on span::before {
+  transform: rotate(45deg);
+  transform-origin: 10px 0px;
+  transform: all 1s;
+}
+footer .link-btn .plus.fil-on span::after {
+  transform: rotate(-45deg);
+  transform: all 1s;
+}
+footer .slide.on {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
 }
 footer .link-btn:hover li {
   opacity: 1;
