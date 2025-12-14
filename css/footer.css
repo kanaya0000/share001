@@ -138,6 +138,7 @@ footer .link-btn .plus span::after {
   height: 20px;
   content: "";
   border-top: 2px solid #fff;
+  transition: transform 1s;
 }
 footer .link-btn .plus span::before {
   top: 24px;
@@ -151,12 +152,12 @@ footer .link-btn .plus span::after {
 }
 footer .link-btn .plus.fil-on span::before {
   transform: rotate(45deg);
-  transform-origin: 10px 0px;
-  transform: all 1s;
+  transform-origin: 10px 1px;
+  transition: transform 1s;
 }
 footer .link-btn .plus.fil-on span::after {
   transform: rotate(-45deg);
-  transform: all 1s;
+  transition: transform 1s;
 }
 footer .slide.on {
   opacity: 1;

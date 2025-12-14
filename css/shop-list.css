@@ -3,7 +3,6 @@ main .shop-list {
   padding-top: 80px;
 }
 main .shop-list .sub-title {
-  color: #1e7b3a;
   margin-left: 30px;
 }
 main .shop-list .title {
@@ -13,29 +12,46 @@ main .shop-list .title {
 main .shop-list .shop-sub {
   display: flex;
 }
-main .shop-list .shop-sub .photo,
-main .shop-list .shop-sub .text {
-  width: 50%;
-  min-width: 0;
-}
 main .shop-list .shop-sub .photo {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+  margin: 0 auto 50px auto;
+  width: 600px;
+}
+main .shop-list .shop-sub .photo .slide_box {
+  width: 500px;
+  margin: 0 auto;
+}
+main .shop-list .shop-sub .photo .slide_box li {
+  width: 100%;
+}
+main .shop-list .shop-sub .photo .slide_box li a img {
+  width: 100%;
+  margin: 0 auto;
+}
+main .shop-list .shop-sub .photo .slide_box .slick-dots li {
+  width: 20px;
 }
 main .shop-list .shop-sub .photo img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .shop-list .shop-sub .photo .slick-prev:before,
+main .shop-list .shop-sub .photo .slick-next:before {
+  color: #333 !important;
+}
+main .shop-list .shop-sub .photo .slick-prev {
+  left: -25px;
+}
+main .shop-list .shop-sub .photo .slick-next {
+  right: -25px;
+}
 main .shop-list .shop-sub .text {
   margin: 0 30px;
+  width: calc(100% - 600px);
 }
 main .shop-list .shop-sub .text .main-text {
   line-height: 2rem;
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-break: keep-all;
+  white-space: pre-line;
 }
 main .shop-list .shop-sub .text .shop-info .address::before {
   content: "住所 : ";
@@ -94,20 +110,35 @@ main .shop-list .shop-sub .text a .google-map {
 }
 
 @media screen and (max-width: 1000px) {
-  main .shop-list .shop-sub .photo {
-    grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 1000px) {
-  main .shop-list .title {
-    font-size: 2rem;
+  main .shop-list h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   main .shop-list .shop-sub {
     flex-direction: column;
   }
-  main .shop-list .shop-sub .photo,
+  main .shop-list .shop-sub .photo {
+    margin: 0 auto 30px auto;
+    width: 90%;
+    max-width: 500px;
+  }
+  main .shop-list .shop-sub .photo .slide_box {
+    width: 450px;
+  }
   main .shop-list .shop-sub .text {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .shop-list .title {
+    font-size: 2rem;
+  }
+  main .shop-list .shop-sub .photo {
+    max-width: none;
     width: 100%;
+  }
+  main .shop-list .shop-sub .photo .slide_box {
+    width: 70%;
   }
   main .shop-list .shop-sub .text {
     width: 90%;
