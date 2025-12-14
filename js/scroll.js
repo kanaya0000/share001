@@ -50,7 +50,7 @@ window.addEventListener('scroll', () => {
         //     list1[1].classList.remove('on');
         // }
     // }
-        if (window.scrollY > 1000) {
+        if (window.scrollY > 500) {
         slide[0].classList.add('on');
         slide[1].classList.add('on');
     } else {

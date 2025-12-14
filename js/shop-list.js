@@ -102,14 +102,31 @@ const img_path = 'material/photo/list/' + region + '/store' + no;
 // console.log('path::' + img_path );
 const div3 = document.createElement('div');
 div3.classList = 'photo';
+
+//スライド準備
+const ul=document.createElement('ul');
+ul.classList='slide_box';
+
+
 for (let k = 1; k < date[memory].detail_img + 1; k++) {
+    const li = document.createElement('li');
+    const a=document.createElement('a');
+    a.href='#';
+
+
     const img = document.createElement('img');
     // img.src = img_path + '/img' + String(k).padStart(3, '0') + '.png';
     // console.log(img_path + '/img' + String(k).padStart(3, '0') + '.png')
     // img.src = img_path + '/img' + String(k).padStart(3, '0') + '.png';
     img.src = img_path + '/img' + String(k).padStart(3, '0') + '.webp';
-    div3.appendChild(img);
+    img.classList = 'img';
+    // div3.appendChild(img);
+    ul.append(li) ;
+    li.appendChild(a);
+    a.appendChild(img);
 }
+div3.appendChild(ul);
+
 
 const div4 = document.createElement('div');
 div4.classList = 'text';
