@@ -386,21 +386,25 @@ main {
                 .photo1 {
                     .bgimg {
                         opacity: 0;
-                        animation: bganime 15s infinite;
+                        animation: bganime 25s infinite;
                         position: absolute; //abs出ないと2つ目以降の画像表示されない
                     }
 
                     .bgimg:nth-child(2) {
                         background-image: url("../material/photo/top-photo/img002.webp");
                         animation-delay: 5s;
-
                     }
-
-
-
                     .bgimg:nth-child(3) {
                         background-image: url("../material/photo/top-photo/img003.webp");
                         animation-delay: 10s;
+                    }
+                    .bgimg:nth-child(4) {
+                        background-image: url("../material/photo/top-photo/img004.webp");
+                        animation-delay: 15s;
+                    }
+                    .bgimg:nth-child(5) {
+                        background-image: url("../material/photo/top-photo/img005.webp");
+                        animation-delay: 20s;
                     }
 
                     .bgimg::after {
@@ -436,22 +440,23 @@ main {
         }
 
         #title {
-            .h2-pc {
-                display: none;
-            }
+            display: none;
+            // .h2-pc {
+            //     display: none;
+            // }
 
-            .h2-phone {
-                display: block;
-            }
+            // .h2-phone {
+            //     display: block;
+            // }
 
-            p {
-                line-height: 2rem;
-                // width: 90%;
-                max-width: 350px;
-                margin: 0 auto;
-                text-align: left;
-                text-wrap: wrap;
-            }
+            // p {
+            //     line-height: 2rem;
+            //     // width: 90%;
+            //     max-width: 350px;
+            //     margin: 0 auto;
+            //     text-align: left;
+            //     text-wrap: wrap;
+            // }
         }
 
         #map {
@@ -564,5 +569,17 @@ main {
                 display: none;
             }
         }
+    }
+}
+
+@keyframes bganime {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
     }
 }

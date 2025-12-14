@@ -81,15 +81,4 @@ main #top_photo .top-text .text-sub {
   main #top_photo .top-text .text-sub {
     font-size: 1.1rem;
   }
-}
-@keyframes bganime {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
 }/*# sourceMappingURL=top-photo.css.map */
