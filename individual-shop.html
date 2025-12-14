@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/shop-list.css">
+
+
+    <link href="js/js/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="js/js/slick.css" rel="stylesheet" type="text/css">
+    <script src="js/js/jquery-3.6.0.min.js"></script>
+    <script src="js/js/script.js"></script>
+    <script type="text/javascript" src="js/js/slick.min.js"></script>
+
+
 </head>
 
 <body>
@@ -75,8 +84,8 @@
         <button id="link-back">
             <a href="index.html">
                 <!-- <img src="material/icon/arrow-left.svg" alt="左矢印"> -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left"
+                    viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
                 </svg>
@@ -102,5 +111,15 @@
 <script src="js/shop-list.js"></script>
 <script src="js/soat.js"></script>
 <!-- <script src="link-back.js"></script> -->
+
+<script type="text/javascript">
+$('.slide_box').slick({
+	arrows: true,
+    autoplay:true,
+    autoplaySpeed:3000,
+    dots:true
+});
+</script>
+
 
 </html>
