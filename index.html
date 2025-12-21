@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <!-- ver32 -->
+    <!-- ver34 -->
     <header>
         <div class="pc-header">
             <div class="pc-header-sub1">
@@ -105,15 +105,90 @@
             </p>
         </section>
 
+        <section id="narrow">
+            <h2>エリアの選択</h2>
+            <label class="label-set"><input class="narrow_btn" type="radio" name="name" value="全て" id="all_check" checked>全て</label>
+            <div class="narrow">
+                <p class="narrow-title">岐阜エリア</p>
+                <ul class="narrow-ul">
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="gifu" id="gifu">岐阜市</label>
+                    </li>
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="kagamihara"
+                                id="kagamihara">各務原市</label></li>
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="anpachi"
+                                id="anpachi">安八町</label></li>
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="hasima" id="hasima">羽島市</label>
+                    </li>
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="ginan" id="ginan">岐南町</label>
+                    </li>
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="kasamatu"
+                                id="kasamatu">笠松町</label></li>
+                    
+                    
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="motosu" id="motosu">本巣市</label>
+                    </li>
+                    <li><label class="gifu-label"><input class="narrow_btn" type="radio" name="name" value="mizuho" id="mizuho">瑞穂市</label>
+                    </li>
+                </ul>
+                <p class="narrow-title">中濃エリア</p>
+                    
+                <ul class="narrow-ul">
+                    <li><label class="tyuunou-label"><input class="narrow_btn" type="radio" name="name" value="seki" id="seki">関市</label>
+                    </li>
+                    <li><label class="tyuunou-label"><input class="narrow_btn" type="radio" name="name" value="kani" id="kani">可児市</label>
+                    </li>
+                    <li><label class="tyuunou-label"><input class="narrow_btn" type="radio" name="name" value="minokamo"
+                                id="minokamo">美濃加茂市</label></li>
+                </ul>
+                
+                <p class="narrow-title">西濃エリア</p>
+                <ul class="narrow-ul">
+                    <li><label class="seinou-label"><input class="narrow_btn" type="radio" name="name" value="oogaki"
+                                id="oogaki">大垣市</label></li>
+                    <li><label class="seinou-label"><input class="narrow_btn" type="radio" name="name" value="yourou"
+                                id="yourou">養老町</label></li>
+                    <li><label class="seinou-label"><input class="narrow_btn" type="radio" name="name" value="wanouti"
+                                id="wanouti">輪之内町</label></li>
+                    <li><label class="seinou-label"><input class="narrow_btn" type="radio" name="name" value="ikeda" id="ikeda">池田町</label>
+                    </li>
+                    <li><label class="seinou-label"><input class="narrow_btn" type="radio" name="name" value="goudo" id="goudo">神戸町</label>
+                    </li>
+                    <li><label class="seinou-label"><input class="narrow_btn" type="radio" name="name" value="ibi" id="ibi">揖斐川町</label>
+                    </li>
+                </ul>
+                <p class="narrow-title">愛知エリア</p>
+                <ul class="narrow-ul">
+                    <li><label class="aichi-label"><input class="narrow_btn" type="radio" name="name" value="inuyama"
+                                id="inuyama">犬山市</label></li>
+                    <li><label class="aichi-label"><input class="narrow_btn" type="radio" name="name" value="itinomiya"
+                                id="itinomiya">一宮市</label></li>
+                    <li><label class="aichi-label"><input class="narrow_btn" type="radio" name="name" value="nagoya"
+                                id="nagoya">名古屋市</label></li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="genre">
+            <h2>ジャンルから選択</h2>
+            <ul class="genre-ul">
+                <li><label><input class="genre_btn" type="radio" name="name2" value="全て" id="all_check_genre" checked>全て</label></li>
+                <li><label><input class="genre_btn" type="radio" name="name2" value="和食" id="washoku">和食</label></li>
+                <li><label><input class="genre_btn" type="radio" name="name2" value="洋食" id="yousyoku">洋食</label></li>                
+                <li><label><input class="genre_btn" type="radio" name="name2" value="中華" id="tyuuka">中華</label></li>
+                <li><label><input class="genre_btn" type="radio" name="name2" value="カフェ" id="cafe">カフェ</label></li>
+                <li><label><input class="genre_btn" type="radio" name="name2" value="焼肉" id="yakiniku">焼肉</label></li>
+                <li><label><input class="genre_btn" type="radio" name="name2" value="ラーメン" id="men">ラーメン</label></li>
+
+            </ul>
+        </section>
 
 
 
-        <section class="serch">
+
+        <!-- <section class="serch">
             <div class="serch-list">
                 <div class="set0">
-
-
-                    <!-- <label for="label1">エリアの選択</label><br> -->
                     <div class="select-set">
                         <img src="material/icon/map.svg" alt="">
                         <span>エリアの選択</span>
@@ -123,7 +198,6 @@
                     </div>
                 </div>
                 <div class="set0">
-                    <!-- <label for="label1">ジャンルの選択</label><br> -->
                     <div class="select-set">
                         <img src="material/icon/house.svg" alt="">
                         <span>ジャンルの選択</span>
@@ -139,9 +213,18 @@
                     </div>
                 </button>
             </div>
+        </section> -->
 
+        <section id="gifusi" class="gifu-shop-list">
+            <div class="title">
+                <!-- <h2>岐阜. 岐阜エリア</h2> -->
+                <h2>
+                    <span class="eria">岐阜エリア</span>
+                    <span class="ken">Gifu</span>
+                </h2>
+            </div>
+            <div class="region-list" id="add_gifu_gifu"></div>
         </section>
-
         <section id="tyuunou" class="gifu-shop-list">
             <div class="title">
                 <!-- <h2>岐阜. 中濃エリア</h2> -->
@@ -154,16 +237,7 @@
 
             <div class="region-list" id="add_gifu_tyuunou"></div>
         </section>
-        <section id="gifusi" class="gifu-shop-list">
-            <div class="title">
-                <!-- <h2>岐阜. 岐阜エリア</h2> -->
-                <h2>
-                    <span class="eria">岐阜エリア</span>
-                    <span class="ken">Gifu</span>
-                </h2>
-            </div>
-            <div class="region-list" id="add_gifu_gifu"></div>
-        </section>
+        
         <section id="seinou" class="gifu-shop-list">
             <div class="title">
                 <!-- <h2>岐阜. 西濃エリア</h2> -->
@@ -193,13 +267,13 @@
 
         <div class="top">
             <!-- <img src="material/icon/arrow-up-circle.svg" alt=""> -->
-             <!-- <span class="arrow"></span> -->
-             <a href="#" class="arrow slide"></a>
+            <!-- <span class="arrow"></span> -->
+            <a href="#" class="arrow slide"></a>
         </div>
 
         <ul class="link-btn slide">
-            <li class="set1 set-off"><a href="#tyuunou">中濃</a></li>
             <li class="set2 set-off"><a href="#gifusi">岐阜</a></li>
+            <li class="set1 set-off"><a href="#tyuunou">中濃</a></li>
             <li class="set3 set-off"><a href="#seinou">西濃</a></li>
             <li class="set4 set-off"><a href="#aichi">愛知</a></li>
             <li class="plus fil-off" id="slide-btn"><span></span></li>
@@ -211,11 +285,13 @@
 
 <script src="js/hensuu-list.js"></script>
 <script src="js/hensuu-list2.js"></script>
-<script src="js/serch.js"></script>
+
 <script src="js/add_file.js"></script>
 <script src="js/button.js"></script>
 
 <script src="js/soat.js"></script>
+<script src="js/serch.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/fill.js"></script>
 
 </html>
