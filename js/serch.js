@@ -1,20 +1,20 @@
 //プルダウンメニュー
 //エリアの選択欄
-const eria_serch = document.getElementById('select0');
-for (let i = 0; i < place_list.length; i++) {
-    const option1 = document.createElement('option');
-    option1.value = place_list[i];
-    option1.textContent = place_list[i];
-    eria_serch.append(option1);
-}
+// const eria_serch = document.getElementById('select0');
+// for (let i = 0; i < place_list.length; i++) {
+//     const option1 = document.createElement('option');
+//     option1.value = place_list[i];
+//     option1.textContent = place_list[i];
+//     eria_serch.append(option1);
+// }
 
-const genre_serch = document.getElementById('select1')
-for (let i = 0; i < classification.length; i++) {
-    const option1 = document.createElement('option');
-    option1.value = classification[i].jp;
-    option1.textContent = classification[i].jp;
-    genre_serch.append(option1);
-}
+// const genre_serch = document.getElementById('select1')
+// for (let i = 0; i < classification.length; i++) {
+//     const option1 = document.createElement('option');
+//     option1.value = classification[i].jp;
+//     option1.textContent = classification[i].jp;
+//     genre_serch.append(option1);
+// }
 
 
 // console.log('count:::' + date[1]);
@@ -33,11 +33,20 @@ function setting(arealist, section) {
 
         const div1 = document.createElement('div');
         div1.classList.add('shop-list');
+        div1.classList.add('dummy');
         for (let k = 0; k < shopdate.key_list.length; k++) {
             div1.classList.add(shopdate.key_list[k]);
             // console.log(shopdate.key_list[k]);
         }
-
+        //ジャンルのクラス追加
+        for(let m=0; m<shopdate.key.length; m++){
+            console.log('ジャンルのクラス名追加');
+            for(let n=0;n<genre_list.length; n++){
+                if(shopdate.key[m]==genre_list[n][1]){
+                    div1.classList.add(genre_list[n][0]);
+                }
+            }
+        }
 
 
         const h3 = document.createElement('h3');

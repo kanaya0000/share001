@@ -7,6 +7,16 @@
 //絞り込み機能
 //inputのid指定
 const check_list = ['all_check', 'gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
+//ジャンルの選択もクラス名から抜粋に変更？？
+const genre_list = [
+    ['all_genre', '全て'],
+    ['washoku', '和食'],
+    ['yousyoku', '洋食'],
+    ['tyuuka', '中華'],
+    ['cafe', 'カフェ'],
+    ['yakiniku', '焼肉'],
+    ['men', 'ラーメン']];
+
 //'.' + check_list[○];
 // const id_list = ['tyuunou', 'gifusi', 'seinou', 'aichi'];
 //絞り込みの記憶 1=中濃、2＝岐阜、3＝西濃、4＝愛知
@@ -17,6 +27,7 @@ for (let i = 0; i < check_list.length; i++) {
     setting(i);
 }
 
+//クラス名で判定へ変更、functionを引き継ぎ使用へ
 
 
 const soat_key = document.getElementById('soat-key');
@@ -26,19 +37,19 @@ const ul = document.createElement('ul');
 
 for (let i = 0; i < classification.length; i++) {
     const li = document.createElement('li');
-    li.classList=classification[i].key;
+    li.classList = classification[i].key;
     // li.textContent=classification[i].jp;
-    const label=document.createElement('label');
+    const label = document.createElement('label');
     // label.textContent=classification[i].jp;
 
-    const input=document.createElement('input');
-    input.classList='soat-btn2';
-    input.id=classification[i].key;
+    const input = document.createElement('input');
+    input.classList = 'soat-btn2';
+    input.id = classification[i].key;
     // input.type='radio';
-    input.type='checkbox';
-    input.name='name2';
-    input.value=classification[i].key;
-    input.id=classification[i].key;
+    input.type = 'checkbox';
+    input.name = 'name2';
+    input.value = classification[i].key;
+    input.id = classification[i].key;
     // input.textContent=classification[i].jp;
     label.append(input);
 
@@ -82,7 +93,7 @@ function setting(i) {
             console.log('エリア：全て' + judge_count);
 
             //キーワード検索の選択をリセット
-            const soat_count=document.querySelectorAll('.soat-btn2');
+            const soat_count = document.querySelectorAll('.soat-btn2');
             soat_count.forEach(input => input.checked = false);
         } else {
             //その他をクリック
@@ -129,7 +140,7 @@ function setting(i) {
 
         //judge_countから地区の絞り込み＋以降の単語の絞り込みで表示
         //チェックの有無を確認
-        const click_check=document.querySelectorAll('input[name="name2"]:checked');
+        const click_check = document.querySelectorAll('input[name="name2"]:checked');
         console.log('チェックを確認' + click_check);
     })
 }

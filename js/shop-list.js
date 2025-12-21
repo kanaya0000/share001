@@ -1,3 +1,5 @@
+//個別ページ
+
 // console.log(sessionStorage.getItem('file'));
 
 // console.log(localStorage.getItem('judge'));
@@ -9,7 +11,7 @@ document.title = date[memory].place;
 const no = sessionStorage.getItem('file'); //stpre　ファイル名で使用
 // console.log(date[memory]);
 console.log('no::' + no);
-const check=sessionStorage.getItem('check');
+const check = sessionStorage.getItem('check');
 console.log('check::' + check);
 // console.log('No::' + date[no]);
 
@@ -67,10 +69,10 @@ switch (date[memory].key_list[0]) {
     case 'oogaki':
         region = '012_oogaki';
         break;
-        case 'yourou':
+    case 'yourou':
         region = '013_yourou';
         break;
-        case 'wanouti':
+    case 'wanouti':
         region = '014_wanouti';
         break;
     case 'ikeda':
@@ -119,14 +121,14 @@ const div3 = document.createElement('div');
 div3.classList = 'photo';
 
 //スライド準備
-const ul=document.createElement('ul');
-ul.classList='slide_box';
+const ul = document.createElement('ul');
+ul.classList = 'slide_box';
 
 
 for (let k = 1; k < date[memory].detail_img + 1; k++) {
     const li = document.createElement('li');
-    const a=document.createElement('a');
-    a.href='#';
+    const a = document.createElement('a');
+    a.href = '#';
 
 
     const img = document.createElement('img');
@@ -136,7 +138,7 @@ for (let k = 1; k < date[memory].detail_img + 1; k++) {
     img.src = img_path + '/img' + String(k).padStart(3, '0') + '.webp';
     img.classList = 'img';
     // div3.appendChild(img);
-    ul.append(li) ;
+    ul.append(li);
     li.appendChild(a);
     a.appendChild(img);
 }
@@ -156,7 +158,7 @@ div5.classList = 'shop-info';
 const p3 = document.createElement('p');
 // p3.classList = date[memory].detail_address;
 p3.classList = 'address';
-p3.textContent=date[memory].detail_address;
+p3.textContent = date[memory].detail_address;
 
 const p4 = document.createElement('p');
 p4.classList = 'regular-holiday';
@@ -181,7 +183,7 @@ const img_insta = document.createElement('img');
 img_insta.classList = 'insta';
 img_insta.src = 'material/icon/insta.svg';
 if (date[memory].detail_url_shop == ' ' || date[memory].detail_url_shop == '#') {
-    a1.style.display='none';
+    a1.style.display = 'none';
 }
 
 
