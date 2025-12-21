@@ -1,6 +1,7 @@
 main {
     margin-top: 80px;
     font-size: 1.2rem;
+
     #top_photo {
         .top_photo {
             .photo1 {
@@ -10,18 +11,22 @@ main {
             }
         }
     }
+
     section {
         max-width: 1000px;
         // width: 80%;
         margin: 50px auto 100px auto;
+
         h2 {
             font-size: 2rem;
             text-align: center;
 
         }
+
         .set {
             display: flex;
             justify-content: center;
+
             img {
                 width: 200px;
                 height: 200px;
@@ -30,27 +35,35 @@ main {
             }
 
             .profile_text {
-                width: 400px;
+                width: 500px;
 
                 ul {
                     display: grid;
-                    grid-template-columns: 40% 60%;
+                    // grid-template-columns: 40% 60%;
+                    grid-template-columns: 150px auto;
                     align-items: center;
                     height: 100%;
+
                     li {
-                        height: calc(200px / 5);
-                        line-height: calc(200px / 5);
+                        height: calc(200px / 4);
+                        line-height: calc(200px / 4);
                     }
+
                     .a {
                         text-align: right;
                         padding-right: 20px;
                     }
 
+                    .b {
+                        text-wrap: wrap;
+                    }
+
                     .insta {
-                        
+
                         a {
                             display: flex;
                             align-items: center;
+
                             .icon {
                                 margin-right: 5px;
                                 height: 100%;
@@ -68,6 +81,7 @@ main {
             }
 
         }
+
         .message-title {
             text-align: center;
             margin-top: 50px;
@@ -76,6 +90,7 @@ main {
 
 
     }
+
     #set2 {
         .set {
             .profile_text {
@@ -89,25 +104,46 @@ main {
         }
     }
 }
+
 @media screen and (max-width:1000px) {
-main {
-    font-size: 1rem;
-    section {
-        width: 90%;
-        .set {
-            flex-direction: column;
-            align-items: center;
-               img {
-                margin: 0;
-               }
-               .profile_text {
-                width: 350px;
-                ul {
-                    margin-top: 50px;
+    main {
+        font-size: 1rem;
+
+        section {
+            width: 90%;
+
+            .set {
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    margin: 0;
                 }
-               }
+
+                .profile_text {
+                    // width: 350px;
+                    width: 90%;
+
+                    ul {
+                        margin-top: 50px;
+                        justify-content: center;
+                        grid-template-columns: 90px auto;
+                        width: 100%;
+                        // li:nth-child(6) {
+                        //     line-height: 25px;
+                        // }
+                        li {
+                            height: auto;
+                        }
+                        li:nth-child(6) {
+                            line-height: 25px;
+                        }
+
+                        
+                    }
+                }
+            }
         }
+
     }
-    
-}
 }

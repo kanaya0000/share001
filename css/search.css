@@ -23,6 +23,103 @@ main #title p {
   font-size: 1rem;
   line-height: 3rem;
 }
+main #narrow,
+main .genre {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main #narrow .label-set,
+main .genre .label-set {
+  margin-left: 205px;
+}
+main #narrow .genre-ul,
+main .genre .genre-ul {
+  margin-left: 205px;
+}
+main #narrow label,
+main .genre label {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #deccb7;
+  border-radius: 5px;
+  color: #a3a29b;
+}
+main #narrow label input,
+main .genre label input {
+  display: none;
+}
+main #narrow label:has(input:checked),
+main .genre label:has(input:checked) {
+  color: white;
+  background-color: #c89961;
+}
+main #narrow .narrow,
+main .genre .narrow {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 200px 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 5px;
+}
+main #narrow .narrow .narrow-title,
+main .genre .narrow .narrow-title {
+  color: #deccb7;
+  font-size: 1.5rem;
+  width: 200px;
+  margin: 0;
+  text-align: center;
+}
+main #narrow .narrow .narrow-ul,
+main .genre .narrow .narrow-ul {
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap;
+  height: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+main #narrow .narrow .narrow-ul li,
+main .genre .narrow .narrow-ul li {
+  flex: 0 0 auto;
+}
+main #narrow .narrow .narrow-ul li label,
+main .genre .narrow .narrow-ul li label {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #deccb7;
+  border-radius: 5px;
+  color: #a3a29b;
+}
+main #narrow .narrow .narrow-ul li label input,
+main .genre .narrow .narrow-ul li label input {
+  display: none;
+}
+main #narrow .narrow .narrow-ul label:has(input:checked),
+main .genre .narrow .narrow-ul label:has(input:checked) {
+  color: white;
+  background-color: #c89961;
+}
+main .genre .genre-ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+main .genre .genre-ul label:has(input:checked) {
+  color: white;
+  background-color: #c89961;
+}
 main .serch {
   margin: 50px auto;
   background-color: white;
@@ -172,7 +269,6 @@ main .gifu-shop-list .region-list .shop-list .detail-page ul,
 main .aichi-shop-list .region-list .shop-list .detail-page h3,
 main .aichi-shop-list .region-list .shop-list .detail-page p,
 main .aichi-shop-list .region-list .shop-list .detail-page ul {
-  color: #545454;
   margin: 5px 5px 5px 15px;
   width: calc(100% - 20px);
   text-align: left;
@@ -220,6 +316,18 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   transform: scale(1.05);
 }
 
+@media screen and (max-width: 1000px) {
+  main #narrow,
+  main .genre {
+    width: 90%;
+  }
+  main #narrow .genre-ul,
+  main .genre .genre-ul {
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
 @media screen and (max-width: 650px) {
   main #top_photo {
     height: calc(100vh - 80px);
@@ -284,6 +392,23 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
   main #map .aichi-map .aichi-list {
     width: 80%;
   }
+  main #narrow .label-set,
+  main .genre .label-set {
+    margin-left: 125px;
+  }
+  main #narrow .narrow,
+  main .genre .narrow {
+    grid-template-columns: 120px 100%;
+  }
+  main #narrow .narrow .narrow-title,
+  main .genre .narrow .narrow-title {
+    font-size: 1.3rem;
+    width: 120px;
+  }
+  main #narrow .narrow .narrow-ul,
+  main .genre .narrow .narrow-ul {
+    width: calc(100% - 120px);
+  }
   main .gifu-shop-list .region-list,
   main .aichi-shop-list .region-list {
     grid-template-columns: repeat(2, 48%);
@@ -320,22 +445,26 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
     align-items: center;
     flex-direction: column;
   }
-  .gifu-shop-list .title h2, .aichi-shop-list .title h2 {
+  .gifu-shop-list .title h2,
+  .aichi-shop-list .title h2 {
     position: relative;
     width: auto;
     display: inline-block;
     position: relative;
   }
-  .gifu-shop-list .title h2 .eria, .aichi-shop-list .title h2 .eria {
+  .gifu-shop-list .title h2 .eria,
+  .aichi-shop-list .title h2 .eria {
     display: block;
     margin-left: 20px;
   }
-  .gifu-shop-list .title h2 .ken, .aichi-shop-list .title h2 .ken {
+  .gifu-shop-list .title h2 .ken,
+  .aichi-shop-list .title h2 .ken {
     font-size: 2rem;
     color: #deccb7;
     display: block;
   }
-  .gifu-shop-list .title h2:before, .aichi-shop-list .title h2:before {
+  .gifu-shop-list .title h2:before,
+  .aichi-shop-list .title h2:before {
     margin-right: 20px;
     content: "";
     position: absolute;
@@ -346,7 +475,8 @@ main .aichi-shop-list .region-list .shop-list .detail-page:hover img {
     display: inline-block;
     background-color: #deccb7;
   }
-  .gifu-shop-list .title h2::after, .aichi-shop-list .title h2::after {
+  .gifu-shop-list .title h2::after,
+  .aichi-shop-list .title h2::after {
     display: none;
   }
 }

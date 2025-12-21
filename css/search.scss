@@ -3,8 +3,8 @@
 // $yellow: #ffe100;
 // $blue: #3b4bff;
 // $red: #ff0000;
-$color: #b9b9b98c; //囲い色
-$text: #545454; //文字色
+$color: #deccb7; //メイン色
+$hover: #c89961; //選択時
 
 
 
@@ -95,6 +95,139 @@ main {
         }
     }
 
+    //絞り込み
+    #narrow,
+    .genre {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        .label-set {
+            margin-left: 205px;
+        }
+
+        .genre-ul {
+            margin-left: 205px;
+        }
+
+        label {
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid $color;
+            border-radius: 5px;
+            color: #a3a29b;
+
+            input {
+                display: none;
+            }
+        }
+
+        label:has(input:checked) {
+            color: white;
+            background-color: $hover;
+            // border: white;
+        }
+
+        .narrow {
+            margin-top: 10px;
+            // display: flex;
+            display: grid;
+            // grid-template-columns: repeat(2,1fr);
+            grid-template-columns: 200px 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            row-gap: 5px;
+
+            .narrow-title {
+                color: $color;
+                font-size: 1.5rem;
+                width: 200px;
+                margin: 0;
+                text-align: center;
+            }
+
+            .narrow-ul {
+                // width: 300px;
+                width: calc(100% - 200px);
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                // flex-wrap: wrap;
+                flex-wrap: nowrap;
+                height: 50px;
+                overflow-x: auto;
+                overflow-y: hidden;
+
+                li {
+                    // width: 200px;
+                    flex: 0 0 auto;
+
+                    label {
+                        width: 100%;
+                        padding: 10px;
+                        margin: 5px;
+                        border: 1px solid $color;
+                        border-radius: 5px;
+                        color: #a3a29b;
+
+                        input {
+                            display: none;
+                        }
+                    }
+                }
+
+                label:has(input:checked) {
+                    color: white;
+                    background-color: $hover;
+                    // border: white;
+                }
+
+
+            }
+        }
+    }
+
+    .genre {
+        .genre-ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            // flex-wrap: wrap;
+            // flex-wrap: nowrap;
+            height: 50px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            // li {
+            //     // width: 200px;
+            //     flex: 0 0 auto;
+
+            //     label {
+            //         width: 100%;
+            //         padding: 10px;
+            //         margin: 5px;
+            //         border: 1px solid $color;
+            //         border-radius: 5px;
+            //         color: #a3a29b;
+
+            //         input {
+            //             display: none;
+            //         }
+            //     }
+            // }
+
+            label:has(input:checked) {
+                color: white;
+                background-color: $hover;
+                // border: white;
+            }
+        }
+    }
+
+
     .serch {
         margin: 50px auto;
         background-color: white;
@@ -179,53 +312,7 @@ main {
         }
     }
 
-    // #tyuunou,
-    // #seinou {
-    // background-color: #f9f7d4;
-    // }
 
-    // #tyuunou {
-    //     .title {
-    //         h2 {
-    //             color: #deccb7;
-    //         }
-    //         h2::after {
-    //             background-color: #deccb7;
-    //         }
-    //     }
-    // }
-    // #gifusi {
-    //     .title {
-    //         h2 {
-    //             color: #4d3e36;
-    //         }
-    //         h2::after {
-    //             background-color: #4d3e36;
-    //         }
-    //     }
-    // }
-    
-    // #seinou {
-    //     .title {
-    //         h2 {
-    //             color: #7b8d8a;
-    //         }
-    //         h2::after {
-    //             background-color: #7b8d8a;
-    //         }
-    //     }
-    // }
-    
-    // #aichi {
-    //     .title {
-    //         h2 {
-    //             color: #657355;
-    //         }
-    //         h2::after {
-    //             background-color: #657355;
-    //         }
-    //     }
-    // }
     .gifu-shop-list,
     .aichi-shop-list {
         // background-color: #f9f7d478;
@@ -235,20 +322,24 @@ main {
 
         .title {
             text-align: center;
+
             h2 {
                 position: relative;
                 display: inline-block;
+
                 // font-size: 2.5rem;
                 .eria {
                     font-size: 3rem;
                     color: #deccb7;
                 }
+
                 .ken {
                     font-size: 1.5rem;
                     // color: rgb(90 255 212);
                     color: #deccb7;
                 }
             }
+
             h2::after {
                 position: absolute;
                 content: "";
@@ -306,6 +397,7 @@ main {
                         display: flex;
                         align-items: center;
                     }
+
                     .place {
                         display: none;
                     }
@@ -313,7 +405,7 @@ main {
                     h3,
                     p,
                     ul {
-                        color: $text;
+                        // color: $text;
                         margin: 5px 5px 5px 15px;
                         width: calc(100% - 20px);
                         text-align: left;
@@ -374,6 +466,21 @@ main {
     }
 }
 
+@media screen and (max-width:1000px) {
+    main {
+
+        #narrow,
+        .genre {
+            width: 90%;
+
+            .genre-ul {
+                margin: 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+        }
+    }
+}
 
 
 
@@ -394,14 +501,17 @@ main {
                         background-image: url("../material/photo/top-photo/img002.webp");
                         animation-delay: 5s;
                     }
+
                     .bgimg:nth-child(3) {
                         background-image: url("../material/photo/top-photo/img003.webp");
                         animation-delay: 10s;
                     }
+
                     .bgimg:nth-child(4) {
                         background-image: url("../material/photo/top-photo/img004.webp");
                         animation-delay: 15s;
                     }
+
                     .bgimg:nth-child(5) {
                         background-image: url("../material/photo/top-photo/img005.webp");
                         animation-delay: 20s;
@@ -428,9 +538,11 @@ main {
                     display: block;
                     color: white;
                 }
+
                 .phone-text-title {
                     font-size: 3rem;
                 }
+
                 .phone-text-sub {
                     font-size: 1.5rem;
                     line-height: 3rem;
@@ -477,6 +589,26 @@ main {
                 }
             }
         }
+
+        #narrow,
+        .genre {
+            .label-set {
+                margin-left: 125px;
+            }
+            .narrow {
+                grid-template-columns: 120px 100%;
+                .narrow-title {
+                    font-size: 1.3rem;
+                    width: 120px;
+                }
+                .narrow-ul {
+                    width:calc(100% - 120px);
+                }
+                
+
+            }
+        }
+
 
         .gifu-shop-list,
         .aichi-shop-list {
@@ -526,17 +658,21 @@ main {
             }
         }
     }
-    .gifu-shop-list , .aichi-shop-list  {
+
+    .gifu-shop-list,
+    .aichi-shop-list {
         .title {
             h2 {
                 position: relative;
                 width: auto;
                 display: inline-block;
                 position: relative;
+
                 .eria {
                     display: block;
                     margin-left: 20px;
                 }
+
                 .ken {
                     // position: absolute;
                     // top: 50%;
@@ -552,12 +688,13 @@ main {
                     display: block;
                 }
             }
+
             h2:before {
                 margin-right: 20px;
                 content: "";
                 position: absolute;
                 top: 0;
-                left:0;
+                left: 0;
                 width: 5px;
                 height: 100%;
                 display: inline-block;
@@ -565,6 +702,7 @@ main {
                 // background-color: rgb(90 255 212);
                 background-color: #deccb7;
             }
+
             h2::after {
                 display: none;
             }
@@ -576,9 +714,11 @@ main {
     0% {
         opacity: 0;
     }
+
     20% {
         opacity: 1;
     }
+
     40% {
         opacity: 0;
     }

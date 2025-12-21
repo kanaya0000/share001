@@ -1,12 +1,10 @@
-
-
 main {
     .shop-list {
         // margin-top: 80px;
         padding-top: 80px;
 
         .sub-title {
-            color: set.$green;
+            // color: set.$green;
             margin-left: 30px;
         }
 
@@ -18,26 +16,72 @@ main {
         .shop-sub {
             display: flex;
 
-            .photo,
-            .text {
-                width: 50%;
-                min-width: 0;
-            }
+            // .photo,
+            // .text {
+            // width: 50%;
+            // min-width: 0;
+            // }
 
             .photo {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 5px;
+                // display: grid;
+                // grid-template-columns: repeat(1, 1fr);
+                // gap: 5px;
+                margin: 0 auto 50px auto;
+                // max-width: 500px;
+                // width: 40%;
+                width: 600px;
+
+                .slide_box {
+                    // max-width: 500px;
+                    width: 500px;
+                    margin: 0 auto;
+
+                    li {
+                        width: 100%;
+
+                        a {
+                            img {
+                                width: 100%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+
+                    .slick-dots {
+
+                        // display: flex;
+                        // justify-content: center;
+                        li {
+                            width: 20px;
+                        }
+                    }
+                }
+
                 img {
                     width: 100%;
                     object-fit: cover;
                     // aspect-ratio: 12/7;
                     // aspect-ratio: 1/1;
                 }
+
+                .slick-prev:before,
+                .slick-next:before {
+                    color: #333 !important;
+                }
+
+                .slick-prev {
+                    left: -25px;
+                }
+
+                .slick-next {
+                    right: -25px;
+                }
+
             }
 
             .text {
                 margin: 0 30px;
+                width: calc(100% - 600px);
 
                 // .sub-title {
                 //     color: set.$green;
@@ -48,9 +92,10 @@ main {
                 .main-text {
                     line-height: 2rem;
                     //空白の場所で改行する
-                    white-space: normal;
-                    overflow-wrap: break-word;
-                    word-break: keep-all;
+                    // white-space: normal;
+                    white-space: pre-line;
+                    // overflow-wrap: break-word;
+                    // word-break: keep-all;
                 }
 
                 .shop-info {
@@ -109,19 +154,23 @@ main {
 //戻るボタンの設定
 .back {
     margin-left: 5%;
+
     #link-back {
         background-color: #4d9bc2;
         border: none;
         border-radius: 3px;
+
         a {
             display: flex;
             align-items: center;
             padding: 5px 10px;
+
             svg {
                 height: 20px;
                 color: white;
                 margin-right: 10px;
             }
+
             span {
                 color: white;
             }
@@ -133,18 +182,32 @@ main {
 @media screen and (max-width:1000px) {
     main {
         .shop-list {
+            h2 {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
             .shop-sub {
+                flex-direction: column;
                 .photo {
-                    grid-template-columns: 1fr;
+                    margin: 0 auto 30px auto;
+                    // grid-template-columns: 1fr;
+                    width: 90%;
+                    max-width: 500px;
+                    .slide_box {
+                        width: 450px;
+                    }
+                }
 
-
+                .text {
+                    // width: calc(100% - 300px);
+                    width: 90%;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:650px) {
     main {
         .shop-list {
             .title {
@@ -152,15 +215,21 @@ main {
             }
 
             .shop-sub {
-                flex-direction: column;
-
-                .photo,
-                .text {
+                .photo {
+                    max-width: none;
                     width: 100%;
-                    // grid-template-columns: 1fr;
-
-
+                    .slide_box {
+                        width: 70%;
                 }
+            }
+
+                // .photo,
+                // .text {
+                //     width: 100%;
+                //     // grid-template-columns: 1fr;
+
+
+                // }
 
                 .text {
                     width: 90%;
