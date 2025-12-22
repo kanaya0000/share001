@@ -250,3 +250,15 @@ const place_list = ['岐阜市', '安八町', '羽島市', '岐南町', '笠松�
 const file_list = ['001_gifu', '002_anpachi', '003_hasima', '004_ginan', '005_kasamatu', '006_kagamihara', '007_motosu', '008_mizuho', '009_kani', '010_seki', '011_minokamo', '012_oogaki', '013_yourou', '014_wanouti', '015_ikeda', '016_goudo', '017_ibi', '018_inuyama', '019_itinomiya', '020_nagoya'];
 
 // console.log(date);
+
+const check_list = ['all_check', 'gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
+
+const genre_list = [
+    ['all_genre', '全て'],
+    ['washoku', '和食'],
+    ['yousyoku', '洋食'],
+    ['tyuuka', '中華'],
+    ['cafe', 'カフェ'],
+    ['yakiniku', '焼肉'],
+    ['men', 'ラーメン']
+];

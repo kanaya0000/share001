@@ -96,6 +96,7 @@ function setting(arealist, section) {
         a.classList.add(shopdate.store_no);
         //同じクラス名を同時に指定できない
         a.href = 'individual-shop.html';
+        // a.href = '#';
         // a.textContent = '記事を読む';
 
         // div1.append(h3, img, ul, p1, p2, a);

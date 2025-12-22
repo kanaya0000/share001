@@ -3,7 +3,13 @@
 
 // shop-listのクラスからクリックした要素を判定
 //クリックした要素のカウントを判定して連想配列の情報を渡す
+console.log('add_file.js読み込み');
+
 const button = document.querySelectorAll('.detail-page');
+console.log(document.querySelectorAll('.detail-page').length)
+console.log(document.readyState);
+
+console.log('button;' + button);
 button.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         console.log(`${index}番目の要素がクリック`);
