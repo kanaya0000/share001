@@ -66,6 +66,12 @@ switch (date[memory].key_list[0]) {
     case 'kani':
         region = '009_kani';
         break;
+    case 'seki':
+        region = '010_seki';
+        break;
+    case 'minokamo':
+        region = '011_minokamo';
+        break;
     case 'oogaki':
         region = '012_oogaki';
         break;

@@ -16,7 +16,6 @@ function filterItems() {
     let check4 = false;
     items.forEach((item, index) => {
         //判定　ブール値 
-        // const isCategoryMatch = !selectedCategory || item.classList.contains(selectedCategory);
         //true_選択 false_「全て」を選択
         const isCategoryMatch = selectedCategory !== null && selectedCategory !== 'all_check';
         const isAreaMatch = selectedArea !== null && selectedArea !== 'all_check_genre';
@@ -49,7 +48,7 @@ function filterItems() {
             console.log('全て選択');
             item.style.display = 'flex';
             //タイトルの再表示
-            for (let j = 1; j < 4; j++) {
+            for (let j = 0; j < 4; j++) {
                 const judge = document.getElementById(id_list[j]);
                 judge.style.display = 'block';
             }
@@ -168,31 +167,7 @@ function filterItems() {
     );
 }
 
-//ヒットしたお店の地区タイトル再表示
-// function title_on() {
-//     for (let i = 0; i < check_list.length; i++) {
-//         if (selectedCategory == check_list[i]) {
-//             // console.log('----i----' + i);
 
-//             if (1 <= i && i <= 8) {
-//                 const judge = document.getElementById(id_list[1]);
-//                 judge.style.display = 'block';
-//             } else if (9 <= i && i <= 11) {
-//                 console.log('中濃エリア');
-//                 const judge = document.getElementById(id_list[0]);
-//                 judge.style.display = 'block';
-//             } else if (12 <= i && i <= 17) {
-//                 console.log('西濃エリア');
-//                 const judge = document.getElementById(id_list[2]);
-//                 judge.style.display = 'block';
-//             } else {
-//                 console.log('愛知エリア');
-//                 const judge = document.getElementById(id_list[3]);
-//                 judge.style.display = 'block';
-//             }
-//         }
-//     }
-// }
 
 
 
