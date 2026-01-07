@@ -37,71 +37,76 @@ div2.classList = 'shop-sub';
 
 let region = '';
 let storenum = '';
-switch (date[memory].key_list[0]) {
-    case 'gifu':
-        region = '001_gifu';
-        // storenum='store' + String(date[memory].count.padStart(3,'0'))
+for(let i=0;i<all_list.length;i++) {
+    if(date[memory].key_list[0] == all_list[i].name) {
+        region=String(all_list[i].id).padStart(3, '0') + "_" + all_list[i].name;
         break;
-    case 'anpachi':
-        region = '002_anpachi';
-        break;
-    case 'hasima':
-        region = '003_hasima';
-        break;
-    case 'ginan':
-        region = '004_ginan';
-        break;
-    case 'kasamatu':
-        region = '005_kasamatu';
-        break;
-    case 'kagamihara':
-        region = '006_kagamihara';
-        break;
-    case 'motosu':
-        region = '007_motosu';
-        break;
-    case 'mizuho':
-        region = '008_mizuho';
-        break;
-    case 'kani':
-        region = '009_kani';
-        break;
-    case 'seki':
-        region = '010_seki';
-        break;
-    case 'minokamo':
-        region = '011_minokamo';
-        break;
-    case 'oogaki':
-        region = '012_oogaki';
-        break;
-    case 'yourou':
-        region = '013_yourou';
-        break;
-    case 'wanouti':
-        region = '014_wanouti';
-        break;
-    case 'ikeda':
-        region = '015_ikeda';
-        break;
-    case 'goudo':
-        region = '016_goudo';
-        break;
-    case 'ibi':
-        region = '017_ibi';
-        break;
-    case 'inuyama':
-        region = '018_inuyama';
-        break;
-    case 'itinomiya':
-        region = '019_itinomiya';
-        break;
-    case 'nagoya':
-        region = '020_nagoya';
-        break;
+    }
 }
+// switch (date[memory].key_list[0]) {
+//     case 'gifu':
+//         region = '001_gifu';
+//         break;
+//     case 'anpachi':
+//         region = '002_anpachi';
+//         break;
+//     case 'hasima':
+//         region = '003_hasima';
+//         break;
+//     case 'ginan':
+//         region = '004_ginan';
+//         break;
+//     case 'kasamatu':
+//         region = '005_kasamatu';
+//         break;
+//     case 'kagamihara':
+//         region = '006_kagamihara';
+//         break;
+//     case 'motosu':
+//         region = '007_motosu';
+//         break;
+//     case 'mizuho':
+//         region = '008_mizuho';
+//         break;
+//     case 'kani':
+//         region = '009_kani';
+//         break;
+//     case 'seki':
+//         region = '010_seki';
+//         break;
+//     case 'minokamo':
+//         region = '011_minokamo';
+//         break;
+//     case 'oogaki':
+//         region = '012_oogaki';
+//         break;
+//     case 'yourou':
+//         region = '013_yourou';
+//         break;
+//     case 'wanouti':
+//         region = '014_wanouti';
+//         break;
+//     case 'ikeda':
+//         region = '015_ikeda';
+//         break;
+//     case 'goudo':
+//         region = '016_goudo';
+//         break;
+//     case 'ibi':
+//         region = '017_ibi';
+//         break;
+//     case 'inuyama':
+//         region = '018_inuyama';
+//         break;
+//     case 'itinomiya':
+//         region = '019_itinomiya';
+//         break;
+//     case 'nagoya':
+//         region = '020_nagoya';
+//         break;
+// }
 
-console.log('region::' + region);
+// console.log('region::' + region);
 
 // const storenum='';
 // switch(date[memory]) {

@@ -122,7 +122,56 @@ const all_list = [
         name: 'nagoya',
         id: 20,
     },
+    {
+        eria: 'seinou',
+        place: '海津市',
+        name: 'kaizu',
+        id: 21,
+    },
+    {
+        eria: 'aichi',
+        place: '稲沢市',
+        name: 'inazawa',
+        id: 22,
+    },
+    {
+        eria: 'aichi',
+        place: '新城市',
+        name: 'shinzyou',
+        id: 22,
+    },
+    {
+        eria: 'aichi',
+        place: '田原市',
+        name: 'tahara',
+        id: 23,
+    },
 ];
+
+//eriaから西濃、岐阜、東濃、愛知のリストに振り分ける
+let gifu_all_list=[];
+let tyuunou_all_list=[];
+let seinou_all_list=[];
+let aichi_all_list=[];
+for(let i=0;i<all_list.length;i++) {
+    if(all_list[i].eria == 'gifu') {
+        gifu_all_list.push(all_list[i].name);
+    }else if(all_list[i].eria == 'tyuunou') {
+        tyuunou_all_list.push(all_list[i].name);
+    }else if(all_list[i].eria == 'seinou') {
+        seinou_all_list.push(all_list[i].name);
+    }else {
+        aichi_all_list.push(all_list[i].name);
+    }
+}
+
+console.log('gifu-list:::' + gifu_all_list);
+console.log('tyuunou-list:::' + tyuunou_all_list);
+console.log('seinou-list:::' + seinou_all_list);
+console.log('aichi-list:::' + aichi_all_list);
+
+//西濃、岐阜、東濃、愛知のエリア分け区切り
+const eria_judge=[8,11,17];
 
 //placeからtype,key_listを入力する
 for (let i = 0; i < date.length; i++) {
@@ -144,13 +193,16 @@ const classification = [ //表示するワード
     // { jp: "ディナー", key: "dinner" },
     // { jp: "モーニング", key: "morning" },
     { jp: "和食", key: "washoku" },
-    { jp: "洋食", key: "youshoku" },
-    { jp: "中華", key: "chinese" },
+    // { jp: "洋食", key: "youshoku" },
+    { jp: "洋食", key: "yousyoku" },
+    // { jp: "中華", key: "chinese" },
+    { jp: "中華", key: "tyuuka" },
     // { jp: "イタリアン", key: "italian" },
     // { jp: "フレンチ", key: "french" },
     { jp: "カフェ", key: "cafe" },
     { jp: "焼肉", key: "yakiniku" },
-    { jp: "ラーメン", key: "ramen" },
+    // { jp: "ラーメン", key: "ramen" },
+    { jp: "ラーメン", key: "men" },
     // { jp: "ファミリー", key: "family" },
     // { jp: "デート", key: "date" },
     // { jp: "一人でもOK", key: "solo" },
@@ -160,6 +212,18 @@ const classification = [ //表示するワード
     // { jp: "高級", key: "luxury" },
 ];
 
+let genre_list = [['all_genre', '全て']];
+for (let i = 0; i < classification.length; i++) {
+    genre_list.push([
+        classification[i].key,
+        classification[i].jp
+    ])
+}
+
+const id_list = ['tyuunou', 'gifusi', 'seinou', 'aichi'];
+let place_list = [];
+let file_list = [];
+let check_list = ['all_check'];
 
 
 let tyuunou_list = [];
@@ -186,19 +250,33 @@ for (let i = 0; i < date.length; i++) {
     }
 }
 
-console.log('wordlist:::' + keyword_list);
+// console.log('wordlist:::' + keyword_list);
 
 //list_nameをなくしてall_listへ？
 
 
-const list_name = ['gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
+// const list_name = ['gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
 const list = [];
-for (let j = 0; j < list_name.length; j++) {
+// for (let j = 0; j < list_name.length; j++) {
+//     list.push({
+//         name: list_name[j],
+//         count: 0
+//     })
+// }
+for (let j = 0; j < all_list.length; j++) {
+    //エリアの登録
     list.push({
-        name: list_name[j],
+        name: all_list[j].eria,
         count: 0
     })
+    // エリアのリスト作成
+    place_list.push(all_list[j].place);
+    file_list.push(String(all_list[j].id).padStart(3, '0') + "_" + all_list[j].name);
+    check_list.push(all_list[j].name);
 }
+// console.log('place_list:::' + place_list);
+// console.log('file_list:::' + file_list);
+// console.log('check_list:::' + check_list);
 
 
 for (let i = 0; i < date.length; i++) {
@@ -245,20 +323,22 @@ for (let i = 0; i < date.length; i++) {
 // console.log(list + 'list:::')
 
 // const id_list = ['tyuunou', 'gifusi', 'seinou', 'aichi'];
-const id_list = ['tyuunou', 'gifusi', 'seinou', 'aichi'];
-const place_list = ['岐阜市', '安八町', '羽島市', '岐南町', '笠松町', '各務原市', '本巣市', '瑞穂市', '可児市', '関市', '美濃加茂市', '大垣市', '養老町', '輪之内町', '池田町', '神戸町', '揖斐川町', '犬山市', '一宮市', '名古屋市'];
-const file_list = ['001_gifu', '002_anpachi', '003_hasima', '004_ginan', '005_kasamatu', '006_kagamihara', '007_motosu', '008_mizuho', '009_kani', '010_seki', '011_minokamo', '012_oogaki', '013_yourou', '014_wanouti', '015_ikeda', '016_goudo', '017_ibi', '018_inuyama', '019_itinomiya', '020_nagoya'];
+
+// const place_list = ['岐阜市', '安八町', '羽島市', '岐南町', '笠松町', '各務原市', '本巣市', '瑞穂市', '可児市', '関市', '美濃加茂市', '大垣市', '養老町', '輪之内町', '池田町', '神戸町', '揖斐川町', '犬山市', '一宮市', '名古屋市'];
+// const file_list = ['001_gifu', '002_anpachi', '003_hasima', '004_ginan', '005_kasamatu', '006_kagamihara', '007_motosu', '008_mizuho', '009_kani', '010_seki', '011_minokamo', '012_oogaki', '013_yourou', '014_wanouti', '015_ikeda', '016_goudo', '017_ibi', '018_inuyama', '019_itinomiya', '020_nagoya'];
+
+
 
 // console.log(date);
 
-const check_list = ['all_check', 'gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
+// const check_list = ['all_check', 'gifu', 'anpachi', 'hasima', 'ginan', 'kasamatu', 'kagamihara', 'motosu', 'mizuho', 'seki', 'kani', 'minokamo', 'oogaki', 'yourou', 'wanouti', 'ikeda', 'goudo', 'ibi', 'inuyama', 'itinomiya', 'nagoya'];
 
-const genre_list = [
-    ['all_genre', '全て'],
-    ['washoku', '和食'],
-    ['yousyoku', '洋食'],
-    ['tyuuka', '中華'],
-    ['cafe', 'カフェ'],
-    ['yakiniku', '焼肉'],
-    ['men', 'ラーメン']
-];
+// const genre_list = [
+//     ['all_genre', '全て'],
+//     ['washoku', '和食'],
+//     ['yousyoku', '洋食'],
+//     ['tyuuka', '中華'],
+//     ['cafe', 'カフェ'],
+//     ['yakiniku', '焼肉'],
+//     ['men', 'ラーメン']
+// ];

@@ -2,10 +2,10 @@ const items = document.querySelectorAll('.shop-list');
 
 let selectedCategory = null;
 let selectedArea = null;
-let check1 = false;
-let check2 = false;
-let check3 = false;
-let check4 = false;
+// let check1 = false;
+// let check2 = false;
+// let check3 = false;
+// let check4 = false;
 
 function filterItems() {
     console.log('selectedCategory::' + selectedCategory);
@@ -101,31 +101,31 @@ function filterItems() {
                 if (item.classList[2] === check_list[i]) {
                     // console.log('----i----' + i);
 
-                    if (1 <= i && i <= 8) {
-                        // const judge = document.getElementById(id_list[1]);
-                        // judge.style.display = 'block';
+                    //チェックリストにヒットしたエリアを選択
+
+                    // if (1 <= i && i <= 8) {
+                    //岐阜エリア判定
+                    if(gifu_all_list.includes(check_list[i])) {
                         check1 = true;
-                        // return;
-                    } else if (9 <= i && i <= 11) {
-                        // console.log('中濃エリア');
-                        // const judge = document.getElementById(id_list[0]);
-                        // judge.style.display = 'block';
-                        check2 = true;
-                        // return;
-                    } else if (12 <= i && i <= 17) {
-                        // console.log('西濃エリア');
-                        // const judge = document.getElementById(id_list[2]);
-                        // judge.style.display = 'block';
-                        check3 = true;
-                        // return;
-                    } else {
-                        // console.log('愛知エリア');
-                        // const judge = document.getElementById(id_list[3]);
-                        // judge.style.display = 'block';
-                        check4 = true;
-                        // return;
+                    }else if(tyuunou_all_list.includes(check_list[i])) {
+                        check2=true;
+                    }else if(seinou_all_list.includes(check_list[i])) {
+                        check3=true;
+                    }else {
+                        check4=true;
                     }
-                } else {
+
+                    // if (1 <= i && i <= eria_judge[0]) {
+                    //     check1 = true;
+                    // } else if (eria_judge[0]+1 <= i && i <= eria_judge[1]) {
+                    //     check2 = true;
+                    // } else if (eria_judge[1]+1 <= i && i <= eria_judge[2]) {
+                    //     check3 = true;
+                    // } else {
+                    //     check4 = true;
+                    // }
+                } 
+                // else {
                     //
                     //選択無し、null 全て選択
                     // for (let j = 0; j < id_list.length; j++) {
@@ -133,12 +133,12 @@ function filterItems() {
                     //     title.style.display = 'block';
                     //     //     console.log('aaaaaaaaaaaaaa');
                     // }
-                }
+                // }
             }
-            console.log('中濃エリア' + check1);
-            console.log('岐阜エリア' + check2);
-            console.log('西濃エリア' + check3);
-            console.log('愛知エリア' + check4);
+            // console.log('中濃エリア' + check1);
+            // console.log('岐阜エリア' + check2);
+            // console.log('西濃エリア' + check3);
+            // console.log('愛知エリア' + check4);
             if (check1 == true) {
                 const judge = document.getElementById(id_list[1]);
                 judge.style.display = 'block';
