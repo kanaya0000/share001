@@ -146,6 +146,12 @@ const all_list = [
         name: 'tahara',
         id: 23,
     },
+    {
+        eria: 'aichi',
+        place: '豊橋市',
+        name: 'toyohashi',
+        id: 24,
+    },
 ];
 
 //eriaから西濃、岐阜、東濃、愛知のリストに振り分ける
